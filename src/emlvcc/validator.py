@@ -12,6 +12,8 @@
 :Created:
     1/21/23
 """
+from pathlib import Path
+
 import daiquiri
 from lxml import etree
 
@@ -27,8 +29,19 @@ class Validator(object):
         self.schema = schema
 
     def validate(self, xml: str):
+
+        # Accept either file or a string
+        if Path(xml).is_file():
+            with open(xml, "r") as f:
+                xml = f.read().encode("utf-8")
+        else:
+            try:
+                xml = xml.encode("utf-8")
+            except AttributeError as e:
+                logger.error(e)
+
         try:
-            doc = etree.parse(xml)
+            doc = etree.fromstring(xml)
             schema = etree.XMLSchema(file=self.schema)
             schema.assertValid(doc)
         except etree.DocumentInvalid as e:

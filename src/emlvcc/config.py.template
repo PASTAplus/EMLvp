@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+:Mod: config.py
+
+:Synopsis:
+
+:Author:
+    servilla
+
+:Created:
+    1/21/23
+"""
+
+
+class Config(object):
+
+    # Scheme locations
+    EML2_2_0_local = None
+    EML2_2_0_remote = None
+
+    EML2_1_1_local = None
+    EML2_1_1_remote = None
+
+    EML2_1_0_local = None
+    EML2_1_0_remote = None

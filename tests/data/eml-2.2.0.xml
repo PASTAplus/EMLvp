@@ -1,0 +1,2078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="edi.1060.1" scope="system"
+  system="https://pasta.edirepository.org"
+  xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access
+    authSystem="https://pasta.edirepository.org/authentication"
+    order="allowFirst" scope="document"
+      system="https://pasta.edirepository.org">
+    <allow><principal>uid=EDI,o=EDI,dc=edirepository,dc=org</principal><permission>all</permission></allow><allow>
+      <principal>uid=CAP,o=EDI,dc=edirepository,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Evidence of alliesthesia during a neighborhood thermal walk in a hot and dry city (Phoenix, Arizona)</title>
+    <creator>
+      <individualName>
+        <givenName>Yuliya</givenName>
+        <surName>Dzyuban</surName>
+      </individualName>
+      <organizationName>Singapore Management University</organizationName>
+      <electronicMailAddress>ydzyuban@smu.edu.sg</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-3688-420X</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>David</givenName>
+        <surName>Hondula</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>david.hondula@asu.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-2465-2671</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Jennifer</givenName>
+        <surName>Vanos</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>jvanos@asu.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-1854-9096</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Ariane</givenName>
+        <surName>Middel</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>Ariane.Middel@asu.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0002-1565-095X</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Paul</givenName>
+        <surName>Coseo</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>Paul.Coseo@asu.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-0727-4074</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Charles</givenName>
+        <surName>Redman</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>charles.redman@asu.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0001-7193-7368</userId>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Yuliya</givenName>
+        <surName>Dzyuban</surName>
+      </individualName>
+      <organizationName>Singapore Management University</organizationName>
+      <electronicMailAddress>ydzyuban@smu.edu.sg</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-3688-420X</userId>
+    </metadataProvider>
+    <pubDate>2022-01-12</pubDate>
+    <language>english</language>
+    <abstract>
+      <markdown>
+Thermal comfort should be an integral part of urban design in the context of global warming and urbanization. The influence of built infrastructure on thermal perceptions of walking pedestrians is not well explored, but thermal walks that combine sensing technologies with simultaneous collection of user experiences is a promising research direction to shorten the gap. We examined the relationships between the built environment, heat perception, and behavioral coping mechanisms in one of the most heat vulnerable Phoenix neighborhoods. Using Phoenix as an example, where extremely hot summer temperatures are becoming a norm, can help to address heat challenges of other cities that are facing rising temperatures. This study is an experimental citizen science project in which participants were surveyed during a 1-hour walk around the neighborhood and recorded their experience in a field guide. Walkers wore GPS devices and microclimate measurements were taken to gain deeper insights on subjective heat perception and physical body heat accumulation during the walk. Results revealed the differences in heat perception across a variety of urban landscapes. Participants identified preferred and most challenging locations. Combined GPS and microclimate data mapped in GIS visualized dependencies between the streetscape, microclimate, and thermal perceptions. Moreover, we presented the evidence of thermal alliesthesia, a feeling of pleasure from relieving of thermal discomfort. This project is one of the first to examine the impact of urban environment on dynamic psychological and physiological responses to heat. Using sensing technologies and collecting subjective perceptions, this research will inform the design changes in the neighborhood that will undergo redevelopment. It can serve as an example for other cities striving to adapt urban microclimates to new extremes.
+</markdown>
+    </abstract>
+    <keywordSet>
+      <keyword
+        keywordType="theme">urban</keyword>
+      <keyword
+        keywordType="theme">microclimate</keyword>
+      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword
+        keywordType="theme">alliesthesia</keyword>
+      <keyword
+        keywordType="theme">human-biometeorological</keyword>
+      <keyword
+        keywordType="theme">thermal comfort</keyword>
+      <keyword
+        keywordType="theme">sky view factor</keyword>
+      <keyword
+        keywordType="theme">urban form</keyword>
+      <keyword
+        keywordType="theme">walkability</keyword>
+      <keyword
+        keywordType="theme">human-biometeorological cart</keyword>
+      <keywordThesaurus>Creator Defined Keyword Set</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword
+        keywordType="place">arizona</keyword>
+      <keyword
+        keywordType="place">az</keyword>
+      <keyword
+        keywordType="theme">arid land</keyword>
+      <keyword
+      keywordType="theme">marty</keyword>
+      <keywordThesaurus>CAPLTER Keyword Set List</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). The consumer of these data ("Data User" herein) has an ethical obligation to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or coauthorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is". The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</intellectualRights>
+    <distribution>
+      <online>
+        <onlineDescription>CAPLTER Metadata URL</onlineDescription>
+        <url>https://sustainability.asu.edu/caplter/data/data-catalog/view/edi.1042.1/xml/</url>
+      </online>
+    </distribution>
+    <distribution
+      id="10.6073/pasta/f969758e0aa62163f674464d68acdaaf" scope="system"
+          system="https://pasta.edirepository.org"><online><url
+        function="information">https://doi.org/10.6073/pasta/f969758e0aa62163f674464d68acdaaf</url></online></distribution><coverage>
+      <geographicCoverage>
+        <geographicDescription>stop 1: N 20th St</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.039</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.039</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.457</northBoundingCoordinate>
+          <southBoundingCoordinate>33.457</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 2: N 20th St</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.039</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.039</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.452</northBoundingCoordinate>
+          <southBoundingCoordinate>33.452</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 3: N 16th Pl</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.047</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.047</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.457</northBoundingCoordinate>
+          <southBoundingCoordinate>33.457</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 4: E Taylor St</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.044</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.044</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.454</northBoundingCoordinate>
+          <southBoundingCoordinate>33.454</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 5: N 19th St</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.041</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.041</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.456</northBoundingCoordinate>
+          <southBoundingCoordinate>33.456</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 6: E McKinley St</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.043</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.043</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.457</northBoundingCoordinate>
+          <southBoundingCoordinate>33.457</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>stop 7: N 19th St (Edison Park)</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.041</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.041</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.458</northBoundingCoordinate>
+          <southBoundingCoordinate>33.458</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2018-09-29</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2018-09-29</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>this dataset is complete and or updates are not anticipated</description>
+      <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+    </maintenance>
+    <contact>
+      <organizationName>Julie Ann Wrigley Global Institute of Sustainability and Innovation, Arizona State University</organizationName>
+      <positionName>Data Manager</positionName>
+      <address>
+        <deliveryPoint>Arizona State University</deliveryPoint>
+        <deliveryPoint>Global Institute of Sustainability and Innovation</deliveryPoint>
+        <city>Tempe</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85287-5402</postalCode>
+        <country>USA</country>
+      </address>
+      <electronicMailAddress>caplter.data@asu.edu</electronicMailAddress>
+      <onlineUrl>https://researchdata.asu.edu/</onlineUrl>
+    </contact>
+    
+    <publisher><organizationName>Environmental Data Initiative</organizationName><electronicMailAddress>info@environmentaldatainitiative.org</electronicMailAddress><onlineUrl>https://environmentaldatainitiative.org</onlineUrl><userId
+          directory="https://ror.org">0330j0z60</userId></publisher><pubPlace>Environmental Data Initiative</pubPlace><methods>
+      <methodStep>
+        <description>
+          <markdown>
+Edison Eastlake neighborhood in Phoenix, AZ, was awarded Choice Neighborhoods Planning and Action Grant through U.S. Department of Housing and Urban Development (HUD) with an effort to improve neighborhood conditions, increase livability, and improve thermal comfort. To map existing thermal comfort conditions and thermal perceptions in relation to various urban infrastructure we conducted a thermal walk on a hot sunny day (September 29, 2018, 16:00–18:00 Local Time). The “Heat Mappers Walk” was organized and supported by The Nature Conservancy in Arizona in partnership with Museum of Walking, Phoenix Revitalization Corporation, and Arizona State University’s Urban Climate Research Center and Knowledge Exchange for Resilience. Fourteen participants wore GPS devices and walked a 5km route answering questions regarding their thermal perceptions on the way. The walk started in the neighborhood park and continued through several residential streets, arterial road, vacant land, and hospital parking lots. Micrometeorological data (air temperature, wind speed, atmospheric moisture, short- and long-wave radiation) was collected using the human-biometeorological cart MaRTy (Middel et al., 2021; Middel &amp; Krayenhoff, 2019). Participant’s location data from the GPS was matched with the nearest point from MaRTy to get location specific individual microclimate data. Microclimate data was used to calculate physiological equivalent temperature (PET) and modified physiological equivalent temperature (mPET), and matched with subjective thermal responses on thermal sensation, thermal comfort, and pleasantness. Route stops and street segments between the stops were manually separated in GIS and named with a unique identifier for the analysis (numerical for stops and alphabetical for segments). PET and mPET was calculated using MaRTy data with Rayman model (Matzarakis &amp; Rutz, 2010) for each participant. Sky view factor (SVF) for each participant was calculated using synthetic fisheye photos (Middel et al., 2017). PET model takes standard metabolic rate and clothing for a middle-age healthy male; for mPET we calculated metabolic rate based on the median of the non-zero speed data points and time spent standing (~2.5 METs) and converted to a metabolic rate (1MET=58.15Wm-2), then weighted based on the time spent on walking or standing. Body surface area was calculated based on the average male and female height and weight, and the lowest age from the following age breaks: 18–24, 25–44, 45–64, 65+. Clo value was determined based on the clothing type participants provided in the survey. For data analysis we used non-parametric statistical significance tests (Wilcoxon-Pratt Signed-Rank), descriptive statistics and Spearman’s Rho correlations to understand the relationships between subjective thermal perceptions and microclimate data.  We correlated TSV and OTC votes with average microclimate data per stop, and pleasure and estimated percent shade with average microclimate data per segment, corresponding to how questions were asked. We calculated Z-scores and plotted subjective sensations, PET, and microclimate variables to ascertain accurate comparisons between stops. All analyses were performed using RStudio (Version 1.3.1056). This project was approved by the Institutional Review Board of Arizona State University (STUDY00008752).
+
+References:
+
+Matzarakis, A., &amp; Rutz, F. (2010). Application of the RayMan model in urban environments. Ninth Symposium on the Urban Environment.
+
+Middel, A., Alkhaled, S., Schneider, F. A., Hagen, B., &amp; Coseo, P. (2021). 50 Grades of Shade. Bulletin of the American Meteorological Society, 1(35). https://doi.org/10.1175/BAMS-D-20-0193.1.
+
+Middel, A., &amp; Krayenhoff, E. S. (2019). Micrometeorological determinants of pedestrian thermal exposure during record-breaking heat in Tempe, Arizona: Introducing the MaRTy observational platform. Science of the Total Environment, 687, 137–151. https://doi.org/10.1016/j.scitotenv.2019.06.085
+
+Middel, A., Lukasczyk, J., &amp; Maciejewski, R. (2017). Sky View Factors from Synthetic Fisheye Photos for Thermal Comfort Routing—A Case Study in Phoenix, Arizona. Urban Planning, 2(1), 19. https://doi.org/10.17645/up.v2i1.855
+</markdown>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Urban resilience to extreme weather related events</title>
+      <personnel>
+        <individualName>
+          <givenName>Charles </givenName>
+          <surName>Redman</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>CHARLES.REDMAN@asu.edu</electronicMailAddress>
+        <userId
+          directory="https://orcid.org">0000-0001-7193-7368</userId>
+        <role>Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Nancy</givenName>
+          <surName>Grimm</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>nbgrimm@asu.edu</electronicMailAddress>
+        <userId
+          directory="https://orcid.org">0000-0001-9374-660X</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Timon</givenName>
+          <surName>McPhearson</surName>
+        </individualName>
+        <organizationName>The New School</organizationName>
+        <electronicMailAddress>timon.mcphearson@newschool.edu</electronicMailAddress>
+        <userId
+          directory="https://orcid.org">0000-0002-9499-0791</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Tischa</givenName>
+          <surName>Munoz-Erickson</surName>
+        </individualName>
+        <organizationName>International Institute of Tropical Forestry, USDA Forest Service</organizationName>
+        <electronicMailAddress>tamunozerickson@fs.fed.us</electronicMailAddress>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mikhail</givenName>
+          <surName>Chester</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>mchester@asu.edu</electronicMailAddress>
+        <userId
+      directory="https://orcid.org">0000-0002-9354-2102</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <abstract>Urban areas are vulnerable to extreme weather related events given their location, high concentration of people, and increasingly complex and interdependent infrastructure. Impacts of Hurricane Katrina, Superstorm Sandy, and other disasters demonstrate not just failures in built infrastructure, they highlight the inadequacy of institutions, resources, and information systems to prepare for and respond to events of this magnitude. The highly interdisciplinary and geographically dispersed Urban Resilience to Extremes Sustainability Research Network (UREx SRN) team will develop a diverse suite of new methods and tools to assess how infrastructure can be more resilient, provide ecosystem services, improve social well being, and exploit new technologies in ways that benefit all segments of urban populations. Starting with nine network cities (six continental U.S. and three Latin American, home to over 35 million residents) and expanding in future years, the vision of the UREx SRN is to co-produce the knowledge needed to promote resilient, livable cities in a future that will look very different from today. The extreme events that this project will focus on include urban flooding, coastal storms, regional droughts, and extreme heat waves. These events are already occurring with shocking frequency in U.S. and global cities. Infrastructure is viewed as an important line of defense against hazards and disasters, yet current urban infrastructure is aging and proving inadequate for protecting city populations. The UREx team will link SRN scientists, students, local practitioners, planners, industry, NGOs, and other stakeholders across &gt;25 institutions and &gt;70 collaborators to co-produce data, models, images, stories, and on-the-ground projects that show how a new resilient infrastructure can be developed. Infrastructure that is flexible, adaptable, safe-to-fail, socially equitable, and ecologically based will enhance urban resilience in the face of a higher incidence of extreme events, more culturally diverse communities, and continued urbanization pressures. Ultimately, the UREx SRN will help accelerate knowledge generation and application to encourage innovative strategies towards urban sustainability.
+
+  The Urban Resilience to Extremes Sustainability Research Network (UREx SRN) will develop a novel theoretical framework for integrating social, ecological, and technological system (SETS) dimensions for conceptualizing, analyzing, and supporting urban infrastructure decisions in the face of climatic uncertainty in a more holistic way. The primary research question is: how do SETS domains interact to generate vulnerability or resilience to extreme weather related events, and how can urban SETS dynamics be guided along more resilient, equitable, and sustainable trajectories? The foundation of the network is eight working groups (WG) who will work together to answer this question. Network activities include: assembling comparable datasets for the cities; doing advanced climate and hydrological modeling and downscaling; conducting comparative analyses; further developing the SETS conceptual framework; experimenting with new visualization and computation approaches for representing the data and the SETS framework; using these products in participatory modeling and scenario analysis for each city; and developing the science and practice for transitioning infrastructure to meet 21st century resilience and sustainability goals. Continual network and educational evaluation will allow realignment and adjustment of the work based on iterative assessments. The program will develop a suite of interactive educational activities spanning institutions across the network, and including local practitioners as well as university students and young professionals. Working Groups include integral educational, communications, and diversity-enhancing activities for graduate and post-doctoral fellows, early-career researchers, and city professionals aimed at developing a model for co-producing effective and robust decision-support tools and educating the next generation of scientists and practitioners to carry out this work. These programs are expected to be especially attractive to Hispanic students and practitioners due to the project's focus on understanding the increasing cultural and intellectual connections of the U.S. and Latin America.
+
+  The strategic goals of the UREx SRN are to:
+
+  1)Build a network of cities, institutions, and student, post-doctoral, and faculty researchers to explore resilience of cities to extreme weather related events;
+
+2)Develop novel theoretical frameworks that express a vision of sustainable, integrated urban infrastructure that is flexible, adaptable, safe-to-fail, socially equitable, and ecologically based;
+
+3)Work with practitioners and decision makers, as well as a cadre of graduate and post-doctoral fellows, to co-produce knowledge that facilitates data-driven visioning and ultimately transitions to a sustainable future for urban infrastructure and, by extension, the fabric of urban social-ecological-technological sustainability; and
+
+4)Create a model for incorporating assessment, learning, and adjustment in response to evaluative feedback in a large, transdisciplinary, multi-institutional, multi-national research network.</abstract>
+      <funding>NSF Awards: CBET 1444755</funding>
+    </project>
+    <dataTable
+          id="1042_microclimate_segments.csv">
+      <entityName>1042_microclimate_segments.csv</entityName>
+      <entityDescription>Collected microclimate data using the human-biometeorological cart MaRTy (Middel et al., 2021 [ttps://doi.org/10.1175/BAMS-D-20-0193.1]; Middel &amp; Krayenhoff, 2019 [https://doi.org/10.1016/j.scitotenv.2019.06.085]) and calculated PET and mPET indices for street segments during a thermal walk in Edison Eastlake neighborhood</entityDescription>
+      <physical>
+        <objectName>1042_microclimate_segments.csv</objectName>
+        <size
+          unit="bytes">384910</size>
+        <authentication
+              method="MD5">ccfbc500f3012c3a26ab7b6fce7f2179</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+                    function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/73a8983f97a5f9abc8358528591659c4</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date_time</attributeName>
+          <attributeDefinition>date and time of variable collection; time is Mountain Standard (GMT-07)</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Segment</attributeName>
+          <attributeDefinition>street segment number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>street segment number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Subject</attributeName>
+          <attributeDefinition>subject identification number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>subject identification number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Latitude</attributeName>
+          <attributeDefinition>geographic latitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">33.451044</minimum>
+                  <maximum
+                    exclusive="false">33.458641</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Longitude</attributeName>
+          <attributeDefinition>geographic longitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">-112.046954</minimum>
+                  <maximum
+                    exclusive="false">-112.038963</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Ta</attributeName>
+          <attributeDefinition>Ambient temperature [degrees C] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">36.4</minimum>
+                  <maximum
+                    exclusive="false">38.3</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>VP</attributeName>
+          <attributeDefinition>Vapour pressure [hPa] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>hectopascal</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">11</minimum>
+                  <maximum
+                    exclusive="false">14</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>WS</attributeName>
+          <attributeDefinition>Wind speed [ms-1] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meterPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0</minimum>
+                  <maximum
+                    exclusive="false">4.7</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>MRT</attributeName>
+          <attributeDefinition>Mean radiant temperature [degrees C] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">34.9</minimum>
+                  <maximum
+                    exclusive="false">66.4</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>PET</attributeName>
+          <attributeDefinition>Physiologycal equivalnet temperature [degrees C] calculated in RayMan (Matzarakis &amp; Rutz 2010)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">36.5</minimum>
+                  <maximum
+      exclusive="false">54.8</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>5181</numberOfRecords>
+    </dataTable>
+    <dataTable
+          id="1042_microclimate_stops.csv">
+      <entityName>1042_microclimate_stops.csv</entityName>
+      <entityDescription>Collected microclimate data using the human-biometeorological cart MaRTy (Middel et al., 2021 [https://doi.org/10.1175/BAMS-D-20-0193.1]; Middel &amp; Krayenhoff, 2019 [https://doi.org/10.1016/j.scitotenv.2019.06.085]) and calculated PET and mPET indices for stops during a thermal walk in Edison Eastlake neighborhood</entityDescription>
+      <physical>
+        <objectName>1042_microclimate_stops.csv</objectName>
+        <size
+          unit="bytes">94152</size>
+        <authentication
+              method="MD5">9ca081e8d8d03f71fd7b2c9e87eeed47</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+                    function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/f9eb2f3877cd95853fd3ef17740dbadf</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date_time</attributeName>
+          <attributeDefinition>date and time of variable collection; time is Mountain Standard (GMT-07)</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Stop</attributeName>
+          <attributeDefinition>stop number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>stop number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Subject</attributeName>
+          <attributeDefinition>subject identification number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>subject identification number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Latitude</attributeName>
+          <attributeDefinition>geographic latitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">33.451476</minimum>
+                  <maximum
+                    exclusive="false">33.457963</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Longitude</attributeName>
+          <attributeDefinition>geographic longitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">-112.047004</minimum>
+                  <maximum
+                    exclusive="false">-112.038981</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Ta</attributeName>
+          <attributeDefinition>Ambient temperature [degrees C] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">36.2</minimum>
+                  <maximum
+                    exclusive="false">38.2</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>VP</attributeName>
+          <attributeDefinition>Vapour pressure [hPa] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>hectopascal</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">11</minimum>
+                  <maximum
+                    exclusive="false">14</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>WS</attributeName>
+          <attributeDefinition>Wind speed [ms-1] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meterPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0.1</minimum>
+                  <maximum
+                    exclusive="false">3.8</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>MRT</attributeName>
+          <attributeDefinition>Mean radiant temperature [degrees C] collected with MaRTy and spatially joined to the nearest location point of the subject</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">33.9</minimum>
+                  <maximum
+                    exclusive="false">66.4</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>PET</attributeName>
+          <attributeDefinition>Physiologycal equivalnet temperature [degrees C] calculated in RayMan (Matzarakis &amp; Rutz 2010)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">35.3</minimum>
+                  <maximum
+      exclusive="false">54.5</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>1261</numberOfRecords>
+    </dataTable>
+    <dataTable
+          id="1042_sky_view_factor.csv">
+      <entityName>1042_sky_view_factor.csv</entityName>
+      <entityDescription>Sky view factor data calculated from synthetic fisheye photos (Middel et al., 2017)[https://doi.org/10.17645/up.v2i1.855]</entityDescription>
+      <physical>
+        <objectName>1042_sky_view_factor.csv</objectName>
+        <size
+          unit="bytes">13384</size>
+        <authentication
+              method="MD5">3653f2aee2f0ce2bce63d843652651f3</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+                    function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/75a9b01aad3235d4fb32090402ac8055</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Stop</attributeName>
+          <attributeDefinition>stop number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>stop number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Segment</attributeName>
+          <attributeDefinition>street segment number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>street segment number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Latitude</attributeName>
+          <attributeDefinition>geographic latitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">33.451392</minimum>
+                  <maximum
+                    exclusive="false">33.458677</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Longitude</attributeName>
+          <attributeDefinition>geographic longitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">-112.046718</minimum>
+                  <maximum
+                    exclusive="false">-112.038943</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SVF</attributeName>
+          <attributeDefinition>Sky View Factor</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0.468879</minimum>
+                  <maximum
+      exclusive="false">0.998586</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>336</numberOfRecords>
+    </dataTable>
+    <dataTable
+          id="1042_survey.csv">
+      <entityName>1042_survey.csv</entityName>
+      <entityDescription>Survey responses collected at stops during a thermal walk in Edison Eastlake neighborhood</entityDescription>
+      <physical>
+        <objectName>1042_survey.csv</objectName>
+        <size
+          unit="bytes">7615</size>
+        <authentication
+              method="MD5">722e6a08cbed5f2e783b7fa7d92977ba</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+                    function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/13017394b34d67d61b24629a88918e2a</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Subject</attributeName>
+          <attributeDefinition>participant number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>participant number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q1_age</attributeName>
+          <attributeDefinition>Q1_age: 18-24=1, 25-44=2, 45-64=3, 65+=4, NA = No answer</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q1_age: 18-24=1, 25-44=2, 45-64=3, 65+=4, NA = No answer</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q2_sex</attributeName>
+          <attributeDefinition>Q2_sex: Male=1, Female=0, Do not identify=99, NA = Cannot determine</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q2_sex: Male=1, Female=0, Do not identify=99, NA = Cannot determine</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q3_livehere</attributeName>
+          <attributeDefinition>Q3_livehere: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q3_livehere: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q4_healthstatus</attributeName>
+          <attributeDefinition>Q4_healthstatus: Excellent=4, Good=3, Fair=2, Poor=1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q4_healthstatus: Excellent=4, Good=3, Fair=2, Poor=1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q5_outsidetime</attributeName>
+          <attributeDefinition>Q5_outsidetime: More than 2=4, 1-2hrs=3, 30-60min=2, Lessthan30=1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q5_outsidetime: More than 2=4, 1-2hrs=3, 30-60min=2, Lessthan30=1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q6_risknormaltemps</attributeName>
+          <attributeDefinition>Q6_risknormaltemps: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q6_risknormaltemps: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q7_riskextremeheat</attributeName>
+          <attributeDefinition>Q7_riskextremeheat: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q7_riskextremeheat: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q8_risk_sunexposure</attributeName>
+          <attributeDefinition>Q8_risk_sunexposure: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q8_risk_sunexposure: Not at all serious=1, Not too serious=2, Somewhat serious=3, Very serious=4, Extremely serious=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q9_heathealth</attributeName>
+          <attributeDefinition>Q9_heathealth: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q9_heathealth: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q10_walkbike</attributeName>
+          <attributeDefinition>Q10_walkbike: Walking = 1, Biking = 2</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q10_walkbike: Walking = 1, Biking = 2</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q11_clothes</attributeName>
+          <attributeDefinition>Q11_clothes: Shorts and short sleeve = 1, Long pants and short sleeve = 2, Long pants and long sleeve = 3</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q11_clothes: Shorts and short sleeve = 1, Long pants and short sleeve = 2, Long pants and long sleeve = 3</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q12_hat</attributeName>
+          <attributeDefinition>Q12_hat: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q12_hat: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q12_sunglasses</attributeName>
+          <attributeDefinition>Q12_sunglasses: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q12_sunglasses: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q12_umbrella</attributeName>
+          <attributeDefinition>Q12_umbrella: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q12_umbrella: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q12_sunscreen</attributeName>
+          <attributeDefinition>Q12_sunscreen: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q12_sunscreen: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q12_waterbottle</attributeName>
+          <attributeDefinition>Q12_waterbottle: Yes = 1, No = 0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q12_waterbottle: Yes = 1, No = 0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q13_status0</attributeName>
+          <attributeDefinition>Q13_status0: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q13_status0: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q14_thermal0</attributeName>
+          <attributeDefinition>Q14_thermal0: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q14_thermal0: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q15_comfort0</attributeName>
+          <attributeDefinition>Q15_comfort0: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q15_comfort0: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q16_words1</attributeName>
+          <attributeDefinition>Q16_words1: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q16_words1: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q17_shade1</attributeName>
+          <attributeDefinition>Q17_shade1: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0</minimum>
+                  <maximum
+                    exclusive="false">80</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Q18_useparks</attributeName>
+          <attributeDefinition>Q18_useparks: Almost every day=3, Every week=2, Few times each summer=1, Never=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q18_useparks: Almost every day=3, Every week=2, Few times each summer=1, Never=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q19_parkchange</attributeName>
+          <attributeDefinition>Q19_parkchange: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q19_parkchange: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q20_status1</attributeName>
+          <attributeDefinition>Q20_status1: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q20_status1: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q21_thermal1</attributeName>
+          <attributeDefinition>Q21_thermal1: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q21_thermal1: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q22_comfort1</attributeName>
+          <attributeDefinition>Q22_comfort1: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q22_comfort1: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q23_pleasant1</attributeName>
+          <attributeDefinition>Q23_pleasant1: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q23_pleasant1: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q24_words2</attributeName>
+          <attributeDefinition>Q24_words2: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q24_words2: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q25_shade2</attributeName>
+          <attributeDefinition>Q25_shade2: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">5</minimum>
+                  <maximum
+                    exclusive="false">90</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q26_status2</attributeName>
+          <attributeDefinition>Q26_status2: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q26_status2: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q27_thermal2</attributeName>
+          <attributeDefinition>Q27_thermal2: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q27_thermal2: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q28_comfort2</attributeName>
+          <attributeDefinition>Q28_comfort2: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q28_comfort2: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q29_pleasant2</attributeName>
+          <attributeDefinition>Q29_pleasant2: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q29_pleasant2: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Q30_words3</attributeName>
+          <attributeDefinition>Q30_words3: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q30_words3: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q31_shade3</attributeName>
+          <attributeDefinition>Q31_shade3: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">2</minimum>
+                  <maximum
+                    exclusive="false">50</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q32_busstops</attributeName>
+          <attributeDefinition>Q32_busstops: First one=1, Second one=2, Third one=3, About the same=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q32_busstops: First one=1, Second one=2, Third one=3, About the same=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q33_status3</attributeName>
+          <attributeDefinition>Q33_status3: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q33_status3: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q34_thermal3</attributeName>
+          <attributeDefinition>Q34_thermal3: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q34_thermal3: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q35_comfort3</attributeName>
+          <attributeDefinition>Q35_comfort3: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q35_comfort3: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q36_pleasant3</attributeName>
+          <attributeDefinition>Q36_pleasant3: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q36_pleasant3: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q37_words4</attributeName>
+          <attributeDefinition>Q37_words4: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q37_words4: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q38_shade4</attributeName>
+          <attributeDefinition>Q38_shade4: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0</minimum>
+                  <maximum
+                    exclusive="false">50</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q39_vacantlots</attributeName>
+          <attributeDefinition>Q39_vacantlots: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q39_vacantlots: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q40_status4</attributeName>
+          <attributeDefinition>Q40_status4: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q40_status4: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q41_thermal4</attributeName>
+          <attributeDefinition>Q41_thermal4: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q41_thermal4: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q42_comfort4</attributeName>
+          <attributeDefinition>Q42_comfort4: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q42_comfort4: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q43_pleasant4</attributeName>
+          <attributeDefinition>Q43_pleasant4: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q43_pleasant4: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q44_words5</attributeName>
+          <attributeDefinition>Q44_words5: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q44_words5: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q45_shade5</attributeName>
+          <attributeDefinition>Q45_shade5: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">15</minimum>
+                  <maximum
+                    exclusive="false">90</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q46_plants</attributeName>
+          <attributeDefinition>Q46_plants: Significantly cooler=1, Slightly cooler=2, Neither cooler nor warmer=3, Slightly warmer=4, Significantly warmer=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q46_plants: Significantly cooler=1, Slightly cooler=2, Neither cooler nor warmer=3, Slightly warmer=4, Significantly warmer=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q47_grass</attributeName>
+          <attributeDefinition>Q47_grass: Strongly agree=5, Agree=4, Undecided=3, Disagree=2, Strongly disagree=1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q47_grass: Strongly agree=5, Agree=4, Undecided=3, Disagree=2, Strongly disagree=1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q48_status5</attributeName>
+          <attributeDefinition>Q48_status5: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q48_status5: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q49_thermal5</attributeName>
+          <attributeDefinition>Q49_thermal5: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q49_thermal5: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q50_comfort5</attributeName>
+          <attributeDefinition>Q50_comfort5: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q50_comfort5: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q51_pleasant5</attributeName>
+          <attributeDefinition>Q51_pleasant5: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q51_pleasant5: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q52_words6</attributeName>
+          <attributeDefinition>Q52_words6: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q52_words6: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q53_shade6</attributeName>
+          <attributeDefinition>Q53_shade6: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">10</minimum>
+                  <maximum
+                    exclusive="false">90</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q54_schoolshade</attributeName>
+          <attributeDefinition>Q54_schoolshade: Excellent=3, Fairly good=2, Not at all good=1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q54_schoolshade: Excellent=3, Fairly good=2, Not at all good=1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q55_playgroundchange</attributeName>
+          <attributeDefinition>Q55_playgroundchange: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q55_playgroundchange: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q56_status6</attributeName>
+          <attributeDefinition>Q56_status6: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q56_status6: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q57_thermal6</attributeName>
+          <attributeDefinition>Q57_thermal6: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q57_thermal6: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q58_comfort6</attributeName>
+          <attributeDefinition>Q58_comfort6: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q58_comfort6: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q59_pleasant6</attributeName>
+          <attributeDefinition>Q59_pleasant6: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q59_pleasant6: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q60_words7</attributeName>
+          <attributeDefinition>Q60_words7: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q60_words7: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q61_shade7</attributeName>
+          <attributeDefinition>Q61_shade7: Percent rounded to nearest integer</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum
+                    exclusive="false">0</minimum>
+                  <maximum
+      exclusive="false">30</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Q62_finishwords</attributeName>
+          <attributeDefinition>Q62_finishwords: free text</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q62_finishwords: free text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q63_status7</attributeName>
+          <attributeDefinition>Q63_status7: Full sun = 2, Full shade = 0, Mix = 1</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q63_status7: Full sun = 2, Full shade = 0, Mix = 1</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q64_thermal7</attributeName>
+          <attributeDefinition>Q64_thermal7: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q64_thermal7: Very cold=-4, Cold=-3, Cool=-2, Slightly cool=-1, Neutral=0, Slightly warm=1, Warm=2, Hot=3, Very hot=4</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q65_comfort7</attributeName>
+          <attributeDefinition>Q65_comfort7: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q65_comfort7: Comfortable=3, Slightly uncomfortable=2, Uncomfortable=1, Very uncomfortable=0</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Q66_pleasant7</attributeName>
+          <attributeDefinition>Q66_pleasant7: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Q66_pleasant7: Unpleasant=1, Slightly unpleasant=2, Neither pleasant nor unpleasant=3, Slightly pleasant=4, Pleasant=5</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>14</numberOfRecords>
+    </dataTable>
+    <otherEntity
+          id="1042_field_guide_2018-09-29.pdf">
+      <entityName>1042_field_guide_2018-09-29.pdf</entityName>
+      <entityDescription>Field guide used during the thermal walk in Edison Eastlake neighborhood</entityDescription>
+      <physical>
+        <objectName>1042_field_guide_2018-09-29.pdf</objectName>
+        <size
+          unit="byte">400954</size>
+        <authentication
+              method="MD5">09bcf2f72e4c373445ddce0b20c009c9</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>Portable Document Format</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+      function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/5a537346dac101c459df61ca5c8e6ec5</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>pdf</entityType>
+    </otherEntity>
+    <otherEntity
+          id="1042_thermal_walk_route_2018-09-29.kmz">
+      <entityName>1042_thermal_walk_route_2018-09-29.kmz</entityName>
+      <entityDescription>spatial reference for walking route and stops</entityDescription>
+      <physical>
+        <objectName>1042_thermal_walk_route_2018-09-29.kmz</objectName>
+        <size
+          unit="byte">4292</size>
+        <authentication
+              method="MD5">c8c33d5866ac8a75ba256c92933590b0</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>kmz</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+        function="download">https://pasta.lternet.edu/package/data/eml/edi/1042/1/27053aac081989eb1cb9645d589d8e06</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>kmz</entityType>
+    </otherEntity>
+    <literatureCited>
+      <citation>
+        <bibtex>@article{Middel_2017,
+	doi = {10.17645/up.v2i1.855},
+	url = {https://doi.org/10.17645%2Fup.v2i1.855},
+	year = 2017,
+	month = {mar},
+	publisher = {Cogitatio},
+	volume = {2},
+	number = {1},
+	pages = {19--30},
+	author = {Ariane Middel and Jonas Lukasczyk and Ross Maciejewski},
+	title = {Sky View Factors from Synthetic Fisheye Photos for Thermal Comfort Routing{\textemdash}A Case Study in Phoenix, Arizona},
+	journal = {Urban Planning}
+}</bibtex>
+      </citation>
+      <citation>
+        <bibtex>@article{Middel_2019,
+	doi = {10.1016/j.scitotenv.2019.06.085},
+	url = {https://doi.org/10.1016%2Fj.scitotenv.2019.06.085},
+	year = 2019,
+	month = {oct},
+	publisher = {Elsevier {BV}},
+	volume = {687},
+	pages = {137--151},
+	author = {Ariane Middel and E. Scott Krayenhoff},
+	title = {Micrometeorological determinants of pedestrian thermal exposure during record-breaking heat in Tempe, Arizona: Introducing the {MaRTy} observational platform},
+	journal = {Science of The Total Environment}
+}</bibtex>
+      </citation>
+      <citation>
+        <bibtex>@article{MIDDEL_2021,
+	doi = {10.1175/bams-d-20-0193.1},
+	url = {https://doi.org/10.1175%2Fbams-d-20-0193.1},
+	year = 2021,
+	month = {may},
+	publisher = {American Meteorological Society},
+	pages = {1--35},
+	author = {ARIANE MIDDEL and SAUD ALKHALED and FLORIAN A. SCHNEIDER and BJOERN HAGEN and PAUL COSEO},
+	title = {50 Grades of Shade},
+	journal = {Bulletin of the American Meteorological Society}
+}</bibtex>
+      </citation>
+      <citation id="https://ams.confex.com/ams/19Ag19BLT9Urban/techprogram/paper_169963.htm">
+        <bibtex>
+@article{matzarakis2010application,
+  title={Application of the RayMan model in urban environments},
+  author={Matzarakis, Andreas and Rutz, F},
+  journal={Freiburg: Meteorological Institute, University of Freiburg},
+  year={2010}
+}
+</bibtex>
+      </citation>
+    </literatureCited>
+  </dataset>
+</eml:eml>

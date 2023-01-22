@@ -1,4 +1,4 @@
-name: emlvcc
+name: emlvp
 channels:
   - conda-forge
   - defaults
@@ -8,4 +8,4 @@ dependencies:
   - click
   - daiquiri
   - pytest
-prefix: /home/servilla/anaconda3/envs/emlvcc
+prefix: /home/servilla/anaconda3/envs/emlvp

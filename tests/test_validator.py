@@ -18,9 +18,9 @@ import pytest
 
 import tests
 
-from emlvcc.config import Config
-import emlvcc.exceptions as exceptions
-import emlvcc.validator as validator
+from emlvp.config import Config
+import emlvp.exceptions as exceptions
+import emlvp.validator as validator
 
 
 def test_validate():

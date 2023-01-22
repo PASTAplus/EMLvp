@@ -17,7 +17,7 @@ from pathlib import Path
 import daiquiri
 from lxml import etree
 
-import emlvcc.exceptions as exceptions
+import emlvp.exceptions as exceptions
 
 
 logger = daiquiri.getLogger(__name__)

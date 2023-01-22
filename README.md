@@ -1,2 +1,2 @@
-# EMLvcc (Ecological Metadata Language validator and compliance checker)
-A Python 3 library to validate and compliance check Ecological Metadata Lanaguage XML documents
+# EMLvp (Ecological Metadata Language validator and parser)
+A Python 3 library to validate and parse Ecological Metadata Lanaguage XML documents for compliance (see the official EML documentation for reference: https://eml.ecoinformatics.org/validation-and-content-references.html)

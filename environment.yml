@@ -1,4 +1,4 @@
-name: emlvcc
+name: emlvp
 channels:
   - conda-forge
   - defaults
@@ -43,4 +43,4 @@ dependencies:
   - tzdata=2022g
   - wheel=0.38.4
   - xz=5.2.6
-prefix: /home/servilla/anaconda3/envs/emlvcc
+prefix: /home/servilla/anaconda3/envs/emlvp

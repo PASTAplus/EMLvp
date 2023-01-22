@@ -23,20 +23,20 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
 with open(path.join(here, "LICENSE"), encoding="utf-8") as f:
     full_license = f.read()
 
-with open(path.join(here, "src/emlcc/VERSION.txt"), encoding="utf-8") as f:
+with open(path.join(here, "src/emlvp/VERSION.txt"), encoding="utf-8") as f:
     version = f.read()
 
 
 setup(
-    name='emlvcc',
+    name='emlvp',
     version=version,
-    description='EMLvcc (Ecological Metadata Lanaguage validator and compliance checker)',
+    description='EMLvp (Ecological Metadata Lanaguage validator and parser)',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Mark Servilla",
-    url="https://github.com/servilla/EMLvcc",
+    url="https://github.com/servilla/EMLvp",
     license=full_license,
-    packages=find_packages(where="src", include=["emlvcc"]),
+    packages=find_packages(where="src", include=["emlvp"]),
     package_dir={"": "src"},
     include_package_data=True,
     python_requires=" >= 3.10.*",

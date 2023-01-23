@@ -22,6 +22,14 @@ class EMLVPError(Exception):
     pass
 
 
+class CircularReferenceIdError(EMLVPError):
+    pass
+
+
+class CustomUnitError(EMLVPError):
+    pass
+
+
 class DuplicateIdError(EMLVPError):
     pass
 

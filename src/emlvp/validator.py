@@ -30,7 +30,7 @@ class Validator(object):
 
     def validate(self, xml: str):
 
-        # Accept either file or a string
+        # Accept either file or a string for source of EML XML
         if Path(xml).is_file():
             with open(xml, "r") as f:
                 xml = f.read().encode("utf-8")

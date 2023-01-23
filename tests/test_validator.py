@@ -20,7 +20,7 @@ import tests
 
 from emlvp.config import Config
 import emlvp.exceptions as exceptions
-import emlvp.validator as validator
+from emlvp.validator import Validator
 
 
 def test_validate():
@@ -29,12 +29,18 @@ def test_validate():
     else:
         test_data = tests.test_data_path
 
-    v = validator.Validator(Config.EML2_2_0_local)
+    v = Validator(Config.EML2_2_0_local)
 
     v.validate(f"{test_data}/eml-2.2.0.xml")
 
     with pytest.raises(exceptions.ValidationError):
         v.validate(f"{test_data}/eml-2.2.0-invalid.xml")
+
+    with pytest.raises(exceptions.ValidationError):
+        v.validate(f"{test_data}/eml-2.2.0-missing-eml-tag.xml")
+
+    with pytest.raises(exceptions.ValidationError):
+        v.validate(f"{test_data}/eml-2.2.0-missing-package-id.xml")
 
     with pytest.raises(exceptions.XMLSyntaxError):
         v.validate(f"{test_data}/eml-2.2.0-syntax-error.xml")

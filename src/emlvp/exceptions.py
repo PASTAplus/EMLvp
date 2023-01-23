@@ -22,6 +22,14 @@ class EMLVPError(Exception):
     pass
 
 
+class DuplicateIdError(EMLVPError):
+    pass
+
+
+class MissingReferenceIdError(EMLVPError):
+    pass
+
+
 class ParseError(EMLVPError):
     pass
 

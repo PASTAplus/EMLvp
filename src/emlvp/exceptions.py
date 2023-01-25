@@ -38,6 +38,10 @@ class InconsistentSystemError(EMLVPError):
     pass
 
 
+class MissingAnnotationParentIdError(EMLVPError):
+    pass
+
+
 class MissingReferenceIdError(EMLVPError):
     pass
 

@@ -60,16 +60,13 @@ class Parser(object):
             if self.fail_fast:
                 raise exceptions.DuplicateIdError(msg_id)
 
-        # Inspect references elements for associated ids (sans additional metadata)
+        # Inspect references elements for associated ids
         self.references_nodes = root.findall(".//{*}references")
-        self.doc_id_nodes = set(self.id_nodes) - (
-                set(root.findall(".//additionalMetadata[@id]")) | set(root.findall(".//additionalMetadata//*[@id]")))
-        doc_ids = [i.attrib["id"] for i in self.doc_id_nodes]
         references = [r.text.strip() for r in self.references_nodes]
         missing_reference_id = False
         references_without_ids = []
         for r in references:
-            if r not in doc_ids:
+            if r not in ids:
                 references_without_ids.append(r)
                 missing_reference_id = True
         if missing_reference_id:
@@ -119,7 +116,7 @@ class Parser(object):
         undefined_custom_units = []
         self.custom_unit_nodes = root.findall(".//{*}customUnit")
         custom_units = set([u.text.strip() for u in self.custom_unit_nodes])
-        self.stmml_unit_nodes = root.findall("./additionalMetadata//{*}unit[@id]")
+        self.stmml_unit_nodes = root.findall("./additionalMetadata/metadata/unitList/unit[@id]")
         unit_ids = [i.attrib["id"] for i in self.stmml_unit_nodes]
         for custom_unit in custom_units:
             if custom_unit not in unit_ids:
@@ -130,3 +127,17 @@ class Parser(object):
             logger.error(msg_undefined_custom_unit)
             if self.fail_fast:
                 raise exceptions.CustomUnitError(msg_undefined_custom_unit)
+
+        # Inspect parents of annotation elements for id (sans annotations)
+        has_missing_annotation_id = False
+        missing_annotation_ids = []
+        parents = root.xpath(".//*[local-name() != 'annotations']/annotation/parent::*")
+        for p in parents:
+            if "id" not in p.attrib:
+                has_missing_annotation_id = True
+                missing_annotation_ids.append(p.tag)
+        if has_missing_annotation_id:
+            msg_missing_annotation_id = f"Missing annotation id for parent(s) exist: {missing_annotation_ids}"
+            logger.error(msg_missing_annotation_id)
+            if self.fail_fast:
+                raise exceptions.MissingAnnotationParentIdError(msg_missing_annotation_id)

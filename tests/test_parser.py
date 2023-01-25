@@ -43,6 +43,12 @@ def test_parse_duplicate_id(test_data):
         p.parse(f"{test_data}/eml-2.2.0-duplicate-id.xml")
 
 
+def test_parse_missing_annotation_parent_id(test_data):
+    p = Parser()
+    with pytest.raises(exceptions.MissingAnnotationParentIdError):
+        p.parse(f"{test_data}/eml-2.2.0-missing-annotation-parent-id.xml")
+
+
 def test_parse_missing_reference_id(test_data):
     p = Parser()
     with pytest.raises(exceptions.MissingReferenceIdError):

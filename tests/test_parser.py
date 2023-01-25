@@ -58,4 +58,10 @@ def test_parse_circular_reference(test_data):
 def test_parse_missing_custom_unit(test_data):
     p = Parser()
     with pytest.raises(exceptions.CustomUnitError):
-        p.parse(f"{test_data}/eml-2.2.0-missing-custom-unit.xml")
+        p.parse(f"{test_data}/eml-2.2.0-undefined-custom-unit.xml")
+
+
+def test_parse_system_inconsistency(test_data):
+    p = Parser()
+    with pytest.raises(exceptions.InconsistentSystemError):
+        p.parse(f"{test_data}/eml-2.2.0-system-inconsistency.xml")

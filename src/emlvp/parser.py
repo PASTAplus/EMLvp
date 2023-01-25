@@ -23,45 +23,17 @@ import emlvp.exceptions as exceptions
 logger = daiquiri.getLogger(__name__)
 
 
-def _ids(e: etree.Element) -> list:
-    ids = []
-
-    for attr in e.attrib:
-        if attr == "id":
-            ids.append(e.attrib[attr])
-
-    for c in e.getchildren():
-        ids.extend(_ids(c))
-
-    return ids
-
-
-def _references(e: etree.Element) -> list:
-    references = []
-    refs = e.findall(".//{*}references")
-    for ref in refs:
-        references.append(ref.text.strip())
-
-    return references
-
-
-def _custom_units(e: etree.Element) -> list:
-    custom_units = []
-    refs = e.findall(".//{*}customUnit")
-    for ref in refs:
-        custom_units.append(ref.text.strip())
-
-    return custom_units
 
 
 class Parser(object):
 
     def __init__(self, fail_fast: bool = True):
         self.fail_fast = fail_fast
-        self.ids = []
-        self.references = []
-        self.custom_units = []
-        self.circular_references = []
+        self.id_nodes = None
+        self.doc_id_nodes = None
+        self.references_nodes = None
+        self.custom_unit_nodes = None
+        self.stmml_unit_nodes = None
 
     def parse(self, xml: str):
         # Accept either file or a string for source of EML XML
@@ -74,77 +46,87 @@ class Parser(object):
             except AttributeError as e:
                 logger.error(e)
 
-        doc = etree.fromstring(xml)
+        root = etree.fromstring(xml)
 
-        self._parse(doc)
-
-        # Varify id uniqueness
-        id_duplicates = set([x for x in self.ids if self.ids.count(x) > 1])
+        # Inspect id attributes in all elements to ensure uniqueness
+        self.id_nodes = root.findall(".//*[@id]")
+        ids = [i.attrib["id"] for i in self.id_nodes]
+        id_duplicates = set([x for x in ids if ids.count(x) > 1])
         duplicate_id = False
         if len(id_duplicates) > 0:
             duplicate_id = True
-            msg_id = f"Duplicate id(s) found: {id_duplicates}"
+            msg_id = f"Duplicate id(s) exist: {list(id_duplicates)}"
             logger.error(msg_id)
             if self.fail_fast:
                 raise exceptions.DuplicateIdError(msg_id)
 
-        # Varify reference ids exist
+        # Inspect references elements for associated ids (sans additional metadata)
+        self.references_nodes = root.findall(".//{*}references")
+        self.doc_id_nodes = set(self.id_nodes) - (
+                set(root.findall(".//additionalMetadata[@id]")) | set(root.findall(".//additionalMetadata//*[@id]")))
+        doc_ids = [i.attrib["id"] for i in self.doc_id_nodes]
+        references = [r.text.strip() for r in self.references_nodes]
         missing_reference_id = False
-        for r in self.references:
-            references_without_ids = []
-            if r not in self.ids:
+        references_without_ids = []
+        for r in references:
+            if r not in doc_ids:
                 references_without_ids.append(r)
                 missing_reference_id = True
         if missing_reference_id:
-            msg_reference = f"Reference(s) missing Id(s): {self.references}"
+            msg_reference = f"Missing references id(s) exist: {references_without_ids}"
             logger.error(msg_reference)
             if self.fail_fast:
                 raise exceptions.MissingReferenceIdError(msg_reference)
 
-        # Varify circular reference does not exist
-        if len(self.circular_references) > 0:
-            msg_circular = f"Circular id/reference(s) exists: {self.circular_references}"
+        # Inspect for circular references
+        has_circular_reference = False
+        circular_references = []
+        for r in self.references_nodes:
+            p = r.getparent()
+            if p is not None and "id" in p.attrib:
+                circular_references.append(f"{p.tag}::{r.text.strip()}")
+                has_circular_reference = True
+        if has_circular_reference:
+            msg_circular = f"Circular references exist: {circular_references}"
             logger.error(msg_circular)
             if self.fail_fast:
                 raise exceptions.CircularReferenceIdError(msg_circular)
 
-        # Varify custom unit definition(s)
-        missing_custom_unit_definition = False
-        missing_custom_units = []
-        for cu in self.custom_units:
-            if cu not in self.ids:
-                missing_custom_units.append(cu)
-                missing_custom_unit_definition = True
-        if missing_custom_unit_definition:
-            msg_custom_unit = f"Custom unit(s) not defined: {missing_custom_units}"
-            logger.error(msg_custom_unit)
+        # Inspect for system attribute consistency
+        has_system_inconsistency = False
+        inconsistent_systems = []
+        for r in self.references_nodes:
+            r_system = None
+            if "system" in r.attrib:
+                r_system = r.attrib["system"]
+            for i in self.id_nodes:
+                if i.attrib["id"] == r.text.strip():
+                    i_system = None
+                    if "system" in i.attrib:
+                        i_system = i.attrib["system"]
+                    if r_system != i_system:
+                        has_system_inconsistency = True
+                        inconsistent_systems.append(f"{i.tag}::{r.text.strip()}")
+                    break
+        if has_system_inconsistency:
+            msg_system_inconsistency = "Inconsistent system attribute(s) exist: {inconsistent_systems}"
+            logger.error(msg_system_inconsistency)
             if self.fail_fast:
-                raise exceptions.CustomUnitError(msg_custom_unit)
+                raise exceptions.InconsistentSystemError(msg_system_inconsistency)
 
-    def _parse(self, e: etree.Element):
-        """"Perform single-pass parsing of DOM analyzing each node"""
-
-        has_id = False
-        id = None
-        for attr in e.attrib:
-            if attr == "id":
-                has_id = True
-                id = e.attrib[attr]
-                self.ids.append(id)
-
-        has_reference = False
-        reference = None
-        for c in e.getchildren():
-            if c.tag == "references":
-                has_reference = True
-                reference = c.text.strip()
-                self.references.append(reference)
-
-        if has_id and has_reference:
-            self.circular_references.append(f"ID::{id}, REFERENCE::{reference}")
-
-        if e.tag == "customUnit":
-            self.custom_units.append(e.text.strip())
-
-        for c in e.getchildren():
-            self._parse(c)
+        # Inspect custom units for STMML definitions
+        has_undefined_custom_unit = False
+        undefined_custom_units = []
+        self.custom_unit_nodes = root.findall(".//{*}customUnit")
+        custom_units = set([u.text.strip() for u in self.custom_unit_nodes])
+        self.stmml_unit_nodes = root.findall("./additionalMetadata//{*}unit[@id]")
+        unit_ids = [i.attrib["id"] for i in self.stmml_unit_nodes]
+        for custom_unit in custom_units:
+            if custom_unit not in unit_ids:
+                has_undefined_custom_unit = True
+                undefined_custom_units.append(custom_unit)
+        if has_undefined_custom_unit:
+            msg_undefined_custom_unit = f"Undefined custom unit(s) exist: {undefined_custom_units}"
+            logger.error(msg_undefined_custom_unit)
+            if self.fail_fast:
+                raise exceptions.CustomUnitError(msg_undefined_custom_unit)

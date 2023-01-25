@@ -34,6 +34,10 @@ class DuplicateIdError(EMLVPError):
     pass
 
 
+class InconsistentSystemError(EMLVPError):
+    pass
+
+
 class MissingReferenceIdError(EMLVPError):
     pass
 

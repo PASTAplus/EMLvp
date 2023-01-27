@@ -23,8 +23,6 @@ import emlvp.exceptions as exceptions
 logger = daiquiri.getLogger(__name__)
 
 
-
-
 class Parser(object):
 
     def __init__(self, fail_fast: bool = True):

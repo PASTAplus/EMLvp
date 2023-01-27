@@ -43,10 +43,22 @@ def test_parse_duplicate_id(test_data):
         p.parse(f"{test_data}/eml-2.2.0-duplicate-id.xml")
 
 
+def test_parse_missing_additional_metadata_describes_id(test_data):
+    p = Parser()
+    with pytest.raises(exceptions.MissingAdditionalMetadataDescribesIdError):
+        p.parse(f"{test_data}/eml-2.2.0-missing-describes-id.xml")
+
+
 def test_parse_missing_annotation_parent_id(test_data):
     p = Parser()
     with pytest.raises(exceptions.MissingAnnotationParentIdError):
         p.parse(f"{test_data}/eml-2.2.0-missing-annotation-parent-id.xml")
+
+
+def test_parse_missing_annotation_references_id(test_data):
+    p = Parser()
+    with pytest.raises(exceptions.MissingAnnotationReferencsIdError):
+        p.parse(f"{test_data}/eml-2.2.0-missing-annotation-references-id.xml")
 
 
 def test_parse_missing_reference_id(test_data):
@@ -64,7 +76,7 @@ def test_parse_circular_reference(test_data):
 def test_parse_missing_custom_unit(test_data):
     p = Parser()
     with pytest.raises(exceptions.CustomUnitError):
-        p.parse(f"{test_data}/eml-2.2.0-undefined-custom-unit.xml")
+        p.parse(f"{test_data}/eml-2.2.0-missing-custom-unit-id.xml")
 
 
 def test_parse_system_inconsistency(test_data):

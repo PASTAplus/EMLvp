@@ -38,7 +38,15 @@ class InconsistentSystemError(EMLVPError):
     pass
 
 
+class MissingAdditionalMetadataDescribesIdError(EMLVPError):
+    pass
+
+
 class MissingAnnotationParentIdError(EMLVPError):
+    pass
+
+
+class MissingAnnotationReferencsIdError(EMLVPError):
     pass
 
 

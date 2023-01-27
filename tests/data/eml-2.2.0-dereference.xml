@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="knb-lter-hbr.40.7" scope="system"
+  system="https://pasta.edirepository.org"
+  xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 http://nis.lternet.edu/schemas/EML/eml-2.1.0/eml.xsd http://www.xml-cml.org/schema/stmml-1.1 http://nis.lternet.edu/schemas/EML/eml-2.1.0/stmml.xsd">
+  <access authSystem="https://pasta.edirepository.org/authentication"
+    order="allowFirst" scope="document" system="https://pasta.edirepository.org">
+    <allow>
+      <principal>
+      uid=HBR,o=LTER,dc=ecoinformatics,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset scope="document">
+    <alternateIdentifier>hbr0040</alternateIdentifier>
+    <alternateIdentifier system="https://doi.org">doi:10.6073/pasta/9ff720ba22aef2b40fc5d9a7b374aa52</alternateIdentifier>
+    <shortName>Veg Inventory WS1 1996</shortName>
+    <title>Forest Inventory of a Calcium Amended Northern Hardwood
+    Forest: Watershed 1, 1996, Hubbard Brook Experimental
+    Forest</title>
+    <creator>
+      <individualName>
+        <givenName>Charles</givenName>
+        <surName>Driscoll</surName>
+      </individualName>
+      <organizationName>Department of Civil and Environmental
+      Engineering, Syracuse University</organizationName>
+      <address>
+        <city>Syracuse</city>
+        <administrativeArea>NY</administrativeArea>
+        <postalCode>13244</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Scott</givenName>
+        <surName>Bailey</surName>
+      </individualName>
+      <organizationName>USDA Forest Service, Hubbard Brook
+      Experimental Forest</organizationName>
+      <address>
+        <city>Campton</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03223</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Joel</givenName>
+        <surName>Blum</surName>
+      </individualName>
+      <organizationName>Department of Geological Sciences, The
+      University of Michigan</organizationName>
+      <address>
+        <city>Ann Arbor</city>
+        <administrativeArea>MI</administrativeArea>
+        <postalCode>48109</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Don</givenName>
+        <surName>Buso</surName>
+      </individualName>
+      <organizationName>Cary Institute of Ecosystem Studies,
+      Hubbard Brook Experimental Forest</organizationName>
+      <address>
+        <city>Campton</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03223</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Chris</givenName>
+        <surName>Eagar</surName>
+      </individualName>
+      <organizationName>USDA Forest Service, Northeastern Research
+      Station</organizationName>
+      <address>
+        <city>Durham</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03824</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Tim</givenName>
+        <surName>Fahey</surName>
+      </individualName>
+      <organizationName>Department of Natural Resources, Cornell
+      University</organizationName>
+      <address>
+        <city>Ithaca</city>
+        <administrativeArea>NY</administrativeArea>
+        <postalCode>14853</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Melany</givenName>
+        <surName>Fisk</surName>
+      </individualName>
+      <organizationName>Miami University</organizationName>
+      <address>
+        <city>Oxford</city>
+        <administrativeArea>OH</administrativeArea>
+        <postalCode>45056</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Peter</givenName>
+        <surName>Groffman</surName>
+      </individualName>
+      <organizationName>Cary Institute of Ecosystem
+      Studies</organizationName>
+      <address>
+        <city>Millbrook</city>
+        <administrativeArea>NY</administrativeArea>
+        <postalCode>12545</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Chris</givenName>
+        <surName>Johnson</surName>
+      </individualName>
+      <organizationName>Department of Civil and Environmental
+      Engineering, Syracuse University</organizationName>
+      <address>
+        <city>Syracuse</city>
+        <administrativeArea>NY</administrativeArea>
+        <postalCode>13244</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Gene</givenName>
+        <surName>Likens</surName>
+      </individualName>
+      <organizationName>Cary Institute of Ecosystem
+      Studies</organizationName>
+      <address>
+        <city>Millbrook</city>
+        <administrativeArea>NY</administrativeArea>
+        <postalCode>12545</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Steven</givenName>
+        <surName>Hamburg</surName>
+      </individualName>
+      <organizationName>Environmental Defense
+      Fund</organizationName>
+      <address>
+        <deliveryPoint>18 Tremont Street, Suite 850</deliveryPoint>
+        <city>Boston</city>
+        <administrativeArea>MA</administrativeArea>
+        <postalCode>02108</postalCode>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Thomas G.</givenName>
+        <surName>Siccama</surName>
+      </individualName>
+      <organizationName>Yale School of Forestry and Environmental
+      Studies</organizationName>
+    </creator>
+    <metadataProvider>
+      <organizationName>Hubbard Brook Experimental Forest
+      LTER</organizationName>
+      <address>
+        <deliveryPoint>234 Mirror Lake Road</deliveryPoint>
+        <city>North Woodstock</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03262</postalCode>
+        <country>USA</country>
+      </address>
+      <phone phonetype="voice">(603) 726-8902</phone>
+      <onlineUrl>http://www.hubbardbrook.org</onlineUrl>
+    </metadataProvider>
+    <pubDate>2015</pubDate>
+    <abstract>
+      <para>In order to evaluate the role of Ca supply in
+      regulating the structure and function of base-poor forest and
+      aquatic ecosystems, the Ca content of soil was increased
+      through the application of wollastonite (CaSiO3) in October
+      1999. Forest inventory surveys were initiated in 1996 and
+      repeated at 5 year intervals. This data set includes
+      pre-treatment inventory measurements collected in 1996. The
+      data consists of a total inventory of all trees &gt;=10 cm
+      diameter-at-breast-height (dbh) on the whole of the watershed
+      (11.8 ha), as measured in each of the 200 25 m x 25 m plots.
+      Trees &gt;=2 to &lt;=10 cm dbh were subsampled using a 3
+      meter wide strip along one edge of each 25 m x 25 m plot.
+      Tree tags were added in 2006 on all trees &gt;=10 cm dbh;
+      tracking of individual trees is not possible prior to that
+      collection year.</para>
+      <para>These data were gathered as part of the Hubbard Brook
+      Ecosystem Study (HBES). The HBES is a collaborative effort at
+      the Hubbard Brook Experimental Forest, which is operated and
+      maintained by the USDA Forest Service, Northern Research
+      Station.</para>
+    </abstract>
+    <keywordSet>
+      <keyword keywordType="theme">biomass</keyword>
+      <keyword keywordType="theme">calcium</keyword>
+      <keyword keywordType="theme">diameter breast height</keyword>
+      <keyword keywordType="theme">forests</keyword>
+      <keyword keywordType="place">HBEF Watershed 1</keyword>
+      <keyword keywordType="place">HBR</keyword>
+      <keyword keywordType="place">Hubbard Brook LTER</keyword>
+      <keyword keywordType="theme">inventory</keyword>
+      <keyword keywordType="theme">trees</keyword>
+      <keyword keywordType="theme">vegetation</keyword>
+      <keyword keywordType="theme">watersheds</keyword>
+      <keywordThesaurus>Hubbard Brook Ecosystem Study
+      LTER</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">disturbance</keyword>
+      <keyword keywordType="theme">inorganic nutrients</keyword>
+      <keyword keywordType="theme">primary production</keyword>
+      <keywordThesaurus>LTER Core Research Areas</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This information is released under the Creative Commons
+      license - Attribution - CC BY
+      (https://creativecommons.org/licenses/by/4.0/). The consumer
+      of these data ("Data User" herein) is required to cite it
+      appropriately in any publication that results from its use.
+      The Data User should realize that these data may be actively
+      used by others for ongoing research and that coordination may
+      be necessary to prevent duplicate publication. The Data User
+      is urged to contact the authors of these data if any
+      questions about methodology or results occur. Where
+      appropriate, the Data User is encouraged to consider
+      collaboration or co-authorship with the authors. The Data
+      User should realize that misinterpretation of data may occur
+      if used out of context of the original study.</para>
+      <para>While substantial efforts are made to ensure the
+      accuracy of data and associated documentation, complete
+      accuracy of data sets cannot be guaranteed. All data are made
+      available "as is." The Data User should be aware, however,
+      that data are updated periodically and it is the
+      responsibility of the Data User to check for new versions of
+      the data. The data authors and the repository where these
+      data were obtained shall not be liable for damages resulting
+      from any use or misinterpretation of the data. Thank
+      you.</para>
+    </intellectualRights>
+    <distribution>
+      <online>
+        <url>
+        http://data.hubbardbrook.org/data/dataset.php?id=40</url>
+      </online>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Watershed 1 is an 11.8 ha watershed
+        extending from the weir at 488 m to the ridge at 747
+        m.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>
+          -71.730866</westBoundingCoordinate>
+          <eastBoundingCoordinate>
+          -71.725832</eastBoundingCoordinate>
+          <northBoundingCoordinate>
+          43.959356</northBoundingCoordinate>
+          <southBoundingCoordinate>
+          43.952121</southBoundingCoordinate>
+          <boundingAltitudes>
+            <altitudeMinimum>488</altitudeMinimum>
+            <altitudeMaximum>747</altitudeMaximum>
+            <altitudeUnits>meter</altitudeUnits>
+          </boundingAltitudes>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1996</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>1996</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact>
+      <positionName>Information Manager, Hubbard Brook
+      LTER</positionName>
+      <address>
+        <deliveryPoint>234 Mirror Lake Road</deliveryPoint>
+        <city>North Woodstock</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03262</postalCode>
+        <country>USA</country>
+      </address>
+      <phone phonetype="voice">(603) 726-8902</phone>
+      <electronicMailAddress>
+      hbr-im@lternet.edu</electronicMailAddress>
+      <onlineUrl>http://www.hubbardbrook.org</onlineUrl>
+    </contact>
+    <publisher>
+      <organizationName>Hubbard Brook Experimental Forest
+      LTER</organizationName>
+      <address>
+        <deliveryPoint>234 Mirror Lake Road</deliveryPoint>
+        <city>North Woodstock</city>
+        <administrativeArea>NH</administrativeArea>
+        <postalCode>03262</postalCode>
+        <country>USA</country>
+      </address>
+      <phone phonetype="voice">(603) 726-8902</phone>
+      <onlineUrl>http://www.hubbardbrook.org</onlineUrl>
+    </publisher>
+    <pubPlace>Hubbard Brook LTER</pubPlace>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>LOCATION DESCRIPTION</title>
+            <para>In order to evaluate the role of Ca supply in
+            regulating the structure and function of base-poor
+            forest and aquatic ecosystems, the Ca content of soil
+            was increased through the application of wollastonite
+            (CaSiO3) in October 1999. A link to more information
+            about the study can be found in ADDITIONAL
+            RESOURCES</para>
+          </section>
+          <section>
+            <title>SAMPLING BACKGROUND</title>
+            <para>Surveys were initiated in 1996 and repeated at 5
+            year intervals. The data in this dataset were collected
+            in the summer of 1996. The hydrology has been monitored
+            since 1956, and stream water chemistry has been
+            monitored since 1963. The watershed is forested by
+            typical northern hardwood species (sugar maple, beech
+            and yellow birch) on the lower 90 % of its area, and by
+            a montane boreal transition forest of red spruce,
+            balsam fir and white birch on the highest 10%.
+            Surveying techniques were used in 1996 to install a
+            grid system of 200 grid cells, each 25 x 25 m square
+            (slope corrected). These grid units serve as the plot
+            system. See the following webpages for more
+            information:</para>
+            <para>
+            http://www.hubbardbrook.org/watersheds/maps/w1_grid_map.htm</para>
+            <para>
+            http://www.hubbardbrook.org/watersheds/w1_grid_elevations.htm.</para>
+          </section>
+          <section>
+            <title>SAMPLING DESIGN</title>
+            <para>The inventory consists of a total inventory of
+            all trees &gt;=10 cm dbh on the whole of the watershed
+            (11.8 ha), as measured in each of the 200 25 m x 25 m
+            plots. Trees &gt;=2 to &lt;=10 cm dbh were subsampled
+            using a 3 meter wide strip along one edge of each 25 m
+            x 25 m plot.</para>
+          </section>
+          <section>
+            <title>DATA DESCRIPTION</title>
+            <para>The data consist of the diameters (dbh) of all
+            the trees &gt;=10 cm dbh, live and dead, in the whole
+            of the watershed (7960 individual stems). Dead trees
+            were recorded as standing dead trees (trees dead but
+            retaining most of their fine branches) and as snags
+            (trees broken off above dbh or with only their major
+            large branches still intact). Live trees were noted
+            "sick" if they had very sparse foliage or yellowing
+            foliage in the mid summer sampling. A subsample of
+            trees &gt;=2 cm dbh and &lt;=10 cm dbh were measured at
+            the same time (2494 individual stems). All stems that
+            met the size criteria were measured individually, and
+            in some years it was noted whether a stem was part of a
+            group of stems from the same tree (i.e. multiple stems
+            that split from a single trunk below breast height).
+            For W1, whether or not a stem was part of a group was
+            recorded in all survey years.</para>
+          </section>
+          <section>
+            <title>CALCULATIONS</title>
+            <para>Aboveground and belowground biomass was estimated
+            for each stem in the inventory and is included in the
+            data. Estimates were based on species-specific
+            allometric equations developed at Hubbard Brook.
+            Phytosociology or biomass summaries can be obtained by
+            using our interactive calculators. Phytosociology
+            summaries include basal area, density and frequency of
+            each species for the watershed as a whole or for
+            smaller units as chosen by the user. Diameter
+            distributions for a specific species can also be
+            selected. Biomass summaries include biomass estimates
+            by plant part for each species for the watershed as a
+            whole or for smaller units as chosen by the user.
+            Options to estimate productivity and total nutrient
+            pools in the vegetation are also available. Links to
+            the tools described here are located in the Additional
+            Resources section of this document.</para>
+          </section>
+          <section>
+            <title>NOTES</title>
+            <para>It is not possible to compare these data between
+            sampling years on a plot by plot basis until 2006 when
+            tree tags were added. Without tags, trees on the lines
+            between plots can "drift" between plots between years
+            depending on the observers line of sight or the
+            observers decision as to whether the center of the base
+            of a tree is in one plot or the adjoining plot.
+            Watershed 1 contains two rain gauge clearings within
+            its boundaries. This reduces the forested area of the
+            watershed and complicates calculation of plot area. For
+            those plots that lie wholly or partially within a
+            clearing, an adjustment is made in the calculation of
+            plot area to include only the forested portion of the
+            plot. Plot 144 is the only plot that lies entirely
+            within a clearing and contains no trees. For extensive
+            notes about the details of these surveys and subsequent
+            calculations, see the notes indicated at the bottom of
+            the interactive calculation programs, links
+            below.</para>
+          </section>
+          <section>
+            <title>ADDITIONAL RESOURCES</title>
+            <para>Quantifying the forest.
+            http://www.hubbardbrook.org/w6_tour/biomass-stop/stop-7.htm</para>
+            <para>W1 biomass calculator.
+            http://www.hubbardbrook.org/w6_tour/biomass-stop/biomassw1.htm</para>
+            <para>W1 phytosociology calculator.
+            http://www.hubbardbrook.org/w6_tour/biomass-stop/phytow1.htm</para>
+            <para>W1 calcium addition summary.
+            http://www.hubbardbrook.org/research/longterm/calcium/w1_overview/index.html</para>
+          </section>
+        </description>
+        <citation>
+          <title>Hubbard Brook Ecosystem Study: composition and
+          dynamics of the tree stratum</title>
+          <creator id="bormann">
+            <individualName>
+              <givenName>F.H.</givenName>
+              <surName>Bormann</surName>
+            </individualName>
+          </creator>
+          <creator id="siccama">
+            <individualName>
+              <givenName>T.G.</givenName>
+              <surName>Siccama</surName>
+            </individualName>
+          </creator>
+          <creator id="likens">
+            <individualName>
+              <givenName>G.E.</givenName>
+              <surName>Likens</surName>
+            </individualName>
+          </creator>
+          <creator id="whittaker">
+            <individualName>
+              <givenName>R.H.</givenName>
+              <surName>Whittaker</surName>
+            </individualName>
+          </creator>
+          <pubDate>1970</pubDate>
+          <article>
+            <journal>Ecol. Monogr.</journal>
+            <volume>40</volume>
+            <issue>4</issue>
+            <pageRange>373-388</pageRange>
+          </article>
+        </citation>
+        <citation>
+          <title>The Hubbard Brook Ecosystem Study: forest biomass
+          and production</title>
+          <creator>
+            <references>whittaker</references>
+          </creator>
+          <creator>
+            <references>bormann</references>
+          </creator>
+          <creator>
+            <references>likens</references>
+          </creator>
+          <creator>
+            <references>siccama</references>
+          </creator>
+          <pubDate>1974</pubDate>
+          <article>
+            <journal>Ecol. Monogr.</journal>
+            <volume>44</volume>
+            <issue>2</issue>
+            <pageRange>233-254</pageRange>
+          </article>
+        </citation>
+        <citation>
+          <title>Hubbard Brook Ecosystem Study: forest nutrient
+          cycling and element behavior</title>
+          <creator>
+            <references>whittaker</references>
+          </creator>
+          <creator>
+            <references>likens</references>
+          </creator>
+          <creator>
+            <references>bormann</references>
+          </creator>
+          <creator id="eaton">
+            <individualName>
+              <givenName>J.S.</givenName>
+              <surName>Eaton</surName>
+            </individualName>
+          </creator>
+          <creator>
+            <references>siccama</references>
+          </creator>
+          <pubDate>1979</pubDate>
+          <language>english</language>
+          <article>
+            <journal>Ecology</journal>
+            <volume>60</volume>
+            <issue>1</issue>
+            <pageRange>203-220</pageRange>
+          </article>
+        </citation>
+      </methodStep>
+    </methods>
+    <dataTable>
+      <entityName>w1_1996veg</entityName>
+      <entityDescription>Tree inventory data for Watershed 1, 1996
+      pre-treatment collection, at the Hubbard Brook
+      LTER.</entityDescription>
+      <physical>
+        <objectName>w1_1996veg.txt</objectName>
+        <characterEncoding>ASCII</characterEncoding>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <numFooterLines>0</numFooterLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>0x2c</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://pasta.lternet.edu/package/data/eml/knb-lter-hbr/40/7/0872a82aba992a9508c24067dab258dc</url>
+          </online>
+          <access
+            authSystem="https://pasta.edirepository.org/authentication"
+            order="allowFirst" scope="document" system="https://pasta.edirepository.org">
+            <allow>
+              <principal>
+              uid=HBR,o=LTER,dc=ecoinformatics,dc=org</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>public</principal>
+              <permission>read</permission>
+            </allow>
+          </access>
+        </distribution>
+      </physical>
+      <additionalInfo>
+        <section>
+          <para>The data is physically located at the Driscoll Lab
+          in the Department of Civil and Environmental Engineering,
+          Syracuse University.</para>
+        </section>
+      </additionalInfo>
+      <attributeList>
+        <attribute>
+          <attributeName>Year</attributeName>
+          <attributeDefinition>sample year</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Watershed</attributeName>
+          <attributeDefinition>watershed
+          number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>the number of the watershed is 1
+                    throughout this dataset</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Plot</attributeName>
+          <attributeDefinition>plot number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An integer representing the
+                  plot</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Zone</attributeName>
+          <attributeDefinition>vegetation
+          zone</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>birch and fern glade on the west
+                    side of the ridge top - 8 plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>spruce/fir flat area on the east
+                    side of the ridge top - 12 plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>high hardwoods just below the
+                    ridgetop - 26 plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>spruce/fir on cliffs and ledges in
+                    the middle of the high hardwoods - 11
+                    plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>5</code>
+                    <definition>mid elevation hardwoods with deeper
+                    soil - 48 plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>6</code>
+                    <definition>poorly-formed hardwoods on ledges
+                    on the east side of the central watershed - 41
+                    plots</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>7</code>
+                    <definition>low elevation hardwoods - 54
+                    plots</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Species</attributeName>
+          <attributeDefinition>species
+          acronym</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>ACSA</code>
+                    <definition>Sugar maple (Acer
+                    saccharum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>FAGR</code>
+                    <definition>American beech (Fagus
+                    grandifolia)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>BEAL</code>
+                    <definition>Yellow birch (Betula
+                    alleghaniensis)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>FRAM</code>
+                    <definition>White ash (Fraxinus
+                    americana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ACSP</code>
+                    <definition>Mountain maple (Acer
+                    spicatum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ACPE</code>
+                    <definition>Striped maple or moose wood (Acer
+                    pensylvanicum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PRPE</code>
+                    <definition>Pin or fire cherry (Prunus
+                    pensylvanica)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PRVI</code>
+                    <definition>Choke cherry (Prunus
+                    virginiana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ABBA</code>
+                    <definition>Balsam fir (Abies
+                    balsamea)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PIRU</code>
+                    <definition>Red spruce (Picea
+                    rubens)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>BEPA</code>
+                    <definition>White or paper birch (Betula
+                    papyrifera)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>SOAM</code>
+                    <definition>Mountain ash (Sorbus
+                    americana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ACRU</code>
+                    <definition>Red maple (Acer
+                    rubrum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TSCA</code>
+                    <definition>Eastern hemlock (Tsuga
+                    canadensis)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>UNKN</code>
+                    <definition>unknown, used for unidentifiable
+                    rotten snags</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>POTR</code>
+                    <definition>Quaking aspen (Populus
+                    tremuloides)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PRSE</code>
+                    <definition>Black cherry (Prunus
+                    serotina)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AMSP</code>
+                    <definition>Shadbush (Amelanchier
+                    sp.)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>POGR</code>
+                    <definition>Big-tooth aspen (Populus
+                    grandidentata)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>SASP</code>
+                    <definition>Willow (Salix sp.)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>COAL</code>
+                    <definition>Alternate-leaved dogwood (Cornus
+                    alternifolia)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PRSP</code>
+                    <definition>Cherry (unspecified) (Prunus
+                    sp.)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SppNum</attributeName>
+          <attributeDefinition>species number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>Sugar maple (Acer
+                    saccharum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>American beech (Fagus
+                    grandifolia)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>Yellow birch (Betula
+                    alleghaniensis)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>White ash (Fraxinus
+                    americana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>5</code>
+                    <definition>Mountain maple (Acer
+                    spicatum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>6</code>
+                    <definition>Striped maple or moose wood (Acer
+                    pensylvanicum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>7</code>
+                    <definition>Pin or fire cherry (Prunus
+                    pensylvanica)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>8</code>
+                    <definition>Choke cherry (Prunus
+                    virginiana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>9</code>
+                    <definition>Balsam fir (Abies
+                    balsamea)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>10</code>
+                    <definition>Red spruce (Picea
+                    rubens)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>11</code>
+                    <definition>White or paper birch (Betula
+                    papyrifera)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>12</code>
+                    <definition>Mountain ash (Sorbus
+                    americana)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>13</code>
+                    <definition>Red maple (Acer
+                    rubrum)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>14</code>
+                    <definition>Eastern hemlock (Tsuga
+                    canadensis)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>15</code>
+                    <definition>unknown, used for unidentifiable
+                    rotten snags</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>16</code>
+                    <definition>Quaking aspen (Populus
+                    tremuloides)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>17</code>
+                    <definition>Black cherry (Prunus
+                    serotina)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>18</code>
+                    <definition>Shadbush (Amelanchier
+                    sp.)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>19</code>
+                    <definition>Big-tooth aspen (Populus
+                    grandidentata)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>20</code>
+                    <definition>Willow (Salix sp.)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>21</code>
+                    <definition>Alternate-leaved dogwood (Cornus
+                    alternifolia)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>22</code>
+                    <definition>Cherry (unspecified) (Prunus
+                    sp.)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Seq</attributeName>
+          <attributeDefinition>sequence number (unique number for
+          each tree; multiple stems of same tree have same
+          sequence)</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>A positive integer representing the
+                  sequence number for the current
+                  sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tag</attributeName>
+          <attributeDefinition>Tag number is not relevant for W1
+          until 2006 when trees were tagged</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>A positive integer tag
+                  identifier</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>0</code>
+            <codeExplanation>Tag number is not relevant for W1
+            until 2006</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Dbh</attributeName>
+          <attributeDefinition>diameter at breast height, in
+          cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <precision>.1</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Vigor</attributeName>
+          <attributeDefinition>vigor code</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>healthy</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>diseased beech (with beech bark
+                    disease)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>diseased beech with crown in
+                    decline</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>sick (trees with crown in
+                    decline)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>standing dead tree</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>5</code>
+                    <definition>standing dead snag (no limbs
+                    left)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>AbvBmss</attributeName>
+          <attributeDefinition>aboveground biomass in kilograms
+          estimated for each stem</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilogram</standardUnit>
+              </unit>
+              <precision>.01</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>BlwBmss</attributeName>
+          <attributeDefinition>belowground biomass in kilograms
+          estimated for each stem</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilogram</standardUnit>
+              </unit>
+              <precision>.01</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TwotoTen</attributeName>
+          <attributeDefinition>presence (1) or absence (0) of
+          measured trees in the 2 - 10 cm diameter class for that
+          plot (in some years, not all plots were
+          measured)</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>Presence</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>Absence</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>10Area</attributeName>
+          <attributeDefinition>plot area in square meters for plot
+          on which trees &gt;10 cm dbh were
+          measured</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meterSquared</customUnit>
+              </unit>
+              <precision>.01</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>0</code>
+            <codeExplanation>Area does not apply to the current
+            sample</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>TwotoTenArea</attributeName>
+          <attributeDefinition>plot area in square meters for plot
+          on which trees 2-10 cm dbh were
+          measured</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meterSquared</customUnit>
+              </unit>
+              <precision>.01</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>0</code>
+            <codeExplanation>Area does not apply to the current
+            sample</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <stmml:unitList>
+        <stmml:unit abbreviation="m-2" id="meterSquared"
+          name="meterSquared" unitType="area">
+          <stmml:description>square meters, used for measurement of
+          plot area</stmml:description>
+        </stmml:unit>
+      </stmml:unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

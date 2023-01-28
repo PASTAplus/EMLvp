@@ -41,6 +41,7 @@ setup(
     include_package_data=True,
     python_requires=" >= 3.10.*",
     install_requires=["lxml>=4.9.2"],
+    entry_points={"console_scripts": ["emlvp=emlvp.emlvp_cli:main"]},
     classifiers=["License :: OSI Approved :: Apache Software License",],
 )
 

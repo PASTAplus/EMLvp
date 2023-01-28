@@ -32,10 +32,12 @@ def test_data():
 
 
 def test_dereference(test_data):
+    with open(f"{test_data}/eml-2.2.0-dereference.xml", "r") as f:
+        xml = f.read()
     d = Dereferencer(pretty_print=True)
-    xml = d.dereference(f"{test_data}/eml-2.2.0-dereference.xml")
-    with open("/tmp/dereferenced.xml", "w") as f:
-        f.write(xml)
+    xml = d.dereference(xml)
+    assert xml is not None
+
 
 
 

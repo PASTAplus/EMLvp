@@ -12,8 +12,6 @@
 :Created:
     1/22/23
 """
-from pathlib import Path
-
 import daiquiri
 from lxml import etree
 
@@ -25,33 +23,29 @@ logger = daiquiri.getLogger(__name__)
 
 class Parser(object):
 
-    def __init__(self, fail_fast: bool = True):
+    def __init__(self, fail_fast: bool = False):
         self.fail_fast = fail_fast
 
     def parse(self, xml: str):
-        # Accept either file or a string for source of EML XML
-        if Path(xml).is_file():
-            with open(xml, "r") as f:
-                xml = f.read().encode("utf-8")
-        else:
-            try:
-                xml = xml.encode("utf-8")
-            except AttributeError as e:
-                logger.error(e)
 
+        xml = xml.encode("utf-8")
         root = etree.fromstring(xml)
+
+        msg_queue = ""
 
         # Inspect id attributes in all elements to ensure uniqueness
         id_nodes = root.findall(".//*[@id]")
         ids = [i.attrib["id"] for i in id_nodes]
         id_duplicates = set([x for x in ids if ids.count(x) > 1])
-        duplicate_id = False
         if len(id_duplicates) > 0:
-            duplicate_id = True
-            msg_id = f"Duplicate id(s) exist: {list(id_duplicates)}"
-            logger.error(msg_id)
+            msg_duplicate_id = f"Duplicate id(s): {list(id_duplicates)}\n"
+            msg_queue += msg_duplicate_id
+            logger.debug(msg_duplicate_id)
             if self.fail_fast:
-                raise exceptions.DuplicateIdError(msg_id)
+                raise exceptions.ParseError(msg_duplicate_id)
+
+        # Remove duplicates
+        ids = set(ids)
 
         # Inspect references elements for subject ids
         references_nodes = root.findall(".//{*}references")
@@ -63,10 +57,11 @@ class Parser(object):
                 references_without_ids.append(r)
                 missing_reference_id = True
         if missing_reference_id:
-            msg_reference = f"Missing references id(s) exist: {references_without_ids}"
-            logger.error(msg_reference)
+            msg_reference = f"Missing references id(s): {references_without_ids}\n"
+            msg_queue += msg_reference
+            logger.debug(msg_reference)
             if self.fail_fast:
-                raise exceptions.MissingReferenceIdError(msg_reference)
+                raise exceptions.ParseError(msg_reference)
 
         # Inspect for circular references
         has_circular_reference = False
@@ -77,10 +72,11 @@ class Parser(object):
                 circular_references.append(f"{p.tag}::{r.text.strip()}")
                 has_circular_reference = True
         if has_circular_reference:
-            msg_circular = f"Circular references exist: {circular_references}"
-            logger.error(msg_circular)
+            msg_circular_references = f"Circular references: {circular_references}\n"
+            msg_queue += msg_circular_references
+            logger.debug(msg_circular_references)
             if self.fail_fast:
-                raise exceptions.CircularReferenceIdError(msg_circular)
+                raise exceptions.ParseError(msg_circular_references)
 
         # Inspect for system attribute consistency
         has_system_inconsistency = False
@@ -99,27 +95,29 @@ class Parser(object):
                         inconsistent_systems.append(f"{i.tag}::{r.text.strip()}")
                     break
         if has_system_inconsistency:
-            msg_system_inconsistency = "Inconsistent system attribute(s) exist: {inconsistent_systems}"
-            logger.error(msg_system_inconsistency)
+            msg_system_inconsistency = "Inconsistent system attribute(s): {inconsistent_systems}\n"
+            msg_queue += msg_system_inconsistency
+            logger.debug(msg_system_inconsistency)
             if self.fail_fast:
-                raise exceptions.InconsistentSystemError(msg_system_inconsistency)
+                raise exceptions.ParseError(msg_system_inconsistency)
 
         # Inspect custom units for STMML definitions
         has_undefined_custom_unit = False
         missing_custom_unit_ids = []
         custom_unit_nodes = root.findall(".//{*}customUnit")
         custom_units = set([u.text.strip() for u in custom_unit_nodes])
-        stmml_unit_nodes = root.findall("./additionalMetadata/metadata/unitList/unit[@id]")
-        unit_ids = [i.attrib["id"] for i in stmml_unit_nodes]
+        unit_nodes = root.xpath("./additionalMetadata/metadata/*[local-name()='unitList']/*[local-name()='unit'][@id]")
+        unit_ids = [i.attrib["id"] for i in unit_nodes]
         for custom_unit in custom_units:
             if custom_unit not in unit_ids:
                 has_undefined_custom_unit = True
                 missing_custom_unit_ids.append(custom_unit)
         if has_undefined_custom_unit:
-            msg_undefined_custom_unit = f"Missing custom unit id(s) exist: {missing_custom_unit_ids}"
-            logger.error(msg_undefined_custom_unit)
+            msg_undefined_custom_unit = f"Missing custom unit id(s): {missing_custom_unit_ids}\n"
+            msg_queue += msg_undefined_custom_unit
+            logger.debug(msg_undefined_custom_unit)
             if self.fail_fast:
-                raise exceptions.CustomUnitError(msg_undefined_custom_unit)
+                raise exceptions.ParseError(msg_undefined_custom_unit)
 
         # Inspect parents of annotation elements for subject id (sans annotations)
         has_missing_annotation_id = False
@@ -130,10 +128,11 @@ class Parser(object):
                 has_missing_annotation_id = True
                 missing_annotation_ids.append(p.tag)
         if has_missing_annotation_id:
-            msg_missing_annotation_id = f"Missing subject id for annotation parent(s) exist: {missing_annotation_ids}"
-            logger.error(msg_missing_annotation_id)
+            msg_missing_annotation_id = f"Missing subject id for annotation parent(s): {missing_annotation_ids}\n"
+            msg_queue += msg_missing_annotation_id
+            logger.debug(msg_missing_annotation_id)
             if self.fail_fast:
-                raise exceptions.MissingAnnotationParentIdError(msg_missing_annotation_id)
+                raise exceptions.ParseError(msg_missing_annotation_id)
 
         # Inspect references attribute of annotation(s) for subject id
         has_missing_annotation_references_id = False
@@ -145,10 +144,11 @@ class Parser(object):
                 has_missing_annotation_references_id = True
                 missing_annotation_references_ids.append(annotation_reference)
         if has_missing_annotation_references_id:
-            msg_missing_annotation_references = f"Missing subject id for annotation references exist: {missing_annotation_references_ids}"
-            logger.error(msg_missing_annotation_references)
+            msg_missing_annotation_references = f"Missing subject id for annotation references: {missing_annotation_references_ids}\n"
+            msg_queue += msg_missing_annotation_references
+            logger.debug(msg_missing_annotation_references)
             if self.fail_fast:
-                raise exceptions.MissingAnnotationReferencsIdError(msg_missing_annotation_references)
+                raise exceptions.ParseError(msg_missing_annotation_references)
 
         # Inspect additionalMetadata describes for subject id
         has_missing_describes_id = False
@@ -160,7 +160,11 @@ class Parser(object):
                 has_missing_describes_id = True
                 missing_describes_ids.append(describe)
         if has_missing_describes_id:
-            msg_missing_describes_id = f"Missing additionalMetadata describes subject id exists: {missing_describes_ids}"
-            logger.error(msg_missing_describes_id)
+            msg_missing_describes_id = f"Missing additionalMetadata describes subject id: {missing_describes_ids}\n"
+            msg_queue += msg_missing_describes_id
+            logger.debug(msg_missing_describes_id)
             if self.fail_fast:
-                raise exceptions.MissingAdditionalMetadataDescribesIdError(msg_missing_describes_id)
+                raise exceptions.ParseError(msg_missing_describes_id)
+
+        if len(msg_queue) > 0:
+            raise exceptions.ParseError(msg_queue.strip())

@@ -33,29 +33,39 @@ def test_data():
 
 
 def test_validate_valid(test_data):
+    with open(f"{test_data}/eml-2.2.0.xml", "r") as f:
+        xml = f.read()
     v = Validator(Config.EML2_2_0_local)
-    v.validate(f"{test_data}/eml-2.2.0.xml")
+    v.validate(xml)
 
 
 def test_validate_invalid(test_data):
+    with open(f"{test_data}/eml-2.2.0-invalid.xml", "r") as f:
+        xml = f.read()
     v = Validator(Config.EML2_2_0_local)
     with pytest.raises(exceptions.ValidationError):
-        v.validate(f"{test_data}/eml-2.2.0-invalid.xml")
+        v.validate(xml)
 
 
 def test_validate_missing_eml_tag(test_data):
+    with open(f"{test_data}/eml-2.2.0-missing-eml-tag.xml", "r") as f:
+        xml = f.read()
     v = Validator(Config.EML2_2_0_local)
     with pytest.raises(exceptions.ValidationError):
-        v.validate(f"{test_data}/eml-2.2.0-missing-eml-tag.xml")
+        v.validate(xml)
 
 
 def test_validate_missing_package_id(test_data):
+    with open(f"{test_data}/eml-2.2.0-missing-package-id.xml", "r") as f:
+        xml = f.read()
     v = Validator(Config.EML2_2_0_local)
     with pytest.raises(exceptions.ValidationError):
-        v.validate(f"{test_data}/eml-2.2.0-missing-package-id.xml")
+        v.validate(xml)
 
 
 def test_validate_syntax_error(test_data):
+    with open(f"{test_data}/eml-2.2.0-syntax-error.xml", "r") as f:
+        xml = f.read()
     v = Validator(Config.EML2_2_0_local)
-    with pytest.raises(exceptions.XMLSyntaxError):
-        v.validate(f"{test_data}/eml-2.2.0-syntax-error.xml")
+    with pytest.raises(exceptions.ValidationError):
+        v.validate(xml)

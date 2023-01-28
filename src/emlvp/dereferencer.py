@@ -13,12 +13,9 @@
     1/26/23
 """
 import copy
-from pathlib import Path
 
 import daiquiri
 from lxml import etree
-
-import emlvp.exceptions as exceptions
 
 
 logger = daiquiri.getLogger(__name__)
@@ -31,16 +28,7 @@ class Dereferencer(object):
 
     def dereference(self, xml: str) -> str:
 
-        # Accept either file or a string for source of EML XML
-        if Path(xml).is_file():
-            with open(xml, "r") as f:
-                xml = f.read().encode("utf-8")
-        else:
-            try:
-                xml = xml.encode("utf-8")
-            except AttributeError as e:
-                logger.error(e)
-
+        xml = xml.encode("utf-8")
         root = etree.fromstring(xml)
 
         references_nodes = root.xpath(".//references")

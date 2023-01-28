@@ -12,8 +12,6 @@
 :Created:
     1/21/23
 """
-from pathlib import Path
-
 import daiquiri
 from lxml import etree
 
@@ -30,33 +28,25 @@ class Validator(object):
 
     def validate(self, xml: str):
 
-        # Accept either file or a string for source of EML XML
-        if Path(xml).is_file():
-            with open(xml, "r") as f:
-                xml = f.read().encode("utf-8")
-        else:
-            try:
-                xml = xml.encode("utf-8")
-            except AttributeError as e:
-                logger.error(e)
+        xml = xml.encode("utf-8")
 
         try:
             doc = etree.fromstring(xml)
             schema = etree.XMLSchema(file=self.schema)
             schema.assertValid(doc)
         except etree.DocumentInvalid as e:
-            logger.error(e)
+            logger.debug(e)
             raise exceptions.ValidationError(e)
         except etree.ParserError as e:
-            logger.error(e)
-            raise exceptions.ParseError(e)
+            logger.debug(e)
+            raise exceptions.ValidationError(e)
         except etree.XIncludeError as e:
-            logger.error(e)
-            raise exceptions.SchemaIncludeError(e)
+            logger.debug(e)
+            raise exceptions.ValidationError(e)
         except etree.XMLSchemaParseError as e:
-            logger.error(e)
-            raise exceptions.XMLSchemaParseError(e)
+            logger.debug(e)
+            raise exceptions.ValidationError(e)
         except etree.XMLSyntaxError as e:
-            logger.error(e)
-            raise exceptions.XMLSyntaxError(e)
+            logger.debug(e)
+            raise exceptions.ValidationError(e)
 

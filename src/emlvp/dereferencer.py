@@ -37,11 +37,9 @@ class Dereferencer(object):
             source_children = source_node.getchildren()
             parent_node = references.getparent()
             parent_node.remove(references)
-            for child in source_children:
-                replicant = copy.deepcopy(child)
-                parent_node.append(replicant)
+            n_children = len(source_children)
+            for child in range(n_children, 0, -1):
+                replicant = copy.deepcopy(source_children[child - 1])
+                parent_node.insert(0, replicant)
 
         return etree.tostring(root, pretty_print=self.pretty_print).decode("utf-8")
-
-
-

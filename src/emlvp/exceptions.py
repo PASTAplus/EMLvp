@@ -38,6 +38,10 @@ class InconsistentSystemError(EMLVPError):
     pass
 
 
+class InspectionError(EMLVPError):
+    pass
+
+
 class MissingAdditionalMetadataDescribesIdError(EMLVPError):
     pass
 

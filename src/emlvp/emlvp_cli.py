@@ -41,8 +41,7 @@ class Style(object):
     RESET = '\033[0m'
 
 
-
-def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool):
+def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str:
     """
     Validate, parse, and dereference EML XML file(s)
     :param xml:
@@ -58,6 +57,8 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool):
         schema = Config.EML2_1_1_local
     elif "eml://ecoinformatics.org/eml-2.1.0" in xml:
         schema = Config.EML2_1_0_local
+    else:
+        raise ValueError("Cannot determine schema")
 
     v = Validator(schema)
     v.validate(xml)
@@ -68,6 +69,8 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool):
         xml = d.dereference(xml)
         v.validate(xml)
         p.parse(xml)
+
+    return xml
 
 
 help_target = "Either EML XML file or directory containing EML XML file(s)"
@@ -88,10 +91,10 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 @click.option("-v", "--verbose", count=True, help=verbose_help)
 def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int):
     """
-        Performs validation of EML XML file(s)
-            1. XML schema validation
-            2. EML parsing for references/id resolution
-            3. Dereference references/id into expanded EML XML and re-validate/parse
+        Performs validation of EML XML file(s)\n
+            1. XML schema validation\n
+            2. EML parsing for references/id resolution\n
+            3. Dereference references/id into expanded EML XML and re-validate/parse\n
 
         \b
             TARGET: EML XML file or directory containing EML XML file(s) (may be repeated)
@@ -102,23 +105,31 @@ def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, 
             with open(t, "r") as f:
                 xml = f.read()
                 try:
-                    vpd(xml, dereference, fail_fast, pretty_print)
+                    xml = vpd(xml, dereference, fail_fast, pretty_print)
                     if verbose >= 1:
                         print(f"{Path(t).name}\n")
+                        if verbose >= 2:
+                            print(xml)
                 except (ValidationError, ParseError) as e:
                     if verbose >= 0:
                         print(f"{Path(t).name}\n{Style.RED}{e}{Style.RESET}\n")
+                        if verbose >= 2:
+                            print(xml)
         elif Path(t).is_dir():
             for tf in Path(t).glob("*.xml"):
                 with open(tf, "r") as f:
                     xml = f.read()
                     try:
-                        vpd(xml, dereference, fail_fast, pretty_print)
+                        xml = vpd(xml, dereference, fail_fast, pretty_print)
                         if verbose >= 1:
                             print(f"{Path(tf).name}\n")
+                            if verbose >= 2:
+                                print(xml)
                     except (ValidationError, ParseError) as e:
                         if verbose >= 0:
                             print(f"{Path(tf).name}\n{Style.RED}{e}{Style.RESET}\n")
+                            if verbose >= 2:
+                                print(xml)
         else:
             logger.error(f"Target {t} is not a file or directory")
             sys.exit(1)

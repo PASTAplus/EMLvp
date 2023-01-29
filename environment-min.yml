@@ -3,9 +3,9 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.10
   - lxml
   - click
-  - daiquiri
   - pytest
+  - daiquiri
+  - python=3.10
 prefix: /home/servilla/anaconda3/envs/emlvp

@@ -22,7 +22,7 @@ import daiquiri
 
 from emlvp.config import Config
 from emlvp.dereferencer import Dereferencer
-from emlvp.exceptions import ValidationError, ParseError
+from emlvp.exceptions import EMLVPError, ValidationError, ParseError
 from emlvp.parser import Parser
 from emlvp.validator import Validator
 
@@ -73,10 +73,29 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
     return xml
 
 
+def process_one_document(doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int):
+    with open(doc, "r") as f:
+        xml = f.read()
+        try:
+            xml = vpd(xml, dereference, fail_fast, pretty_print)
+            if verbose >= 1:
+                print(f"{doc}\n")
+                if verbose >= 2:
+                    print(xml)
+        except (ValidationError, ParseError) as e:
+            if verbose >= 0:
+                print(f"{doc}\n{Style.RED}{e}{Style.RESET}\n")
+                if verbose >= 2:
+                    print(xml)
+            raise EMLVPError(e)
+    pass
+
+
 help_target = "Either EML XML file or directory containing EML XML file(s)"
 help_dereference = "Dereference EML XML file(s) (default is False)"
 help_fail_fast = "Exit on first exception encountered (default is False)"
 help_pretty_print = "Pretty print output for dereferenced EML XML (default is False)"
+help_statistics = "Show post processing inspection statistics"
 verbose_help = "Send output to standard out (-v or -vv or -vvv for increasing output)"
 
 
@@ -88,8 +107,9 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 @click.option("-d", "--dereference", is_flag=True, default=False, help=help_dereference)
 @click.option("-f", "--fail-fast", is_flag=True, default=False, help=help_fail_fast)
 @click.option("-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print)
+@click.option("-s", "--statistics", is_flag=True, default=False, help=help_statistics)
 @click.option("-v", "--verbose", count=True, help=verbose_help)
-def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int):
+def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, statistics: bool, verbose: int):
     """
         Performs validation of EML XML file(s)\n
             1. XML schema validation\n
@@ -99,40 +119,32 @@ def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, 
         \b
             TARGET: EML XML file or directory containing EML XML file(s) (may be repeated)
     """
+    docs_processed = 0
+    docs_with_exceptions = 0
 
     for t in target:
         if Path(t).is_file():
-            with open(t, "r") as f:
-                xml = f.read()
-                try:
-                    xml = vpd(xml, dereference, fail_fast, pretty_print)
-                    if verbose >= 1:
-                        print(f"{Path(t).name}\n")
-                        if verbose >= 2:
-                            print(xml)
-                except (ValidationError, ParseError) as e:
-                    if verbose >= 0:
-                        print(f"{Path(t).name}\n{Style.RED}{e}{Style.RESET}\n")
-                        if verbose >= 2:
-                            print(xml)
+            try:
+                docs_processed += 1
+                process_one_document(doc=t, dereference=dereference, fail_fast=fail_fast,
+                                     pretty_print=pretty_print, verbose=verbose)
+            except EMLVPError:
+                docs_with_exceptions += 1
         elif Path(t).is_dir():
             for tf in Path(t).glob("*.xml"):
-                with open(tf, "r") as f:
-                    xml = f.read()
-                    try:
-                        xml = vpd(xml, dereference, fail_fast, pretty_print)
-                        if verbose >= 1:
-                            print(f"{Path(tf).name}\n")
-                            if verbose >= 2:
-                                print(xml)
-                    except (ValidationError, ParseError) as e:
-                        if verbose >= 0:
-                            print(f"{Path(tf).name}\n{Style.RED}{e}{Style.RESET}\n")
-                            if verbose >= 2:
-                                print(xml)
+                try:
+                    docs_processed += 1
+                    process_one_document(doc=str(tf), dereference=dereference, fail_fast=fail_fast,
+                                         pretty_print=pretty_print, verbose=verbose)
+                except EMLVPError:
+                    docs_with_exceptions += 1
         else:
             logger.error(f"Target {t} is not a file or directory")
             sys.exit(1)
+
+        if statistics:
+            print(f"Total documents validated: {docs_processed}")
+            print(f"Documents that failed validation: {docs_with_exceptions}")
 
     return 0
 

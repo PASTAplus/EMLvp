@@ -38,6 +38,7 @@ class Dereferencer(object):
             parent_node = references.getparent()
             parent_node.remove(references)
             n_children = len(source_children)
+            # Add children in reverse to ensure correct order when using E.insert() at position 0
             for child in range(n_children, 0, -1):
                 replicant = copy.deepcopy(source_children[child - 1])
                 parent_node.insert(0, replicant)

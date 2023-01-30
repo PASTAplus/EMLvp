@@ -116,7 +116,7 @@ class Parser(object):
         missing_custom_unit_ids = []
         custom_unit_nodes = root.findall(".//{*}customUnit")
         custom_units = set([u.text.strip() for u in custom_unit_nodes])
-        unit_nodes = root.xpath("./additionalMetadata/metadata/*[local-name()='unitList']/*[local-name()='unit'][@id]")
+        unit_nodes = root.xpath("./additionalMetadata/metadata//*[local-name()='unitList']/*[local-name()='unit'][@id]")
         unit_ids = [i.attrib["id"] for i in unit_nodes]
         for custom_unit in custom_units:
             if custom_unit not in unit_ids:

@@ -37,7 +37,7 @@ class Validator(object):
         Validates an EML XML document instance
         :param xml: EML XML document instance as a unicode string.
         :return: None.
-        :exception: Raises emlvp.exceptions.ValidationError on any invalid content found.
+        :exception emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found.
         """
 
         xml = xml.encode("utf-8")

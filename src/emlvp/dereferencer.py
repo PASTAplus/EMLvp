@@ -34,7 +34,7 @@ class Dereferencer(object):
         """
         Dereferences an EML XML document instance.
         :param xml: EML XML document instance as a unicode string.
-        :return: Expanded EML XML as a str.
+        :return str: Expanded EML XML.
         """
 
         xml = xml.encode("utf-8")

@@ -35,7 +35,7 @@ class Parser(object):
         Parses an EML XML document instance inspecting for non-schema related issues.
         :param xml: EML XML document instance as a unicode string.
         :return: None.
-        :exception: Raises emlvp.exceptions.ParseError on any invalid content found.
+        :exception emlvp.exceptions.ParseError: Raises ParseError on any invalid content found.
         """
 
         xml = xml.encode("utf-8")

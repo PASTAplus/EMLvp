@@ -22,11 +22,21 @@ logger = daiquiri.getLogger(__name__)
 
 
 class Parser(object):
+    """
+    Parses an EML XML document instance inspecting for non-schema related issues. See here for possible
+    issues: https://eml.ecoinformatics.org/validation-and-content-references.html
+    """
 
     def __init__(self, fail_fast: bool = False):
         self.fail_fast = fail_fast
 
     def parse(self, xml: str):
+        """
+        Parses an EML XML document instance inspecting for non-schema related issues.
+        :param xml: EML XML document instance as a unicode string.
+        :return: None.
+        :exception: Raises emlvp.exceptions.ParseError on any invalid content found.
+        """
 
         xml = xml.encode("utf-8")
         root = etree.fromstring(xml)

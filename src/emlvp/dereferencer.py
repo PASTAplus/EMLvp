@@ -22,11 +22,20 @@ logger = daiquiri.getLogger(__name__)
 
 
 class Dereferencer(object):
+    """
+    Expands EML XML content by dereferencing "references" element to content defined
+    by the "id" attribute of a source element.
+    """
 
     def __init__(self, pretty_print=False):
         self.pretty_print = pretty_print
 
     def dereference(self, xml: str) -> str:
+        """
+        Dereferences an EML XML document instance.
+        :param xml: EML XML document instance as a unicode string.
+        :return: Expanded EML XML as a str.
+        """
 
         xml = xml.encode("utf-8")
         root = etree.fromstring(xml)

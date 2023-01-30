@@ -22,11 +22,23 @@ logger = daiquiri.getLogger(__name__)
 
 
 class Validator(object):
+    """
+    Validates an EML XML document for being well formed and schema syntax correct.
+    """
 
     def __init__(self, schema: str):
+        """
+        :param schema: path to root schema eml.xsd
+        """
         self.schema = schema
 
     def validate(self, xml: str):
+        """
+        Validates an EML XML document instance
+        :param xml: EML XML document instance as a unicode string.
+        :return: None.
+        :exception: Raises emlvp.exceptions.ValidationError on any invalid content found.
+        """
 
         xml = xml.encode("utf-8")
 

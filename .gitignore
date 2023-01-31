@@ -69,7 +69,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+documentation/_build/
 
 # PyBuilder
 target/
@@ -131,3 +131,4 @@ dmypy.json
 # Project ignores
 .idea
 config.py
+documentation/build

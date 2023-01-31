@@ -32,40 +32,49 @@ def test_data():
     return test_data
 
 
-def test_validate_valid(test_data):
+@pytest.fixture()
+def schema_path():
+    if "SCHEMA_PATH" in os.environ:
+        schema_path = os.environ["SCHEMA_PATH"]
+    else:
+        schema_path = tests.schema_path
+    return schema_path
+
+
+def test_validate_valid(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0.xml", "r") as f:
         xml = f.read()
-    v = Validator(Config.EML2_2_0_local)
+    v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
     v.validate(xml)
 
 
-def test_validate_invalid(test_data):
+def test_validate_invalid(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0-invalid.xml", "r") as f:
         xml = f.read()
-    v = Validator(Config.EML2_2_0_local)
+    v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
     with pytest.raises(exceptions.ValidationError):
         v.validate(xml)
 
 
-def test_validate_missing_eml_tag(test_data):
+def test_validate_missing_eml_tag(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0-missing-eml-tag.xml", "r") as f:
         xml = f.read()
-    v = Validator(Config.EML2_2_0_local)
+    v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
     with pytest.raises(exceptions.ValidationError):
         v.validate(xml)
 
 
-def test_validate_missing_package_id(test_data):
+def test_validate_missing_package_id(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0-missing-package-id.xml", "r") as f:
         xml = f.read()
-    v = Validator(Config.EML2_2_0_local)
+    v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
     with pytest.raises(exceptions.ValidationError):
         v.validate(xml)
 
 
-def test_validate_syntax_error(test_data):
+def test_validate_syntax_error(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0-syntax-error.xml", "r") as f:
         xml = f.read()
-    v = Validator(Config.EML2_2_0_local)
+    v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
     with pytest.raises(exceptions.ValidationError):
         v.validate(xml)

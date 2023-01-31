@@ -1,0 +1,3 @@
+# EMLvp manifest.in - 20230131
+graft src/emlvp/schemas
+exclude *.log

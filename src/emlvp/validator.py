@@ -12,6 +12,8 @@
 :Created:
     1/21/23
 """
+from pathlib import Path
+
 import daiquiri
 from lxml import etree
 
@@ -31,6 +33,9 @@ class Validator(object):
         :param schema: path to root schema eml.xsd
         """
         self.schema = schema
+        if not Path(self.schema).is_file():
+            msg = f"Cannot locate root schema file: {schema}"
+            raise IOError(msg)
 
     def validate(self, xml: str):
         """

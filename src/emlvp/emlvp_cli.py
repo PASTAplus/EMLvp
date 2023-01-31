@@ -51,12 +51,14 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
     :return: None
     """
 
+    cwd = os.path.abspath(os.path.dirname(__file__))
+
     if "https://eml.ecoinformatics.org/eml-2.2.0" in xml:
-        schema = Config.EML2_2_0_local
+        schema = os.path.abspath(cwd + "/schemas/EML2.2.0/xsd/eml.xsd")
     elif "eml://ecoinformatics.org/eml-2.1.1" in xml:
-        schema = Config.EML2_1_1_local
+        schema = os.path.abspath(cwd + "/schemas/EML2.1.1/eml.xsd")
     elif "eml://ecoinformatics.org/eml-2.1.0" in xml:
-        schema = Config.EML2_1_0_local
+        schema = os.path.abspath(cwd + "/schemas/EML2.1.0/eml.xsd")
     else:
         raise ValueError("Cannot determine schema")
 
@@ -91,12 +93,12 @@ def process_one_document(doc: str, dereference: bool, fail_fast: bool, pretty_pr
     pass
 
 
-help_target = "Either EML XML file or directory containing EML XML file(s)"
-help_dereference = "Dereference EML XML file(s) (default is False)"
-help_fail_fast = "Exit on first exception encountered (default is False)"
-help_pretty_print = "Pretty print output for dereferenced EML XML (default is False)"
-help_statistics = "Show post processing inspection statistics"
-verbose_help = "Send output to standard out (-v or -vv or -vvv for increasing output)"
+help_target = "Either EML XML file or directory containing EML XML file(s)."
+help_dereference = "Dereference EML XML file(s) (default is False)."
+help_fail_fast = "Exit on first exception encountered (default is False)."
+help_pretty_print = "Pretty print output for dereferenced EML XML (default is False)."
+help_statistics = "Show post processing inspection statistics."
+verbose_help = "Send output to standard out (-v or -vv or -vvv for increasing output)."
 
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])

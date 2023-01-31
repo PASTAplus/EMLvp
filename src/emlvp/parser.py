@@ -73,7 +73,7 @@ class Parser(object):
             if self.fail_fast:
                 raise exceptions.ParseError(msg_reference)
 
-        # Inspect for circular references
+        # Inspect for circular references (reference parent elements with id attributes)
         has_circular_reference = False
         circular_references = []
         for r in references_nodes:
@@ -129,7 +129,7 @@ class Parser(object):
             if self.fail_fast:
                 raise exceptions.ParseError(msg_undefined_custom_unit)
 
-        # Inspect parents of annotation elements for subject id (sans annotations)
+        # Inspect parents of annotation elements for subject id (sans the annotations element)
         has_missing_annotation_id = False
         missing_annotation_ids = []
         parents_nodes = root.xpath(".//*[local-name() != 'annotations']/annotation/parent::*")
@@ -176,5 +176,6 @@ class Parser(object):
             if self.fail_fast:
                 raise exceptions.ParseError(msg_missing_describes_id)
 
+        # Fail slow
         if len(msg_queue) > 0:
             raise exceptions.ParseError(msg_queue.strip())

@@ -28,6 +28,10 @@ class Dereferencer(object):
     """
 
     def __init__(self, pretty_print=False):
+        """
+        Class init method.
+        :param pretty_print: Boolean to indicate if dereferenced EML XML is formatted for viewing
+        """
         self.pretty_print = pretty_print
 
     def dereference(self, xml: str) -> str:

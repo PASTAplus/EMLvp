@@ -43,4 +43,6 @@ dependencies:
   - tzdata=2022g
   - wheel=0.38.4
   - xz=5.2.6
+  - pip:
+      - emlvp==0.0.1
 prefix: /home/servilla/anaconda3/envs/emlvp

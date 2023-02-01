@@ -14,7 +14,7 @@ official EML documentation for reference: https://eml.ecoinformatics.org/validat
 
 The **EMLvp** package is both a command line interface (CLI) application that can be used in a local environment and an
 EML validation and parsing API that may be imported into other Python modules. The CLI application, ``emlvp``, is also
-used as a reference implementation for the emlvp API. The EMLvp package API provides three object classes that 1)
+used as a reference implementation for the **EMLvp** API. The EMLvp package API provides three object classes that 1)
 perform XML schema validation - ``Validator``, 2) EML compliance parsing - ``Parser``, and 3) dereference EML
 ``<references>`` elements into their normalized structures - ``Dereferencer``.
 
@@ -91,7 +91,7 @@ If no errors are found, ``emlvp`` ends quietly.
 .. highlight:: Python3
 
 To use **EMLvp** in your own Python project, you would need to "import" the necessary class module and perform the
-appropriate analysis against the EML XML document. For exmample::
+appropriate analysis against the EML XML document. For example::
 
    >>> import emlvp.validator as validator
    >>> from emlvp.validator import Validator

@@ -19,7 +19,7 @@ import sys
 import daiquiri
 
 
-cwd = Path(".").resolve().as_posix()
+cwd = Path("../tests").resolve().as_posix()
 logfile = cwd + "/tests.log"
 daiquiri.setup(level=logging.DEBUG,
                outputs=(daiquiri.output.File(logfile), "stdout",))

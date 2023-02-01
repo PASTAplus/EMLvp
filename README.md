@@ -2,6 +2,8 @@
 A Python 3 library to validate and parse Ecological Metadata Lanaguage XML documents for compliance (see the 
 official EML documentation for reference: https://eml.ecoinformatics.org/validation-and-content-references.html)
 
+![EMLvp](https://github.com/PASTAplus/EMLvp/actions/workflows/python-package-conda.yml/badge.svg)
+
 The **EMLvp** package is both a command line interface (CLI) application that can be used in a local environment and an
 EML validation and parsing API that may be imported into other Python modules. The CLI application, `emlvp`, is also
 used as a reference implementation for the emlvp API. The EMLvp package API provides three object classes that 1)

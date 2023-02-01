@@ -6,7 +6,8 @@ The **EMLvp** package is both a command line interface (CLI) application that ca
 EML validation and parsing API that may be imported into other Python modules. The CLI application, `emlvp`, is also
 used as a reference implementation for the emlvp API. The EMLvp package API provides three object classes that 1)
 perform XML schema validation - `Validator`, 2) EML compliance parsing - `Parser`, and 3) dereference EML 
-`<references>` elements into their normalized structures  - `Derefencer`. (see here for details)
+`<references>` elements into their normalized structures  - `Derefencer`. (see 
+  [here](https://emlvp.readthedocs.io/en/latest/) for details)
 
 Compliance includes the following inspections:
  1.  `id` attributes in all elements are unique,

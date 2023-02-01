@@ -28,14 +28,18 @@ class Parser(object):
     """
 
     def __init__(self, fail_fast: bool = False):
+        """
+        Class init method.
+        :param fail_fast: Boolean to indicate whether parsing should fail immediately
+        """
         self.fail_fast = fail_fast
 
     def parse(self, xml: str):
         """
         Parses an EML XML document instance inspecting for non-schema related issues.
-        :param xml: EML XML document instance as a unicode string.
-        :return: None.
-        :exception emlvp.exceptions.ParseError: Raises ParseError on any invalid content found.
+        :param xml: EML XML document instance as a unicode string
+        :return: None
+        :raises emlvp.exceptions.ParseError: Raises ParseError on any invalid content found
         """
 
         xml = xml.encode("utf-8")

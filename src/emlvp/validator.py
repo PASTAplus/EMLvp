@@ -12,6 +12,7 @@
 :Created:
     1/21/23
 """
+import os
 from pathlib import Path
 
 import daiquiri
@@ -23,6 +24,15 @@ import emlvp.exceptions as exceptions
 logger = daiquiri.getLogger(__name__)
 
 
+def schema_path() -> str:
+    """
+    Return path to installed schemas.
+    :return: Path to emlvp installed schemas
+    :rtype: str
+    """
+    return os.path.abspath(os.path.dirname(__file__)) + "/schemas"
+
+
 class Validator(object):
     """
     Validates an EML XML document for being well formed and schema syntax correct.
@@ -30,6 +40,7 @@ class Validator(object):
 
     def __init__(self, schema: str):
         """
+        Class init method.
         :param schema: path to root schema eml.xsd
         """
         self.schema = schema
@@ -40,9 +51,9 @@ class Validator(object):
     def validate(self, xml: str):
         """
         Validates an EML XML document instance
-        :param xml: EML XML document instance as a unicode string.
-        :return: None.
-        :exception emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found.
+        :param xml: EML XML document instance as a unicode string
+        :return: None
+        :raises emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found
         """
 
         xml = xml.encode("utf-8")

@@ -20,7 +20,7 @@ perform XML schema validation - ``Validator``, 2) EML compliance parsing - ``Par
 
 Compliance includes the following inspections:
 
- 1.  ``id`` attributes in all elements are unique.
+ 1.  ``id`` attributes in all elements are unique,
  2.  ``references`` elements for subject ``id``,
  3.  for circular ``references`` (``references`` parent elements with ``id`` attributes),
  4.  for ``system`` attribute consistency,

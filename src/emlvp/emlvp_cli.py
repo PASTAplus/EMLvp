@@ -49,7 +49,7 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
     :return: None
     """
 
-    p = Path(".").resolve().as_posix()
+    p = Path(__file__).resolve().parent.as_posix()
 
     if "https://eml.ecoinformatics.org/eml-2.2.0" in xml:
         schema = p + "/schemas/EML2.2.0/xsd/eml.xsd"

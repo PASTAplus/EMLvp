@@ -1,4 +1,4 @@
-# EMLvp (Ecological Metadata Language validator and parser)
+# EMLvp (validator and parser)
 
 ![EMLvp](https://github.com/PASTAplus/EMLvp/actions/workflows/python-package-conda.yml/badge.svg) ![RTD](https://readthedocs.org/projects/emlvp/badge/?version=latest)
 

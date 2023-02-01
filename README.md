@@ -1,6 +1,6 @@
 # EMLvp (Ecological Metadata Language validator and parser)
 
-![EMLvp](https://github.com/PASTAplus/EMLvp/actions/workflows/python-package-conda.yml/badge.svg)
+![EMLvp](https://github.com/PASTAplus/EMLvp/actions/workflows/python-package-conda.yml/badge.svg) ![RTD](https://readthedocs.org/projects/emlvp/badge/?version=latest)
 
 A Python 3 library to validate and parse Ecological Metadata Lanaguage XML documents for compliance (see the
 official EML documentation for reference: https://eml.ecoinformatics.org/validation-and-content-references.html)

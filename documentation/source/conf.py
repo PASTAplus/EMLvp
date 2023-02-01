@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EMLvp'
-copyright = '2023, EDI'
+copyright = '2023, Environmental Data Initiative'
 author = 'EDI'
 release = '0.0.1'
 

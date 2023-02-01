@@ -18,7 +18,6 @@ import pytest
 
 import tests
 
-from emlvp.config import Config
 import emlvp.exceptions as exceptions
 from emlvp.validator import Validator
 

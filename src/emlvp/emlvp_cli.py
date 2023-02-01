@@ -13,21 +13,19 @@
     1/27/23
 """
 import logging
-import os
 from pathlib import Path
 import sys
 
 import click
 import daiquiri
 
-from emlvp.config import Config
 from emlvp.dereferencer import Dereferencer
 from emlvp.exceptions import EMLVPError, ValidationError, ParseError
 from emlvp.parser import Parser
 from emlvp.validator import Validator
 
 
-cwd = os.path.dirname(os.path.realpath(__file__))
+cwd = Path(".").resolve().as_posix()
 logfile = cwd + "/emlvp.log"
 daiquiri.setup(level=logging.INFO,
                outputs=(daiquiri.output.File(logfile), "stdout",))
@@ -51,14 +49,14 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
     :return: None
     """
 
-    cwd = os.path.abspath(os.path.dirname(__file__))
+    p = Path(".").resolve().as_posix()
 
     if "https://eml.ecoinformatics.org/eml-2.2.0" in xml:
-        schema = os.path.abspath(cwd + "/schemas/EML2.2.0/xsd/eml.xsd")
+        schema = p + "/schemas/EML2.2.0/xsd/eml.xsd"
     elif "eml://ecoinformatics.org/eml-2.1.1" in xml:
-        schema = os.path.abspath(cwd + "/schemas/EML2.1.1/eml.xsd")
+        schema = p + "/schemas/EML2.1.1/eml.xsd"
     elif "eml://ecoinformatics.org/eml-2.1.0" in xml:
-        schema = os.path.abspath(cwd + "/schemas/EML2.1.0/eml.xsd")
+        schema = p + "/schemas/EML2.1.0/eml.xsd"
     else:
         raise ValueError("Cannot determine schema")
 

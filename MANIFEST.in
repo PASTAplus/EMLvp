@@ -1,3 +1,4 @@
 # EMLvp manifest.in - 20230131
 graft src/emlvp/schemas
+include src/emlvp/changelog.md
 exclude *.log

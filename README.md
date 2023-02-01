@@ -5,18 +5,18 @@ official EML documentation for reference: https://eml.ecoinformatics.org/validat
 The **EMLvp** package is both a command line interface (CLI) application that can be used in a local environment and an
 EML validation and parsing API that may be imported into other Python modules. The CLI application, `emlvp`, is also
 used as a reference implementation for the emlvp API. The EMLvp package API provides three object classes that 1)
-perform XML schema validation, 2) EML compliance parsing, and 3) dereference EML `<references>` elements into their
-normalized structures. (see here for details)
+perform XML schema validation - `Validator`, 2) EML compliance parsing - `Parser`, and 3) dereference EML 
+`<references>` elements into their normalized structures  - `Derefencer`. (see here for details)
 
 Compliance includes the following inspections:
- 1.  `id` attributes in all elements to ensure uniqueness
- 2.  `references` elements for subject `id`
- 3.  for circular `references` (`references` parent elements with `id` attributes)
- 4.  for `system` attribute consistency
- 5.  `customUnit` for STMML definitions
- 6.  parents of `annotation` elements for subject `id` (sans the annotations element)
- 7.  `references` attribute of annotation(s) for subject id
- 8.  `additionalMetadata` `describes` attribute for subject id 
+ 1.  `id` attributes in all elements are unique,
+ 2.  `references` elements for subject `id`,
+ 3.  for circular `references` (`references` parent elements with `id` attributes),
+ 4.  for `system` attribute consistency,
+ 5.  `customUnit` for STMML definitions,
+ 6.  parents of `annotation` elements for subject `id` (sans the annotations element),
+ 7.  `references` attribute of annotation(s) for subject id, and
+ 8.  `additionalMetadata` `describes` attribute for subject id.
 
 The `emlvp` application accepts an Ecological Metadata Language XML document file as input or a directory containing
 EML XML document files with a “.xml” file extension. Once an EML XML document is identified, the application will

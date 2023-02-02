@@ -24,7 +24,6 @@ from emlvp.exceptions import EMLVPError, ValidationError, ParseError
 from emlvp.parser import Parser
 from emlvp.validator import Validator
 
-
 cwd = Path(".").resolve().as_posix()
 logfile = cwd + "/emlvp.log"
 daiquiri.setup(level=logging.INFO,
@@ -97,7 +96,7 @@ help_fail_fast = "Exit on first exception encountered (default is False)."
 help_pretty_print = "Pretty print output for dereferenced EML XML (default is False)."
 help_statistics = "Show post processing inspection statistics."
 verbose_help = "Send output to standard out (-v or -vv or -vvv for increasing output)."
-
+version_help = "Output emlvp version and exit."
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
@@ -109,7 +108,9 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 @click.option("-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print)
 @click.option("-s", "--statistics", is_flag=True, default=False, help=help_statistics)
 @click.option("-v", "--verbose", count=True, help=verbose_help)
-def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, statistics: bool, verbose: int):
+@click.option("--version", is_flag=True, default=False, help=version_help)
+def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, statistics: bool, verbose: int,
+         version: bool):
     """
         Performs validation of EML XML file(s)\n
             1. XML schema validation\n
@@ -121,6 +122,11 @@ def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, 
     """
     docs_processed = 0
     docs_with_exceptions = 0
+
+    if version:
+        p = Path(__file__).resolve().parent
+        v = Path(p, "VERSION.txt").read_text("utf-8")
+        print(v)
 
     for t in target:
         if Path(t).is_file():

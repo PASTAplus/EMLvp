@@ -78,6 +78,7 @@ at which time the errors are reported (fail-slow). The ``emlvp`` help provides t
      -s, --statistics    Show post processing inspection statistics.
      -v, --verbose       Send output to standard out (-v or -vv or -vvv for
                          increasing output).
+     --version           Output emlvp version and exit.
      -h, --help          Show this message and exit.
 
 As noted above, the "TARGET" argument may be one or more space separate EML XML files or a directory containing many

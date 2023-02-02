@@ -102,7 +102,7 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.argument("target", required=True, nargs=-1)
+@click.argument("target", nargs=-1)
 @click.option("-d", "--dereference", is_flag=True, default=False, help=help_dereference)
 @click.option("-f", "--fail-fast", is_flag=True, default=False, help=help_fail_fast)
 @click.option("-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print)

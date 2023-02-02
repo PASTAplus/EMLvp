@@ -40,7 +40,8 @@ Installation
 
 **EMLvp** may be install using pip: ``pip install emlvp``. You may also install from GitHub by cloning the repository
 and then using pip to install **EMLvp** with ``setup.py``. The ``emlvp`` command line application is installed as part
-of the pip installation, as are the XML schema files for EML 2.1.0, 2.1.1, and 2.2.0.
+of the pip installation, as are the XML schema files for EML 2.1.0, 2.1.1, and 2.2.0. **EMPvp** is dependent on the
+following Python packages: Python >= 3.10, lxml >= 4.9.2, click >= 8.1.3, and daiquiri >= 3.0.0.
 
 Quickstart Guide
 ----------------
@@ -86,7 +87,7 @@ EML XML files (these files must end with the ".xml" extension). For example::
    edi.1252.1.xml
    Missing custom unit id(s): ['total abundance', 'logarithmic']
 
-If no errors are found, ``emlvp`` ends quietly.
+If no errors are found, ``emlvp`` ends quietly and with no fanfare.
 
 .. highlight:: Python3
 
@@ -113,8 +114,12 @@ appropriate analysis against the EML XML document. For example::
    emlvp.exceptions.ParseError: Missing custom unit id(s): ['logarithmic', 'total abundance']
    >>>
 
-Class API
----------
+Applications that use the API should rely on exceptions to indicate an error has occurred in either validation or
+parsing of the EML XML document.
+
+
+EMLvp Class API
+---------------
 
 .. highlight:: Python3
 

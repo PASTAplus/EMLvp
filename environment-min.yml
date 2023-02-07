@@ -8,4 +8,6 @@ dependencies:
   - pytest
   - daiquiri
   - python=3.10
+  - black
+  - pylint
 prefix: /home/servilla/anaconda3/envs/emlvp

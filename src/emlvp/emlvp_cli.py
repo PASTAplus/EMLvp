@@ -24,18 +24,26 @@ from emlvp.exceptions import EMLVPError, ValidationError, ParseError
 from emlvp.parser import Parser
 from emlvp.validator import Validator
 
-cwd = Path(".").resolve().as_posix()
-logfile = cwd + "/emlvp.log"
-daiquiri.setup(level=logging.INFO,
-               outputs=(daiquiri.output.File(logfile), "stdout",))
+CWD = Path(".").resolve().as_posix()
+LOGFILE = CWD + "/emlvp.log"
+daiquiri.setup(
+    level=logging.INFO,
+    outputs=(
+        daiquiri.output.File(LOGFILE),
+        "stdout",
+    ),
+)
 logger = daiquiri.getLogger(__name__)
 
 
-class Style(object):
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    BLUE = '\033[34m'
-    RESET = '\033[0m'
+class Style:
+    """
+    Colored output constants
+    """
+    RED = "\033[31m"
+    GREEN = "\033[32m"
+    BLUE = "\033[34m"
+    RESET = "\033[0m"
 
 
 def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str:
@@ -48,31 +56,33 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
     :return: None
     """
 
-    p = Path(__file__).resolve().parent.as_posix()
+    path = Path(__file__).resolve().parent.as_posix()
 
     if "https://eml.ecoinformatics.org/eml-2.2.0" in xml:
-        schema = p + "/schemas/EML2.2.0/xsd/eml.xsd"
+        schema = path + "/schemas/EML2.2.0/xsd/eml.xsd"
     elif "eml://ecoinformatics.org/eml-2.1.1" in xml:
-        schema = p + "/schemas/EML2.1.1/eml.xsd"
+        schema = path + "/schemas/EML2.1.1/eml.xsd"
     elif "eml://ecoinformatics.org/eml-2.1.0" in xml:
-        schema = p + "/schemas/EML2.1.0/eml.xsd"
+        schema = path + "/schemas/EML2.1.0/eml.xsd"
     else:
         raise ValueError("Cannot determine schema")
 
     v = Validator(schema)
     v.validate(xml)
-    p = Parser(fail_fast=fail_fast)
-    p.parse(xml)
+    parser = Parser(fail_fast=fail_fast)
+    parser.parse(xml)
     if dereference:
         d = Dereferencer(pretty_print=pretty_print)
         xml = d.dereference(xml)
         v.validate(xml)
-        p.parse(xml)
+        parser.parse(xml)
 
     return xml
 
 
-def process_one_document(doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int):
+def process_one_document(
+    doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int
+):
     with open(doc, "r") as f:
         xml = f.read()
         try:
@@ -105,20 +115,29 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 @click.argument("target", nargs=-1)
 @click.option("-d", "--dereference", is_flag=True, default=False, help=help_dereference)
 @click.option("-f", "--fail-fast", is_flag=True, default=False, help=help_fail_fast)
-@click.option("-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print)
+@click.option(
+    "-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print
+)
 @click.option("-s", "--statistics", is_flag=True, default=False, help=help_statistics)
 @click.option("-v", "--verbose", count=True, help=verbose_help)
 @click.option("--version", is_flag=True, default=False, help=version_help)
-def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, statistics: bool, verbose: int,
-         version: bool):
+def main(
+    target: tuple,
+    dereference: bool,
+    fail_fast: bool,
+    pretty_print: bool,
+    statistics: bool,
+    verbose: int,
+    version: bool,
+):
     """
-        Performs validation of EML XML file(s)\n
-            1. XML schema validation\n
-            2. EML parsing for references/id resolution\n
-            3. Dereference references/id into expanded EML XML and re-validate/parse\n
+    Performs validation of EML XML file(s)\n
+        1. XML schema validation\n
+        2. EML parsing for references/id resolution\n
+        3. Dereference references/id into expanded EML XML and re-validate/parse\n
 
-        \b
-            TARGET: EML XML file or directory containing EML XML file(s) (may be repeated)
+    \b
+        TARGET: EML XML file or directory containing EML XML file(s) (may be repeated)
     """
     docs_processed = 0
     docs_with_exceptions = 0
@@ -132,16 +151,26 @@ def main(target: tuple, dereference: bool, fail_fast: bool, pretty_print: bool, 
         if Path(t).is_file():
             try:
                 docs_processed += 1
-                process_one_document(doc=t, dereference=dereference, fail_fast=fail_fast,
-                                     pretty_print=pretty_print, verbose=verbose)
+                process_one_document(
+                    doc=t,
+                    dereference=dereference,
+                    fail_fast=fail_fast,
+                    pretty_print=pretty_print,
+                    verbose=verbose,
+                )
             except EMLVPError:
                 docs_with_exceptions += 1
         elif Path(t).is_dir():
             for tf in Path(t).glob("*.xml"):
                 try:
                     docs_processed += 1
-                    process_one_document(doc=str(tf), dereference=dereference, fail_fast=fail_fast,
-                                         pretty_print=pretty_print, verbose=verbose)
+                    process_one_document(
+                        doc=str(tf),
+                        dereference=dereference,
+                        fail_fast=fail_fast,
+                        pretty_print=pretty_print,
+                        verbose=verbose,
+                    )
                 except EMLVPError:
                     docs_with_exceptions += 1
         else:

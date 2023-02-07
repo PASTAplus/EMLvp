@@ -18,7 +18,7 @@ from pathlib import Path
 import daiquiri
 from lxml import etree
 
-import emlvp.exceptions as exceptions
+from emlvp import exceptions
 
 
 logger = daiquiri.getLogger(__name__)
@@ -33,7 +33,7 @@ def schema_path() -> str:
     return os.path.abspath(os.path.dirname(__file__)) + "/schemas"
 
 
-class Validator(object):
+class Validator():
     """
     Validates an EML XML document for being well formed and schema syntax correct.
     """
@@ -77,4 +77,3 @@ class Validator(object):
         except etree.XMLSyntaxError as e:
             logger.debug(e)
             raise exceptions.ValidationError(e)
-

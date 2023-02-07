@@ -21,7 +21,7 @@ from lxml import etree
 logger = daiquiri.getLogger(__name__)
 
 
-class Dereferencer(object):
+class Dereferencer():
     """
     Expands EML XML content by dereferencing "references" element to content defined
     by the "id" attribute of a source element.

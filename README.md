@@ -6,14 +6,19 @@ See [this documentation](https://emlvp.readthedocs.io/en/latest/) on "Read the D
 
 ## Introduction
 
-**EMLvp** is a Python 3 library to validate and parse Ecological Metadata Language XML documents for compliance with
-the EML metadata standard. See the
-[EML normative documentation](https://eml.ecoinformatics.org/validation-and-content-references.html) for reference.
+**EMLvp** is a Python 3 library to validate and parse Ecological Metadata
+Language XML documents for compliance with the EML metadata standard,
+including XML schema validation and ensuring that references resolve to
+existing ids. See the[EML normative documentation]
+(https://eml.ecoinformatics.org/validation-and-content-references.html) for
+reference.
 
-The **EMLvp** package is both a command line interface (CLI) application that can be used in a local environment and an
-EML validation and parsing API that may be imported into other Python modules. The CLI application, `emlvp`, is also
-used as a reference implementation for the emlvp API. The EMLvp package API provides three object classes that 1)
-perform XML schema validation - `Validator`, 2) EML compliance parsing - `Parser`, and 3) dereference EML 
+The **EMLvp** package is both a command line interface (CLI) application that
+can be used in a local environment and an EML validation and parsing API that
+may be imported into other Python modules. The CLI application, `emlvp`, is
+also used as a reference implementation for the emlvp API. The EMLvp package
+API provides three object classes that 1) perform XML schema validation -
+`Validator`, 2) EML compliance parsing - `Parser`, and 3) dereference EML
 `<references>` elements into their normalized structures  - `Derefencer`.
 
 Compliance includes the following inspections:
@@ -26,10 +31,12 @@ Compliance includes the following inspections:
  7.  `references` attribute of annotation(s) for subject id, and
  8.  `additionalMetadata` `describes` attribute for subject id.
 
-The `emlvp` application accepts an Ecological Metadata Language XML document file as input or a directory containing
-EML XML document files with a “.xml” file extension. Once an EML XML document is identified, the application will
-immediately perform a schema validation inspection followed by EML compliance parsing that verifies the
-document is compliant with rules that go beyond what is possible with XML schema validation (see above).
+The `emlvp` application accepts an Ecological Metadata Language XML document
+file as input or a directory containing EML XML document files with a “.xml”
+file extension. Once an EML XML document is identified, the application will
+immediately perform a schema validation inspection followed by EML compliance
+parsing that verifies the document is compliant with rules that go beyond what
+is possible with XML schema validation (see above).
 
 ## Installation
 

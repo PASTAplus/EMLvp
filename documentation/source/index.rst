@@ -9,9 +9,11 @@ EMLvp (validator and parser)
 Introduction
 ------------
 
-**EMLvp** is a Python 3 library to validate and parse Ecological Metadata Language XML documents for compliance with
-the EML metadata standard. See the
-`EML normative documentation <https://eml.ecoinformatics.org/validation-and-content-references.html>`_ for reference.
+**EMLvp** is a Python 3 library to validate and parse Ecological Metadata
+Language XML documents for compliance with the EML metadata standard,
+including XML schema validation and ensuring that references resolve to
+existing ids. See the `EML normative documentation <https://eml.ecoinformatics.org/validation-and-content-references.html>`_
+for reference.
 
 The **EMLvp** package is both a command line interface (CLI) application that can be used in a local environment and an
 EML validation and parsing API that may be imported into other Python modules. The CLI application, ``emlvp``, is also

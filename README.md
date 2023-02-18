@@ -9,7 +9,7 @@ See [this documentation](https://emlvp.readthedocs.io/en/latest/) on "Read the D
 **EMLvp** is a Python 3 library to validate and parse Ecological Metadata
 Language XML documents for compliance with the EML metadata standard,
 including XML schema validation and ensuring that references resolve to
-existing ids. See the[EML normative documentation]
+existing ids. See the [EML normative documentation]
 (https://eml.ecoinformatics.org/validation-and-content-references.html) for
 reference.
 

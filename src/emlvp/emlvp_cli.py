@@ -177,9 +177,9 @@ def main(
             logger.error(f"Target {t} is not a file or directory")
             sys.exit(1)
 
-        if statistics:
-            print(f"Total documents validated: {docs_processed}")
-            print(f"Documents that failed validation: {docs_with_exceptions}")
+    if statistics:
+        print(f"Total documents validated: {docs_processed}")
+        print(f"Documents that failed validation: {docs_with_exceptions}")
 
     return 0
 

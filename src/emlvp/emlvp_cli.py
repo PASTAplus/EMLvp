@@ -83,7 +83,7 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
 def process_one_document(
     doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int
 ):
-    with open(doc, "r") as f:
+    with open(doc, "r", encoding="utf-8") as f:
         xml = f.read()
         try:
             xml = vpd(xml, dereference, fail_fast, pretty_print)

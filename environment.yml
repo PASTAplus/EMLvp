@@ -58,6 +58,4 @@ dependencies:
   - wheel=0.38.4
   - wrapt=1.14.1
   - xz=5.2.6
-  - pip:
-      - emlvp==0.0.4
 prefix: /home/servilla/anaconda3/envs/emlvp

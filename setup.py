@@ -39,7 +39,7 @@ setup(
     packages=find_packages(where="src", include=["emlvp"]),
     package_dir={"": "src"},
     include_package_data=True,
-    python_requires=" >= 3.10",
+    python_requires=" >= 3.11",
     install_requires=["lxml>=4.9.2", "click>=8.1.3", "daiquiri>=3.0.0"],
     entry_points={"console_scripts": ["emlvp=emlvp.emlvp_cli:main"]},
     classifiers=["License :: OSI Approved :: Apache Software License",],

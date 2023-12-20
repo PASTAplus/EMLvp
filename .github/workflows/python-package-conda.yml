@@ -33,6 +33,6 @@ jobs:
         pip install .
     - name: Test with pytest
       run: |
-        conda install pytest
+        conda install pytest --solver=classic
         cd tests
         pytest

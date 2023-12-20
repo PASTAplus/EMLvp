@@ -4,7 +4,6 @@ click==8.1.7
 colorama==0.4.6
 daiquiri==3.0.0
 dill==0.3.7
-emlvp==0.0.6
 exceptiongroup==1.2.0
 iniconfig==2.0.0
 isort==5.13.2

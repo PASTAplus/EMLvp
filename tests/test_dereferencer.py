@@ -18,7 +18,6 @@ import pytest
 
 import tests
 
-import emlvp.exceptions as exceptions
 from emlvp.dereferencer import Dereferencer
 
 
@@ -37,7 +36,3 @@ def test_dereference(test_data):
     d = Dereferencer(pretty_print=True)
     xml = d.dereference(xml)
     assert xml is not None
-
-
-
-

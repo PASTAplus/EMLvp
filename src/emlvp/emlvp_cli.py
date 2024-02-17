@@ -21,6 +21,7 @@ import daiquiri
 
 from emlvp.dereferencer import Dereferencer
 from emlvp.exceptions import EMLVPError, ValidationError, ParseError
+import emlvp.normalizer as normalizer
 from emlvp.parser import Parser
 from emlvp.validator import Validator
 
@@ -46,14 +47,15 @@ class Style:
     RESET = "\033[0m"
 
 
-def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str:
+def nvpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool, normalize: bool) -> str:
     """
-    Validate, parse, and dereference EML XML file(s)
-    :param xml:
-    :param dereference:
-    :param fail_fast:
-    :param pretty_print:
-    :return: None
+    Normalize, validate, parse, and dereference EML XML file(s)
+    :param xml: EML XML file as a unicode string
+    :param dereference: Dereference EML XML file(s) (default is False)
+    :param fail_fast: Exit on first exception encountered (default is False)
+    :param pretty_print: Pretty print output for dereferenced EML XML (default is False)
+    :param normalize: Normalize EML XML file(s) before parsing and validating (default is False)
+    :return: EML XML file, either dereferenced and/or normalized as a unicode string
     """
 
     path = Path(__file__).resolve().parent.as_posix()
@@ -66,6 +68,9 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
         schema = path + "/schemas/EML2.1.0/eml.xsd"
     else:
         raise ValueError("Cannot determine schema")
+
+    if normalize:
+        xml = normalizer.normalize(xml)
 
     v = Validator(schema)
     v.validate(xml)
@@ -81,32 +86,43 @@ def vpd(xml: str, dereference: bool, fail_fast: bool, pretty_print: bool) -> str
 
 
 def process_one_document(
-    doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int
+    doc: str, dereference: bool, fail_fast: bool, pretty_print: bool, verbose: int, normalize: bool
 ):
+    """
+    Process one EML XML document
+    :param doc: File path to EML XML document
+    :param dereference: Dereference EML XML file(s) (default is False)
+    :param fail_fast: Exit on first exception encountered (default is False)
+    :param pretty_print: Pretty print output for dereferenced EML XML (default is False)
+    :param verbose: Level of output verbosity (0, 1, 2, 3)
+    :param normalize: Normalize EML XML file(s) before parsing and validating (default is False)
+    :return:
+    """
     with open(doc, "r", encoding="utf-8") as f:
         xml = f.read()
-        try:
-            xml = vpd(xml, dereference, fail_fast, pretty_print)
-            if verbose >= 1:
-                print(f"{doc}\n")
-                if verbose >= 2:
-                    print(xml)
-        except (ValidationError, ParseError) as e:
-            if verbose >= 0:
-                print(f"{doc}\n{Style.RED}{e}{Style.RESET}\n")
-                if verbose >= 2:
-                    print(xml)
-            raise EMLVPError(e)
-    pass
+
+    try:
+        xml = nvpd(xml, dereference, fail_fast, pretty_print, normalize)
+        if verbose >= 1:
+            print(f"{doc}\n")
+            if verbose >= 2:
+                print(xml)
+    except (ValidationError, ParseError) as e:
+        if verbose >= 0:
+            print(f"{doc}\n{Style.RED}{e}{Style.RESET}\n")
+            if verbose >= 2:
+                print(xml)
+        raise EMLVPError(e)
 
 
 help_target = "Either EML XML file or directory containing EML XML file(s)."
 help_dereference = "Dereference EML XML file(s) (default is False)."
 help_fail_fast = "Exit on first exception encountered (default is False)."
+help_normalize = "Normalize EML XML file(s) before parsing and validating (default is False)."
 help_pretty_print = "Pretty print output for dereferenced EML XML (default is False)."
 help_statistics = "Show post processing inspection statistics."
-verbose_help = "Send output to standard out (-v or -vv or -vvv for increasing output)."
-version_help = "Output emlvp version and exit."
+help_verbose = "Send output to standard out (-v or -vv or -vvv for increasing output)."
+help_version = "Output emlvp version and exit."
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
@@ -115,16 +131,16 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 @click.argument("target", nargs=-1)
 @click.option("-d", "--dereference", is_flag=True, default=False, help=help_dereference)
 @click.option("-f", "--fail-fast", is_flag=True, default=False, help=help_fail_fast)
-@click.option(
-    "-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print
-)
+@click.option("-n", "--normalize", is_flag=True, default=False, help=help_normalize)
+@click.option("-p", "--pretty-print", is_flag=True, default=False, help=help_pretty_print)
 @click.option("-s", "--statistics", is_flag=True, default=False, help=help_statistics)
-@click.option("-v", "--verbose", count=True, help=verbose_help)
-@click.option("--version", is_flag=True, default=False, help=version_help)
+@click.option("-v", "--verbose", count=True, help=help_verbose)
+@click.option("--version", is_flag=True, default=False, help=help_version)
 def main(
     target: tuple,
     dereference: bool,
     fail_fast: bool,
+    normalize: bool,
     pretty_print: bool,
     statistics: bool,
     verbose: int,
@@ -157,6 +173,7 @@ def main(
                     fail_fast=fail_fast,
                     pretty_print=pretty_print,
                     verbose=verbose,
+                    normalize=normalize,
                 )
             except EMLVPError:
                 docs_with_exceptions += 1
@@ -170,6 +187,7 @@ def main(
                         fail_fast=fail_fast,
                         pretty_print=pretty_print,
                         verbose=verbose,
+                        normalize=normalize
                     )
                 except EMLVPError:
                     docs_with_exceptions += 1

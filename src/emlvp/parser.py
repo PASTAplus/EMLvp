@@ -123,7 +123,7 @@ class Parser:
         has_undefined_custom_unit = False
         missing_custom_unit_ids = []
         custom_unit_nodes = root.findall(".//{*}customUnit")
-        custom_units = set([unit.text.strip() for unit in custom_unit_nodes])
+        custom_units = set([unit.text for unit in custom_unit_nodes])
         unit_nodes = root.xpath(
             "./additionalMetadata/metadata//*[local-name()='unitList']/*[local-name()='unit'][@id]"
         )
@@ -182,7 +182,7 @@ class Parser:
         has_missing_describes_id = False
         missing_describes_ids = []
         describes_nodes = root.xpath(".//additionalMetadata/describes")
-        describes = set([d.text.strip() for d in describes_nodes])
+        describes = set([d.text for d in describes_nodes])
         for describe in describes:
             if describe not in ids:
                 has_missing_describes_id = True

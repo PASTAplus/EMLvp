@@ -36,6 +36,8 @@ The ``emlvp`` application accepts an Ecological Metadata Language XML document f
 EML XML document files with a “.xml” file extension. Once an EML XML document is identified, the application will
 immediately perform a schema validation inspection followed by EML compliance parsing that verifies the
 document is compliant with rules that go beyond what is possible with XML schema validation (see above).
+In addition, the ``emlvp`` application can normalize the EML XML document by removing insignificant white space,
+including replacing non-breaking spaces with regular spaces.
 
 Installation
 ------------
@@ -75,6 +77,8 @@ at which time the errors are reported (fail-slow). The ``emlvp`` help provides t
    Options:
      -d, --dereference   Dereference EML XML file(s) (default is False).
      -f, --fail-fast     Exit on first exception encountered (default is False).
+     -n, --normalize     Normalize EML XML file(s) before parsing and validating
+                         (default is False).
      -p, --pretty-print  Pretty print output for dereferenced EML XML (default is
                          False).
      -s, --statistics    Show post processing inspection statistics.
@@ -190,6 +194,20 @@ Dereferencer::
        Dereferences an EML XML document instance.
        :param xml: EML XML document instance as a unicode string.
        :return str: Expanded EML XML.
+       """
+
+EMLvp Helper Function API
+---------------
+
+.. highlight:: Python3
+
+Normalizer::
+
+   def normalize(xml: str) -> str:
+       """
+       Normalize an EML XML document instance
+       :param xml: EML XML document instance as a unicode string
+       :return: Normalized EML XML document instance as a unicode string
        """
 
 

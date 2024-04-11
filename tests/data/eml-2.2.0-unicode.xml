@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml system="https://pasta.edirepository.org" packageId="edi.1616.1" xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access system="https://pasta.edirepository.org" scope="document" order="allowFirst" authSystem="https://pasta.edirepository.org/authentication">
+    <allow>
+      <principal>uid=asmits,o=EDI,dc=edirepository,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Smoke effects on lake metabolism</title>
+    <creator>
+      <individualName>
+        <givenName>Adrianne</givenName>
+        <givenName>P</givenName>
+        <surName>Smits</surName>
+      </individualName>
+      <organizationName>University of California Davis</organizationName>
+      <positionName>Project Scientist</positionName>
+      <electronicMailAddress>asmits@ucdavis.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-9967-5419</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Facundo</givenName>
+        <surName>Scordo</surName>
+      </individualName>
+      <organizationName>Universidad Nacional del Sur: Bahia Blanca</organizationName>
+      <positionName>Researcher</positionName>
+      <electronicMailAddress>scordo@agro.uba.ar</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-6182-7368</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Minmeng</givenName>
+        <surName>Tang</surName>
+      </individualName>
+      <organizationName>Cornell University</organizationName>
+      <positionName>Postdoctoral researcher</positionName>
+      <electronicMailAddress>mt747@cornell.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2848-9712</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Mary</givenName>
+        <givenName>Jade</givenName>
+        <surName>Farruggia</surName>
+      </individualName>
+      <organizationName>University of California Davis</organizationName>
+      <positionName>Student</positionName>
+      <electronicMailAddress>mjfarruggia@ucdavis.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-4234-6678</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Alicia</givenName>
+        <surName>Cortes</surName>
+      </individualName>
+      <organizationName>University of California Davis</organizationName>
+      <positionName>Project Scientist</positionName>
+      <electronicMailAddress>alicortes@ucdavis.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4873-4164</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Shohei</givenName>
+        <surName>Watanabe</surName>
+      </individualName>
+      <organizationName>University of California Davis</organizationName>
+      <positionName>Project Scientist</positionName>
+      <electronicMailAddress>swatanabe@ucdavis.edu</electronicMailAddress>
+      <userId directory="https://orcid.org"> https://orcid.org/0000-0003-2026-6263</userId>
+    </creator>
+    <abstract>      <para>This dataset was collected as part of a large-scale study to assess impacts of smoke cover on gross primary production (GPP) and ecosystem respiration (R) in California lakes. The 10 study lakes span large gradients in elevation, size, nutrient concentrations, and water clarity. They include 5 ponds and lakes in Sequoia National Park, Lake Tahoe, Dulzura Lake, Clear Lake, Castle Lake, and a site in the Sacramento-San Joaquin River Delta. Metabolic rates in the upper mixed layer of each lake was estimated from hourly in-situ sensor data during the three smokiest years in California since 2006 (2018, 2020, 2021). The dataset includes daily estimates of GPP and R, mean daily values of variables used in metabolism models (water temperature, dissolved oxygen, mixed layer depth, photosynthetically active radiation, wind speed), and mean daily values of metrics related to smoke cover (shortwave radiation, PM2.5, smoke density derived from remote-sensing).</para>
+</abstract>
+    <keywordSet>
+      <keyword>Wildfire smoke</keyword>
+      <keyword>California</keyword>
+      <keyword>ecosystem metabolism</keyword>
+      <keyword>shortwave radiation</keyword>
+      <keyword>Lake Tahoe</keyword>
+      <keyword>Clear Lake</keyword>
+    </keywordSet>
+    <keywordSet>
+      <keyword>lakes</keyword>
+      <keyword>gross primary production</keyword>
+      <keyword>ecosystem respiration</keyword>
+      <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>      <para>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</para>
+</intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>This study was conducted in 10 freshwater bodies in California, USA. One of them, Lake Tahoe, is located in both California and Nevada. </geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-122.842</westBoundingCoordinate>
+          <eastBoundingCoordinate>-118.637</eastBoundingCoordinate>
+          <northBoundingCoordinate>41.227</northBoundingCoordinate>
+          <southBoundingCoordinate>36.594</southBoundingCoordinate>
+          <boundingAltitudes>
+            <altitudeMinimum>0.0</altitudeMinimum>
+            <altitudeMaximum>3229.0</altitudeMaximum>
+            <altitudeUnits>meter</altitudeUnits>
+          </boundingAltitudes>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2018</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2021</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>        <para>This study is complete and there will be no further updates to the dataset.</para>
+</description>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Adrianne</givenName>
+        <givenName>P</givenName>
+        <surName>Smits</surName>
+      </individualName>
+      <organizationName>University of California Davis</organizationName>
+      <positionName>Project Scientist</positionName>
+      <electronicMailAddress>asmits@ucdavis.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-9967-5419</userId>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>          <para>Detailed descriptions of study sites, data collection, and metabolism modeling</para>
+          <para>Sequoia Lakes</para>
+          <para>The Sequoia lakes are a cluster of 5 subalpine and alpine lakes and ponds in Sequoia National Park, including Emerald Lake, a long-term research site 1,2. These lakes and ponds are shallow (1.9 - 10 m maximum depth), occupy granitic basins with little soil development, and are ice and snow-covered for up to 8 months each year3. Emerald Lake is dimictic, whereas Topaz Lake and all the ponds are polymictic during the ice-free season. Each lake or pond was instrumented with dissolved oxygen (DO; PME miniDOT) and temperature (Onset HOBO) sensors in the deepest part of the water column during the open-water seasons in 2020 and 2021.  DO sensors in Emerald Lake and Topaz Lake were equipped with wiper units that cleaned sensors every 12 hours. The DO sensors in ponds (EML Pond 1, TOK 11 Pond, Topaz Pond) were manually cleaned every 2 weeks in 2020. Wiper units were installed on pond DO sensors in 2021. Meteorological data were available from two weather stations, one near the shore of Emerald Lake (elevation 2810 m.a.s.l.) and one near the shore of Topaz Lake (3230 m.a.s.l.). Water samples for chemical analysis (TDN, TDP, and chlorophyll-a) were collected 1- 6 times per season via surface grabs in the ponds, or from 1 m depth using a peristaltic pump or Van Dorn sampler in Emerald Lake and Topaz Lake. Water samples were processed and analyzed following methods in Sadro et al. 4. A single light profile in August was collected from Emerald Lake and Topaz Lake to estimate light attenuation. Light profiles were collected at the deepest point in each lake using a PME miniPAR lowered at 0.5 m intervals.  We did not collect light profiles in ponds due to their shallow depth, so we used the kd value from Topaz Lake. PM2.5 data from 2021 were downloaded from a PurpleAir sensor in Three Rivers, CA. No PM2.5 data were available in 2020. </para>
+          <para>Lake Tahoe and Dulzura Lake</para>
+          <para>The two study sites in the northern Sierra Nevada mountains include Lake Tahoe and Dulzura Lake (Figure 2, Table 1). Both lakes occupy forested, subalpine watersheds.  Lake Tahoe is a large, deep, monomictic and ice-free lake. Dulzura Lake is a small and shallow lake 25 km northwest of Lake Tahoe. DO and temperature were measured with RBR³T.ODO sensors at two nearshore stations on the western shore of Lake Tahoe in 2020 and 2021: one at Tahoe City (TC) and one at Tahoe Vista (TV)5. Sensors were installed at ~ 1 m depth and were equipped with wipers. Hourly SW radiation, wind speed, and air temperature data were obtained from a weather station in Tahoe City (USCG)5. Water samples for TDN, TDP and chlorophyll-a were collected from the lake surface 5 - 6 times between June 1 and November 1 at a mid-lake station (MLTP) and were processed and analyzed according to methods in Liston et al. 6. PM2.5 data from 2020 and 2021 were downloaded from a PurpleAir sensor in Tahoe City, CA.</para>
+          <para>In Dulzura Lake, DO and water temperature were measured with PME miniDOT loggers at 3-m depth in a pelagic and nearshore location in 2021. DO sensors were manually cleaned once a month. Wind speed and shortwave radiation were measured hourly at a weather station (TADC1; https://mesowest.utah.edu/cgi-bin/droman/mesomap.cgi) located 10 km northeast of the lake. Light (PAR; 400–700 nm) and temperature profiles were collected every month at 0.5 m intervals using a Biospherical Instruments 2104P radiometer at the deepest part of the lake. Surface water samples for TDN, TDP, and chlorophyll-a were collected 4 times at the deepest part of the lake. PM2.5 data were downloaded from a PurpleAir sensor in Truckee, CA.</para>
+          <para>Castle Lake</para>
+          <para>Castle Lake is a dimictic, seasonally ice-covered lake situated in a sub-alpine watershed in the Klamath mountains (Figure 2, Table 1)7. DO and temperature measurements were made using PME MiniDOT loggers at 3-m depth in a pelagic and littoral location during 2018. DO sensors were manually cleaned every two weeks. Wind speed and SW radiation were measured hourly at a weather station (Weatherhawk) on the shore of Castle Lake. Light (PAR; 400–700 nm) and temperature profiles (every 0.5 m) were obtained weekly using a Biospherical Instruments 2104P radiometer at the deepest part of the lake. Water samples were collected at 0 m depth 6 times between June 1- November 1 (see Scordo et al.7 for collection and analytical methods). PM2.5 data from 2018 were downloaded from a PurpleAir sensor in Yreka, CA.</para>
+          <para>Clear Lake</para>
+          <para>Clear Lake is a large, shallow, hyper-eutrophic lake located in the northern Coast Range mountains (Figure 2, Table 1). Clear Lake has three different sub-basins: the Upper Arm, Lower Arm, and Oaks Arm. The Upper Arm (UA) is the largest and shallowest basin, and directly receives &gt;90% of the watershed runoff. A passage at the east end of the UA connects it with two smaller and deeper basins, the Lower Arm (LA), which connects to the only outlet at the southeast end of the lake, and the Oaks Arm (OA), which is the smallest basin. The lake is polymictic but can stratify for weeks during summer. Temperature (RBR soloT thermistors) and DO (PME miniDOTs with wipers) measurements were recorded at the deepest location within the LA and OA in 2020 and 2021. Meteorological data were obtained from a weather station installed on the shoreline at Buckingham Point (BKP)8. Water chemistry samples were collected 3 - 4 times during the study periods, at the same location as the DO sensors, from 0.5 m depth, and analyzed according to methods in Sharp et al.9. Measurements of photosynthetically active radiation (PAR) were made throughout the water column at each site, 2 - 4 times between June 1 – Nov 1, using a LiCOR L1400 light meter equipped with an upwelling quantum sensor. PM2.5 data from 2020 and 2021 were downloaded from a PurpleAir sensor near the east shore of the lake.</para>
+          <para></para>
+          <para>Delta (Sacramento Deep Water Ship Channel)</para>
+          <para>The Sacramento deep water ship channel, located in the northern Sacramento-San Joaquin River Delta (Figure 2), is a highly turbid freshwater channel connecting the West Sacramento Port to the Sacramento River. The 69 km long channel has a width of ~150 m, a depth of ~10 m, and is tidally forced and functionally resembles a dead-end slough10. DO and temperature measurements (PME miniDOTs with wiper units) were made in the upper portion of the channel (landward of channel marker 74) during summer and autumn in 2020. The landward portions of the channel have a long residence time (weeks-months) and very little net flow, resulting in a lake-like environment, including occasional vertical stratification11,12. Water samples were not collected from the Delta site in 2020 due to COVID19-related public health restrictions, so we used the most recent chemistry data and light attenuation measurements available (June - October of 2019; Smits et al. 2023). Hourly air temperature, wind speed, and SW radiation were downloaded from https://cimis.water.ca.gov/ (Station #121 in Dixon, CA). PM2.5 data were downloaded from an EPA sensor in West Sacramento, CA.</para>
+          <para>Description of data processing and metabolism models</para>
+          <para>We modeled daily rates of gross primary production (GPP; mg DO L-1 day-1), ecosystem respiration (R), and net ecosystem production (NEP = GPP - R) in the surface mixed layer of our study sites using hourly DO (mg L-1), water temperature (℃), SW radiation (W m-2), and wind speed (m s-1) data. Prior to use in metabolism models, all hourly data (DO, water temperature, SW radiation, wind speed) were visually inspected, and extreme outliers (&gt; 3 standard deviations from the daily mean value) were removed and replaced using linear interpolation, following methods in Phillips13.</para>
+          <para>Hourly DO time series were modeled using the following equation: DOₜ₊₁ = DOₜ + GPP - R + F + ε; F is the flux of oxygen between the lake and atmosphere, and ε is the process error associated with vertical or horizontal mixing. GPP and R were estimated using the ‘metab’ function and bayesian model in the Lake Metabolizer R package14. The models in Lake Metabolizer have been used to estimate metabolic rates across diverse lake types15,16 and are described in detail in Winslow et al.14. The bayesian model estimates daily parameters for GPP and R and associated uncertainty in each estimate (expressed as a standard deviation; reported in Supplementary Table 1) within a Bayesian statistical framework. PAR (μmol m⁻² s⁻¹) and water temperature are covariates used to model rates of GPP and R, respectively. In addition to hourly DO, temperature, SW radiation, and wind speed the following model inputs were used: the depth of the surface mixed layer at each time step (zmix; m), the attenuation coefficient for PAR (kd; m-1), and lake surface area (m²). </para>
+          <para>We used several approaches to estimate the depth of the surface mixed layer (zmix), depending on data availability and habitat types (pelagic versus littoral). We calculated zmix using depth-distributed water temperature measurements from fixed depth sensors or vertical profiles in the following pelagic sites: Emerald Lake, Topaz Lake, Clear Lake (OA and LA), Castle Lake, and Dulzura Lake. Zmix was calculated for each time step from temperature data using the ‘ts.thermo.depth’ function in the LakeAnalyzer R package17. For littoral sites within larger stratified lakes (Castle, Dulzura, Tahoe), zmix was set to the depth of the DO sensor. In shallow water bodies that did not stratify (TOK 11, EML Pond 1, Topaz Pond), zmix was set to the lake depth at the location of the DO sensor, which was measured approximately monthly and linearly interpolated between measurements. In the tidally-influenced Delta site, zmix was set to the mean depth of the channel within the range of the tidal excursion (7.5 m).</para>
+          <para>We estimated mean PAR within the surface mixed layer by converting hourly SW radiation measurements to surface PAR using the ‘sw.to.par’ function in LakeMetabolizer, and then using the attenuation coefficient for PAR (kd; m -1) and zmix to estimate mean water column PAR using equation 5 from Staehr et al.18.  In Castle Lake, Dulzura Lake, Lake Tahoe, and Clear Lake, light profiles were collected multiple times per season, and kd was estimated from each profile and linearly interpolated between profiling dates (Supplementary Figure 4). For three of the lakes (Emerald Lake, Topaz Lake, Delta), light profiles were collected once per summer, and thus kd did not vary through time. In ponds that were too shallow to perform light profiles (TOK 11, EML Pond 1, Topaz Pond), we set kd to the value of the nearest lake (Topaz Lake).  </para>
+          <para>We calculated oxygen fluxes across the air-water interface at each time step using the following equation: F = k₆₀₀ (DO – DOsat)/zmix, where DO is the measured oxygen concentration in water, DOsat is the concentration of DO at equilibrium with the atmosphere at the measured water temperature and pressure, and k₆₀₀ is the transport coefficient for O₂. k₆₀₀ was calculated from a wind-based gas exchange model that accounted for lake surface area (vachon model in LakeMetabolizer)19. We set gas exchange to zero during periods when the DO sensor was below the diel or seasonal thermocline. </para>
+          <para>Days with unrealistic metabolism estimates (negative GPP, positive R) were excluded from results. Unrealistic estimates occurred most often on days when water column mixing resulted in irregular diel DO curves and were most common in polymictic, hyper-eutrophic Clear Lake (35 - 55 % of days between July 1 - Oct 1) and Emerald Lake during periods of thermocline deepening in autumn (24 - 33%; Supplementary Table 1). </para>
+</description>
+      </methodStep>
+      <methodStep>
+        <description>          <para>Methods for smoke metrics</para>
+          <para>Meteorological data corresponding to time periods of in-situ sensor data collection were obtained for each lake from the nearest available weather station (SW radiation, W m⁻²; wind speed, m s⁻¹; air temperature, °C). We also obtained mean daily atmospheric fine particulate matter concentrations (&lt; 2.5 μm in diameter; PM2.5; μg m⁻³) from the nearest PurpleAir or EPA sensor. No PM2.5 data are available for the Sequoia Lakes in 2020. </para>
+          <para>We used the smoke plume product from the NOAA/NESDIS Satellite Analysis Branch’s Hazard Mapping System (HMS), to quantify the spatial and temporal patterns of smoke cover in California from 2006 to 2022. This product provides a daily smoke plume density polygon over North America at a 4 km resolution by integrating near real-time polar-orbiting and geostationary satellite imagery from Geostationary Operational Environmental Satellite Program (GOES), Moderate Resolution Imaging Spectroradiometer (MODIS), and Advanced Very High Resolution Radiometer (AVHRR). This remote sensing product classified smoke plumes into three categories: low, medium, and high density, based on the estimated smoke concentrations of 5, 16, 27 𝜇g m-3, respectively. </para>
+          <para>We generated a daily smoke density sequence over each study lake from 2006 – 2022. First, we obtained lake shapefiles from the California Lake database maintained by California Department of Fish and Wildlife (CDFW). For study sites that were not included in the California Lake database (e.g., small ponds in Sequoia National Park), we used a 100 meter buffer around the central point in the lake as an approximation of the lake surface. We then assigned a daily smoke density value to each lake by comparing spatial relationships between smoke plume polygons and lake surfaces. If a smoke plume intersected a lake’s surface area, we assigned the corresponding smoke density to the lake based on the date. If multiple smoke densities were assigned to the same lake on the same date, only the highest smoke density was assigned.</para>
+          <para>Characterizing lake exposure to smoke during study period</para>
+          <para>We identified periods of smoke cover for each lake during the study years (2018, 2020, 2021) using a combination of the daily smoke density value, SW radiation measurements from local weather stations, PM2.5 concentrations, and visual inspection of Sentinel satellite images to confirm the presence of smoke plumes. </para>
+          <para>At each lake, we used both the remote sensing-derived smoke density values and local meteorological data to conservatively classify each day as ‘smoke’ or ‘non-smoke’. We modeled theoretical ‘clear-sky’ SW radiation (SWclear.sky) for each day using a statistical clear sky algorithm. We then subtracted the measured daily mean SW (SWmeas) from SWclear.sky (SWdiff = SWclear.sky - SWmeas). We calculated the median value of SWdiff on days with smoke density of zero across all 9 meteorological datasets (median SWdiff = 20 W m⁻²). Days were then classified as smoke days if they met two conditions: 1) daily mean SW radiation was reduced by more than 20 W m⁻², and 2) smoke density was medium or high. </para>
+</description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Variable impact of wildfire smoke on ecosystem metabolic rates in lakes</title>
+      <personnel>
+        <individualName>
+          <givenName>Steven</givenName>
+          <surName>Sadro</surName>
+        </individualName>
+        <organizationName>University of California Davis</organizationName>
+        <positionName>Associate Professor</positionName>
+        <electronicMailAddress>ssadro@ucdavis.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-6416-3840</userId>
+        <role>Principal Investigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <awardNumber>NSF RAPID Award # 2102344</awardNumber>
+        <title>Effects of wildfires on lake productivity and oxygen deficits in the western U.S.</title>
+      </award>
+    </project>
+    <dataTable>
+      <entityName>Study Site Locations and Attributes</entityName>
+      <entityDescription>Study Site Locations and Attributes</entityDescription>
+      <physical>
+        <objectName>Table1_StudySites_forEDI.csv</objectName>
+        <size unit="byte">680</size>
+        <authentication method="MD5">1140c4fb5ba7c0e6509e69d46c008b59</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://ezeml.edirepository.org/user-data/asmits-89802141907ba930c13d2a39e62f93a8/uploads/Smoke%20effects%20on%20lake%20metabolism/Table1_StudySites_forEDI.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site Name</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Region</attributeName>
+          <attributeLabel>Region</attributeLabel>
+          <attributeDefinition>Region of California</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition>
+                    <code>Klamath</code>
+                    <definition>Klamath Mountain Range</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>N. Coast Range</code>
+                    <definition>Northern Coast Range</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>N. Sierra Nevada</code>
+                    <definition>Northern Sierra Nevada</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S. Sierra Nevada</code>
+                    <definition>Southern Sierra Nevada</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sacramento-San Joaquin River Delta</code>
+                    <definition>Sacramento-San Joaquin River Delta</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Latitude</attributeName>
+          <attributeLabel>Latitude</attributeLabel>
+          <attributeDefinition>Latitude</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Longitude</attributeName>
+          <attributeLabel>Longitude</attributeLabel>
+          <attributeDefinition>Longitude</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Elevation</attributeName>
+          <attributeLabel>Elevation</attributeLabel>
+          <attributeDefinition>Altitude (meters above sea level)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SurfaceArea</attributeName>
+          <attributeLabel>SurfaceArea</attributeLabel>
+          <attributeDefinition>Lake surface area</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>hectare</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>MaxDepth</attributeName>
+          <attributeLabel>MaxDepth</attributeLabel>
+          <attributeDefinition>Maximum lake depth</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>10</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>Monthly smoke area in California (2006 - 2022)</entityName>
+      <entityDescription>Monthly time series of the maximum area within California, USA (meters squared) covered by medium or high-density smoke (derived from NOAA HMS smoke product). Time series extends from 2006 - 2022.</entityDescription>
+      <physical>
+        <objectName>02_smoke_area_timeseries_forEDI.csv</objectName>
+        <size unit="byte">3528</size>
+        <authentication method="MD5">0a9b8838110e46154826e1787767e6ca</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://ezeml.edirepository.org/user-data/asmits-89802141907ba930c13d2a39e62f93a8/uploads/Smoke%20effects%20on%20lake%20metabolism/02_smoke_area_timeseries_forEDI.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Year</attributeName>
+          <attributeLabel>Year</attributeLabel>
+          <attributeDefinition>Year</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>nominalYear</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Month</attributeName>
+          <attributeLabel>Month</attributeLabel>
+          <attributeDefinition>Month</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>nominalMonth</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SmokeArea</attributeName>
+          <attributeLabel>SmokeArea</attributeLabel>
+          <attributeDefinition>Maximum spatial area covered by medium or high density smoke in each month</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>203</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>Smoke density time series (2006 - 2022)</entityName>
+      <entityDescription>Daily time series of smoke density at each study site (2006 - 2022), derived from the NOAA HMS smoke product.</entityDescription>
+      <physical>
+        <objectName>02_Smoke_density_timeseries_study_sites_forEDI.csv</objectName>
+        <size unit="byte">1673364</size>
+        <authentication method="MD5">a050d0c8cc277c19fb35ff8506f43cfa</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://ezeml.edirepository.org/user-data/asmits-89802141907ba930c13d2a39e62f93a8/uploads/Smoke%20effects%20on%20lake%20metabolism/02_Smoke_density_timeseries_study_sites_forEDI.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Date</attributeName>
+          <attributeLabel>Date</attributeLabel>
+          <attributeDefinition>Date</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Study site name</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition>
+                    <code>Castle.Lake</code>
+                    <definition>Castle Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Clear.Lake</code>
+                    <definition>Clear Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Dulzura.Lake</code>
+                    <definition>Dulzura Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Emerald.Lake</code>
+                    <definition>Emerald Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>EML.pond.1</code>
+                    <definition>Emerald Pond 1</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Lake.Tahoe</code>
+                    <definition>Lake Tahoe</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sacramento.shipping.channel</code>
+                    <definition>Sacramento Deep Water Ship Channel</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TOK11.pond</code>
+                    <definition>TOK11 Pond</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Topaz.Lake</code>
+                    <definition>Topaz Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TOPAZ.pond</code>
+                    <definition>Topaz Pond</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Density</attributeName>
+          <attributeLabel>Density</attributeLabel>
+          <attributeDefinition>Maximum daily smoke density in pixel overlapping with lake area (from NOAA HMS smoke product)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition order="1">
+                    <code>0</code>
+                    <definition>Smoke density of zero</definition>
+                  </codeDefinition>
+                  <codeDefinition order="2">
+                    <code>5</code>
+                    <definition>Low smoke density</definition>
+                  </codeDefinition>
+                  <codeDefinition order="3">
+                    <code>16</code>
+                    <definition>Medium smoke density</definition>
+                  </codeDefinition>
+                  <codeDefinition order="4">
+                    <code>27</code>
+                    <definition>High smoke density</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No smoke density value available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>61410</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>California lakes daily metabolism and smoke data (2018, 2020, 2021)</entityName>
+      <entityDescription>Daily metabolism datasets (primary production, ecosystem respiration, and net ecosystem production rates), variables used to estimate metabolism (PAR, water temperature, mixed layer depth, wind speed, dissolved oxygen), and corresponding meteorological conditions (shortwave radiation, estimated clear-sky shortwave radiation, smoke density, PM2.5) for 10 lakes in California in 2018, 2020, and 2021.</entityDescription>
+      <physical>
+        <objectName>10_daily_metabolism_smoke_dataset_forEDI_v2.csv</objectName>
+        <size unit="byte">412328</size>
+        <authentication method="MD5">d9c89c8822d2d06cf58b8036abdda9c6</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://ezeml.edirepository.org/user-data/asmits-89802141907ba930c13d2a39e62f93a8/uploads/Smoke%20effects%20on%20lake%20metabolism/10_daily_metabolism_smoke_dataset_forEDI_v2.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Study lake and location within lake (if applicable) where metabolic rates where measured.</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition>
+                    <code>Castle_littoral</code>
+                    <definition>Castle lake littoral zone</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Castle_pelagic</code>
+                    <definition>Castle Lake pelagic zone (upper mixed layer)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ClearLake_LA03</code>
+                    <definition>Clear Lake, Lower Arm</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ClearLake_OA04</code>
+                    <definition>Clear Lake, Oaks Arm</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Dulzura_littoral</code>
+                    <definition>Dulzura Lake littoral zone</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Dulzura_pelagic</code>
+                    <definition>Dulzura Lake pelagic zone (upper mixed layer)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DWSC</code>
+                    <definition>Sacramento Deep Water Ship Channel</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Emerald</code>
+                    <definition>Emerald Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>EMLPOND1</code>
+                    <definition>Emerald Pond 1</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Tahoe_TC</code>
+                    <definition>Lake Tahoe, littoral site near Tahoe City</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Tahoe_TV</code>
+                    <definition>Lake Tahoe, littoral site near Tahoe Vista</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TOK11</code>
+                    <definition>TOK11 Pond</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Topaz</code>
+                    <definition>Topaz Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TOPAZPOND</code>
+                    <definition>Topaz Pond</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Habitat</attributeName>
+          <attributeLabel>Habitat</attributeLabel>
+          <attributeDefinition>Habitat within a lake where metabolic rates were measured</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition>
+                    <code>littoral</code>
+                    <definition>Littoral zone (nearshore)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pelagic</code>
+                    <definition>Pelagic zone (mid-lake, upper mixed layer)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Date</attributeName>
+          <attributeLabel>Date</attributeLabel>
+          <attributeDefinition>Date</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>GPP</attributeName>
+          <attributeLabel>GPP</attributeLabel>
+          <attributeDefinition>Gross primary production </attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>GPPsd</attributeName>
+          <attributeLabel>GPPsd</attributeLabel>
+          <attributeDefinition>Error in daily GPP estimate from bayesian metabolism model (standard deviation)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>R</attributeName>
+          <attributeLabel>R</attributeLabel>
+          <attributeDefinition>Ecosystem respiration rate</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Rsd</attributeName>
+          <attributeLabel>Rsd</attributeLabel>
+          <attributeDefinition>Error in daily R estimate from bayesian metabolism model (standard deviation)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>NEP</attributeName>
+          <attributeLabel>NEP</attributeLabel>
+          <attributeDefinition>Net ecosystem production rate (NEP = GPP - R)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>NEPsd</attributeName>
+          <attributeLabel>NEPsd</attributeLabel>
+          <attributeDefinition>Error in daily NEP estimate from bayesian metabolism model (standard deviation)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>milligramDOPerLiter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No metabolism estimate available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>PAR</attributeName>
+          <attributeLabel>PAR</attributeLabel>
+          <attributeDefinition>Mean photosynthetically active radiation (PAR) within the upper mixed layer, as photosynthetic photon flux density</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>micromolePerMeterSquaredPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Mean PAR not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>DO</attributeName>
+          <attributeLabel>DO</attributeLabel>
+          <attributeDefinition>Mean daily dissolved oxygen concentration in the upper mixed layer</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Oxygen data not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WaterTemp</attributeName>
+          <attributeLabel>WaterTemp</attributeLabel>
+          <attributeDefinition>Daily mean water temperature in the surface mixed layer</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Temperature data not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>MixedLayerDepth</attributeName>
+          <attributeLabel>MixedLayerDepth</attributeLabel>
+          <attributeDefinition>Daily mean depth of the upper mixed layer of the study lake</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Mixed layer depth not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WindSpeed</attributeName>
+          <attributeLabel>WindSpeed</attributeLabel>
+          <attributeDefinition>Daily mean wind speed measured at the closest meteorological station to the study lake</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meterPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Wind speed data not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SWrad</attributeName>
+          <attributeLabel>SWrad</attributeLabel>
+          <attributeDefinition>Daily mean shortwave radiation measured at nearest meteorological station to the study lake</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>wattPerMeterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SWradClrsky</attributeName>
+          <attributeLabel>SWradClrsky</attributeLabel>
+          <attributeDefinition>Theoretical clear-sky shortwave radiation estimate</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>wattPerMeterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No radiation data available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SmokeDensity</attributeName>
+          <attributeLabel>SmokeDensity</attributeLabel>
+          <attributeDefinition>Daily maximum smoke density value within pixel overlapping study lake surface area (from NOAA HMS product)</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition order="1">
+                    <code>0</code>
+                    <definition>Smoke density of zero</definition>
+                  </codeDefinition>
+                  <codeDefinition order="2">
+                    <code>5</code>
+                    <definition>Low smoke density</definition>
+                  </codeDefinition>
+                  <codeDefinition order="3">
+                    <code>16</code>
+                    <definition>Medium smoke density</definition>
+                  </codeDefinition>
+                  <codeDefinition order="4">
+                    <code>27</code>
+                    <definition>High smoke density</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Smoke density value not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>PM2.5</attributeName>
+          <attributeLabel>PM2.5</attributeLabel>
+          <attributeDefinition>Daily mean atmospheric concentration of fine particulate matter (&lt; 2.5 μm in diameter) measured by nearest EPA or PurpleAir Sensor</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>microgramPerMeterCubed</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No PM2.5 data available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SmokeDay</attributeName>
+          <attributeLabel>SmokeDay</attributeLabel>
+          <attributeDefinition>Classification of smoke day, where smoke density is medium or high AND mean daily shortwave radiation is reduced from clear-sky estimate by &gt; 20 watts per meter squared</attributeDefinition>
+          <storageType typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain enforced="yes">
+                  <codeDefinition>
+                    <code>n</code>
+                    <definition>Not a smoke day; smoke density is zero or low and/or daily mean shortwave radiation is within 20 watts per meter squared of the clear-sky estimate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>y</code>
+                    <definition>Smoke day; smoke density is medium or high AND daily mean shortwave radiation is reduced by more than 20 watts per meter squared from the daily clear-sky estimate</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>2351</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="milligramDOPerLiter" name="milligramDOPerLiter">
+          <description>Milligrams dissolved oxygen per liter</description>
+        </unit>
+        <unit id="microgramPerMeterCubed" name="microgramPerMeterCubed">
+          <description>Micrograms PM2.5 per cubic meter</description>
+        </unit>
+        <unit id="nominalMonth" name="nominalMonth">
+          <description>Month of the year</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata>
+    <metadata>
+      <emlEditor app="ezEML" release="2024.03.27"/>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

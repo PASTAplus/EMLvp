@@ -75,11 +75,15 @@ Usage: emlvp [OPTIONS] TARGET...
 Options:
   -d, --dereference   Dereference EML XML file(s) (default is False).
   -f, --fail-fast     Exit on first exception encountered (default is False).
+  -l, --list_unicode  List non-ASCII unicode characters, along with unicode
+                      data
   -n, --normalize     Normalize EML XML file(s) before parsing and validating
                       (default is False).
   -p, --pretty-print  Pretty print output for dereferenced EML XML (default is
                       False).
   -s, --statistics    Show post processing inspection statistics.
+  -u, --unicode       Highlight non-ASCII unicode characters in EML output
+                      (-uu for line numbers)
   -v, --verbose       Send output to standard out (-v or -vv or -vvv for
                       increasing output).
   --version           Output emlvp version and exit.
@@ -127,7 +131,7 @@ parsing of the EML XML document.
 
 ## EMLvp Class API
 
-### Validator:
+### validator:
 
 ```Python
 class Validator(object):
@@ -150,7 +154,7 @@ def validate(self, xml: str):
   """
 ```
 
-### Parser:
+### parser:
 
 ```Python
 class Parser(object):
@@ -174,7 +178,7 @@ def parse(self, xml: str):
    """
 ```
 
-### Derferencer:
+### derferencer:
 
 ```Python
 class Dereferencer(object):
@@ -199,7 +203,7 @@ def dereference(self, xml: str) -> str:
 
 ## EMLvp Helper Function API
 
-### Normalizer
+### normalizer
 
 ```Python
 def normalize(xml: str) -> str:
@@ -208,4 +212,16 @@ def normalize(xml: str) -> str:
    :param xml: EML XML document instance as a unicode string
    :return: Normalized EML XML document instance as a unicode string
    """
+```
+
+### unicode_inspector
+
+```Python
+def unicode_list(xml: str) -> list:
+    """
+    List all unicode characters in the given XML with codepoints greater than ASCII 127
+    as a list of tuples: (row, col, char, cp, name)
+    :param xml:
+    :return list:
+    """
 ```

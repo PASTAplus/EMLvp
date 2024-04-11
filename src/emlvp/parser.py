@@ -42,7 +42,12 @@ class Parser:
         :raises emlvp.exceptions.ParseError: Raises ParseError on any invalid content found
         """
 
-        xml = xml.encode("utf-8")
+        try:
+            xml = xml.encode("utf-8")
+        except UnicodeEncodeError as e:
+            logger.debug(e)
+            raise exceptions.UTF8Error(e)
+
         root = etree.fromstring(xml)
 
         msg_queue = ""
@@ -170,9 +175,7 @@ class Parser:
                 has_missing_annotation_references_id = True
                 missing_annotation_references_ids.append(annotation_reference)
         if has_missing_annotation_references_id:
-            msg_missing_annotation_references = (
-                f"Missing subject id for annotation references: {missing_annotation_references_ids}\n"
-            )
+            msg_missing_annotation_references = f"Missing subject id for annotation references: {missing_annotation_references_ids}\n"
             msg_queue += msg_missing_annotation_references
             logger.debug(msg_missing_annotation_references)
             if self.fail_fast:

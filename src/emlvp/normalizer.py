@@ -19,11 +19,12 @@
 import daiquiri
 from lxml import etree
 
+from emlvp import exceptions
+
 
 logger = daiquiri.getLogger(__name__)
 
-normalize_whitespace = \
-    """<xsl:stylesheet version="1.0"
+normalize_whitespace = """<xsl:stylesheet version="1.0"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                        >
@@ -60,5 +61,11 @@ def normalize(xml: str) -> str:
     :return: Normalized EML XML document instance as a unicode string
     """
     xslt = etree.XSLT(etree.XML(normalize_whitespace))
-    normalized = str(xslt(etree.XML(xml.replace('\xa0', ' ').encode("utf-8"))))
+
+    try:
+        normalized = str(xslt(etree.XML(xml.replace("\xa0", " ").encode("utf-8"))))
+    except UnicodeEncodeError as e:
+        logger.debug(e)
+        raise exceptions.UTF8Error(e)
+
     return normalized

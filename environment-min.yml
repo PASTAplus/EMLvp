@@ -7,7 +7,7 @@ dependencies:
   - click
   - pytest
   - daiquiri
-  - python=3.11
+  - python=3.12
   - black
   - pylint
 prefix: /home/servilla/anaconda3/envs/emlvp

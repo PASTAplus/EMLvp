@@ -70,6 +70,10 @@ class SchemaIncludeError(EMLVPError):
     pass
 
 
+class UTF8Error(EMLVPError):
+    pass
+
+
 class ValidationError(EMLVPError):
     pass
 

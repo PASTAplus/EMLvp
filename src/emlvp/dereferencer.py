@@ -17,11 +17,13 @@ import copy
 import daiquiri
 from lxml import etree
 
+from emlvp import exceptions
+
 
 logger = daiquiri.getLogger(__name__)
 
 
-class Dereferencer():
+class Dereferencer:
     """
     Expands EML XML content by dereferencing "references" element to content defined
     by the "id" attribute of a source element.
@@ -41,7 +43,12 @@ class Dereferencer():
         :return str: Expanded EML XML.
         """
 
-        xml = xml.encode("utf-8")
+        try:
+            xml = xml.encode("utf-8")
+        except UnicodeEncodeError as e:
+            logger.debug(e)
+            raise exceptions.UTF8Error(e)
+
         root = etree.fromstring(xml)
 
         references_nodes = root.xpath(".//references")

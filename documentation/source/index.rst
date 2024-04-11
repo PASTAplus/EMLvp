@@ -77,11 +77,15 @@ at which time the errors are reported (fail-slow). The ``emlvp`` help provides t
    Options:
      -d, --dereference   Dereference EML XML file(s) (default is False).
      -f, --fail-fast     Exit on first exception encountered (default is False).
+     -l, --list_unicode  List non-ASCII unicode characters, along with unicode
+                         data
      -n, --normalize     Normalize EML XML file(s) before parsing and validating
                          (default is False).
      -p, --pretty-print  Pretty print output for dereferenced EML XML (default is
                          False).
      -s, --statistics    Show post processing inspection statistics.
+     -u, --unicode       Highlight non-ASCII unicode characters in EML output
+                         (-uu for line numbers)
      -v, --verbose       Send output to standard out (-v or -vv or -vvv for
                          increasing output).
      --version           Output emlvp version and exit.
@@ -131,7 +135,7 @@ EMLvp Class API
 .. highlight:: Python3
 
 
-Validator::
+validator::
 
    class Validator(object):
       """
@@ -153,7 +157,7 @@ Validator::
       """
 
 
-Parser::
+parser::
 
    class Parser(object):
        """
@@ -175,7 +179,7 @@ Parser::
        :raises emlvp.exceptions.ParseError: Raises ParseError on any invalid content found
        """
 
-Dereferencer::
+dereferencer::
 
    class Dereferencer(object):
        """
@@ -201,7 +205,7 @@ EMLvp Helper Function API
 
 .. highlight:: Python3
 
-Normalizer::
+normalizer::
 
    def normalize(xml: str) -> str:
        """
@@ -209,6 +213,18 @@ Normalizer::
        :param xml: EML XML document instance as a unicode string
        :return: Normalized EML XML document instance as a unicode string
        """
+
+
+unicode_inspector::
+
+   def unicode_list(xml: str) -> List[str]:
+       """
+       List all unicode characters in the given XML with codepoints greater than ASCII 127
+       as a list of tuples: (row, col, char, cp, name)
+       :param xml: EML XML document instance as a unicode string
+       :return: List of unicode characters found in the EML XML document instance
+       """
+
 
 
 .. Indices and tables

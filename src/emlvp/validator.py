@@ -33,7 +33,7 @@ def schema_path() -> str:
     return os.path.abspath(os.path.dirname(__file__)) + "/schemas"
 
 
-class Validator():
+class Validator:
     """
     Validates an EML XML document for being well formed and schema syntax correct.
     """
@@ -56,7 +56,11 @@ class Validator():
         :raises emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found
         """
 
-        xml = xml.encode("utf-8")
+        try:
+            xml = xml.encode("utf-8")
+        except UnicodeEncodeError as e:
+            logger.debug(e)
+            raise exceptions.UTF8Error(e)
 
         try:
             doc = etree.fromstring(xml)

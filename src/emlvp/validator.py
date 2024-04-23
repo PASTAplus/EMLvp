@@ -82,17 +82,3 @@ class Validator:
         except etree.XMLSyntaxError as e:
             logger.debug(e)
             raise exceptions.XMLSyntaxError(e)
-
-
-def _parse_validation_errors(e) -> str:
-    """
-    Parse validation errors into a list of strings
-    :param e: ValidationError exception
-    :return: List of strings
-    """
-    errors = ""
-    for error in str(e.error_log).split("\n"):
-        errors += error + "\n"
-    return errors
-
-

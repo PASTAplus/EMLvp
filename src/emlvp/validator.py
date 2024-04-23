@@ -53,7 +53,8 @@ class Validator:
         Validates an EML XML document instance
         :param xml: EML XML document instance as a unicode string
         :return: None
-        :raises emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found
+        :raises emlvp.exceptions.ValidationError, emlvp.exceptions.ParseError, emlvp.exceptions.XIncludeError,
+            emlvp.exceptions.XMLSchemaParseError, emlvp.exceptions.XMLSyntaxError
         """
 
         try:
@@ -68,16 +69,30 @@ class Validator:
             schema.assertValid(doc)
         except etree.DocumentInvalid as e:
             logger.debug(e)
-            raise exceptions.ValidationError(e)
+            raise exceptions.ValidationError(e.error_log)
         except etree.ParserError as e:
             logger.debug(e)
-            raise exceptions.ValidationError(e)
+            raise exceptions.ParserError(e)
         except etree.XIncludeError as e:
             logger.debug(e)
-            raise exceptions.ValidationError(e)
+            raise exceptions.XIncludeError(e)
         except etree.XMLSchemaParseError as e:
             logger.debug(e)
-            raise exceptions.ValidationError(e)
+            raise exceptions.XMLSchemaParseError(e)
         except etree.XMLSyntaxError as e:
             logger.debug(e)
-            raise exceptions.ValidationError(e)
+            raise exceptions.XMLSyntaxError(e)
+
+
+def _parse_validation_errors(e) -> str:
+    """
+    Parse validation errors into a list of strings
+    :param e: ValidationError exception
+    :return: List of strings
+    """
+    errors = ""
+    for error in str(e.error_log).split("\n"):
+        errors += error + "\n"
+    return errors
+
+

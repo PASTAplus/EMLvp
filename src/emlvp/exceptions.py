@@ -62,6 +62,10 @@ class ParseError(EMLVPError):
     pass
 
 
+class ParserError(EMLVPError):
+    pass
+
+
 class SaxError(EMLVPError):
     pass
 
@@ -75,6 +79,10 @@ class UTF8Error(EMLVPError):
 
 
 class ValidationError(EMLVPError):
+    pass
+
+
+class XIncludeError(EMLVPError):
     pass
 
 

@@ -75,5 +75,5 @@ def test_validate_syntax_error(test_data, schema_path):
     with open(f"{test_data}/eml-2.2.0-syntax-error.xml", "r", encoding="utf-8") as f:
         xml = f.read()
     v = Validator(schema_path + "/EML2.2.0/xsd/eml.xsd")
-    with pytest.raises(exceptions.ValidationError):
+    with pytest.raises(exceptions.XMLSyntaxError):
         v.validate(xml)

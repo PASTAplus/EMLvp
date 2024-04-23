@@ -20,7 +20,7 @@ import click
 import daiquiri
 
 from emlvp.dereferencer import Dereferencer
-from emlvp.exceptions import EMLVPError, ValidationError, ParseError
+from emlvp.exceptions import EMLVPError, ValidationError, ParseError, ParserError, XIncludeError, XMLSchemaParseError, XMLSyntaxError
 import emlvp.normalizer as normalizer
 from emlvp.parser import Parser
 import emlvp.unicode_inspector as ui
@@ -147,7 +147,6 @@ def process_one_document(
                     unicode_show(xml, unicode=unicode)
                 else:
                     print(xml)
-
         if list_unicode:
             unicode_list = ui.unicode_list(xml)
             print(f"\n{doc} has {len(unicode_list)} non-ASCII unicode characters")
@@ -156,13 +155,26 @@ def process_one_document(
                     f"Row: {u[0]}, Col: {u[1]}, Char: {u[2]}, CP: {u[3]}, Name: {u[4]}"
                 )
             print()
-
-    except (ParseError, ValidationError, ValueError) as e:
+    except ValidationError as e:
+        if verbose >= 0:
+            print(f"{doc}")
+            errors = str(e.args[0]).split("\n")
+            for error in errors:
+                e_parts = [p.strip() for p in error.split(":")]
+                msg = f"Schema validation error: Line {e_parts[1]}, {e_parts[-2]}: {e_parts[-1]}"
+                print(f"{Style.RED}{msg}{Style.RESET}")
+            if verbose >= 2:
+                if unicode:
+                    unicode_show(xml, unicode=unicode)
+                else:
+                    print(xml)
+        raise EMLVPError(e)
+    except (ParseError, ParserError, ValueError, XIncludeError, XMLSchemaParseError, XMLSyntaxError) as e:
         if verbose >= 0:
             print(f"{doc}\n{Style.RED}{e}{Style.RESET}\n")
             if verbose >= 2:
                 if unicode:
-                    unicode_show(xml)
+                    unicode_show(xml, unicode=unicode)
                 else:
                     print(xml)
         raise EMLVPError(e)

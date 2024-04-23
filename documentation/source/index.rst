@@ -153,7 +153,7 @@ validator::
       Validates an EML XML document instance
       :param xml: EML XML document instance as a unicode string
       :return: None
-      :raises emlvp.exceptions.ValidationError: Raises ValidationError on any invalid content found
+      :raises emlvp.exceptions.ValidationError, emlvp.exceptions.ParseError, emlvp.exceptions.XIncludeError, emlvp.exceptions.XMLSchemaParseError, emlvp.exceptions.XMLSyntaxError
       """
 
 

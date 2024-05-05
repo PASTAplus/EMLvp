@@ -35,7 +35,7 @@ def unicode_list(xml: str) -> list:
                 col = c + 1
                 char = i
                 cp = ord(i)
-                name = unicodedata.name(i)
+                name = unicodedata.name(i, "Unknown")
                 unicodes.append((row, col, char, cp, name))
 
     return unicodes

@@ -40,7 +40,7 @@ normalize_whitespace = """<xsl:stylesheet version="1.0"
            </xsl:template>
        
            <!-- Template for normalizing space in text nodes, with specific exclusions -->
-           <xsl:template match="text()[not(ancestor::markup or ancestor::literalLayout or ancestor::objectName or ancestor::attributeName or ancestor::para)]">
+           <xsl:template match="text()[not(ancestor::markdown or ancestor::literalLayout or ancestor::objectName or ancestor::attributeName or ancestor::para)]">
                <xsl:value-of select="normalize-space(.)"/>
            </xsl:template>
        

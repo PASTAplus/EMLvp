@@ -133,3 +133,6 @@ dmypy.json
 config.py
 documentation/build
 .pylintrc
+# pixi environments
+.pixi
+*.egg-info

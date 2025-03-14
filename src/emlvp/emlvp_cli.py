@@ -160,8 +160,8 @@ def process_one_document(
             print(f"{doc}")
             errors = str(e.args[0]).split("\n")
             for error in errors:
-                e_parts = [p.strip() for p in error.split(":")]
-                msg = f"Schema validation error: Line {e_parts[1]}, {e_parts[-2]}: {e_parts[-1]}"
+                error = error.replace('("', '').replace('",)', '')
+                msg = f"Schema validation error: {error}"
                 print(f"{Style.RED}{msg}{Style.RESET}")
             if verbose >= 2:
                 if unicode:

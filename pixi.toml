@@ -22,5 +22,8 @@ pytest = "*"
 pylint = "*"
 black = "*"
 
+[feature.test.tasks]
+test = "pytest"
+
 [environments]
 test = ["test"]

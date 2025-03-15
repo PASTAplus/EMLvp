@@ -21,8 +21,7 @@ path = "src/emlvp/VERSION.txt"
 pattern = "(?P<version>\\d+\\.\\d+\\.\\d+)"
 
 [tool.hatch.build.targets.sdist]
-# only-include = ["src"]
-include = ["src"]
+only-include = ["src"]
 
 [tool.pixi.project]
 channels = ["conda-forge"]

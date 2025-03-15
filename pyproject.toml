@@ -1,0 +1,46 @@
+[project]
+authors = [
+  {name = "Mark Servilla", email = "mark.servilla@gmail.com"}
+]
+dependencies = []
+name = "EMLvp"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">= 3.13"
+version = "1.2.3"
+
+[project.scripts]
+emlvp = "emlvp.emlvp_cli:main"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64"]
+
+[tool.pixi.pypi-dependencies]
+#emlvp = { path = ".", editable = true }
+
+[tool.pixi.dependencies]
+lxml = ">=5.3.0,<6"
+click = ">=8.1.7,<9"
+daiquiri = ">=3.0.0,<4"
+python = ">=3.13.1,<3.14"
+pip = ">=24.3.1,<25"
+pixi-pycharm = ">=0.0.8,<0.0.9"
+
+[tool.pixi.feature.test.dependencies]
+pytest = "*"
+pylint = "*"
+black = "*"
+
+[tool.pixi.feature.test.tasks]
+test = "pytest"
+
+[tool.pixi.environments]
+test = ["test"]

@@ -123,7 +123,7 @@ def process_one_document(
     :param doc: File path to EML XML document
     :param dereference: Dereference EML XML file(s) (default is False)
     :param fail_fast: Exit on first exception encountered (default is False)
-    :param: list_unicode: List non-ASCII unicode characters, along with unicode data (default is False)
+    :param list_unicode: List non-ASCII unicode characters, along with unicode data (default is False)
     :param pretty_print: Pretty print output for dereferenced EML XML (default is False)
     :param unicode: Highlight non-ASCII unicode characters in EML output (-uu for line numbers)
     :param verbose: Level of output verbosity (0, 1, 2, 3)

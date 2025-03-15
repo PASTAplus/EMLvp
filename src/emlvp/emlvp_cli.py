@@ -158,10 +158,11 @@ def process_one_document(
     except ValidationError as e:
         if verbose >= 0:
             print(f"{doc}")
-            errors = str(e.args[0]).split("\n")
+            errors = e.args[0]
             for error in errors:
-                error = error.replace('("', '').replace('",)', '')
-                msg = f"Schema validation error: {error}"
+                line = error.line
+                cause = error.message.replace("\n", "\\n")
+                msg = f"Schema validation error: Line {line}, {cause}"
                 print(f"{Style.RED}{msg}{Style.RESET}")
             if verbose >= 2:
                 if unicode:

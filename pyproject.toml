@@ -7,7 +7,7 @@ name = "EMLvp"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">= 3.13"
-version = "1.2.3"
+dynamic = ["version"]
 
 [project.scripts]
 emlvp = "emlvp.emlvp_cli:main"
@@ -16,15 +16,17 @@ emlvp = "emlvp.emlvp_cli:main"
 build-backend = "hatchling.build"
 requires = ["hatchling"]
 
+[tool.hatch.version]
+path = "src/emlvp/VERSION.txt"
+pattern = "(?P<version>\\d+\\.\\d+\\.\\d+)"
+
 [tool.hatch.build.targets.sdist]
-only-include = ["src"]
+# only-include = ["src"]
+include = ["src"]
 
 [tool.pixi.project]
 channels = ["conda-forge"]
 platforms = ["linux-64", "linux-aarch64"]
-
-[tool.pixi.pypi-dependencies]
-#emlvp = { path = ".", editable = true }
 
 [tool.pixi.dependencies]
 lxml = ">=5.3.0,<6"

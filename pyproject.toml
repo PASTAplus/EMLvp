@@ -3,14 +3,14 @@ authors = [
   {name = "Mark Servilla", email = "mark.servilla@gmail.com"}
 ]
 dependencies = [
-  "lxml>=5.3.0,<6",
-  "click>=8.1.7,<9",
+  "lxml>=5.3.1,<6",
+  "click>=8.1.8,<9",
   "daiquiri>=3.0.0,<4",
 ]
 name = "EMLvp"
 readme = "README.md"
 license = {file = "LICENSE"}
-requires-python = ">= 3.11"
+requires-python = ">=3.11,<3.14"
 dynamic = ["version"]
 
 [project.scripts]

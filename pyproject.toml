@@ -6,7 +6,6 @@ dependencies = [
   "lxml>=5.3.0,<6",
   "click>=8.1.7,<9",
   "daiquiri>=3.0.0,<4",
-  "pip>=24.3.1,<25",
 ]
 name = "EMLvp"
 readme = "README.md"

@@ -12,32 +12,10 @@
 :Created:
     1/21/23
 """
-import os
-
 import pytest
-
-import tests
 
 import emlvp.exceptions as exceptions
 from emlvp.validator import Validator
-
-
-@pytest.fixture()
-def test_data():
-    if "TEST_DATA" in os.environ:
-        test_data = os.environ["TEST_DATA"]
-    else:
-        test_data = tests.test_data_path
-    return test_data
-
-
-@pytest.fixture()
-def schema_path():
-    if "SCHEMA_PATH" in os.environ:
-        schema_path = os.environ["SCHEMA_PATH"]
-    else:
-        schema_path = tests.schema_path
-    return schema_path
 
 
 def test_validate_valid(test_data, schema_path):

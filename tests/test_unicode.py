@@ -12,21 +12,7 @@
 :Created:
     4/11/24
 """
-import os
-
-import pytest
-
-import tests
 import emlvp.unicode_inspector as ui
-
-
-@pytest.fixture()
-def test_data():
-    if "TEST_DATA" in os.environ:
-        test_data = os.environ["TEST_DATA"]
-    else:
-        test_data = tests.test_data_path
-    return test_data
 
 
 def test_unicode_list(test_data):

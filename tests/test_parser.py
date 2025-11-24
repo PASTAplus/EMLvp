@@ -12,23 +12,10 @@
 :Created:
     1/22/23
 """
-import os
-
 import pytest
-
-import tests
 
 import emlvp.exceptions as exceptions
 from emlvp.parser import Parser
-
-
-@pytest.fixture()
-def test_data():
-    if "TEST_DATA" in os.environ:
-        test_data = os.environ["TEST_DATA"]
-    else:
-        test_data = tests.test_data_path
-    return test_data
 
 
 def test_parse_valid(test_data):

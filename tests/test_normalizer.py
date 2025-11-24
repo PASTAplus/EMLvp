@@ -12,22 +12,7 @@
 :Created:
     2/16/24
 """
-import os
-
-import pytest
-
-import tests
-
 from emlvp.normalizer import normalize
-
-
-@pytest.fixture()
-def test_data():
-    if "TEST_DATA" in os.environ:
-        test_data = os.environ["TEST_DATA"]
-    else:
-        test_data = tests.test_data_path
-    return test_data
 
 
 def test_dereference(test_data):

@@ -12,22 +12,7 @@
 :Created:
     1/26/23
 """
-import os
-
-import pytest
-
-import tests
-
 from emlvp.dereferencer import Dereferencer
-
-
-@pytest.fixture()
-def test_data():
-    if "TEST_DATA" in os.environ:
-        test_data = os.environ["TEST_DATA"]
-    else:
-        test_data = tests.test_data_path
-    return test_data
 
 
 def test_dereference(test_data):

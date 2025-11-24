@@ -14,8 +14,7 @@ pixi-pycharm = ">=0.0.8,<0.0.9"
 
 [feature.test.dependencies]
 pytest = "*"
-pylint = "*"
-black = "*"
+ruff = "*"
 
 [feature.test.tasks]
 test = "pytest"

@@ -1,4 +1,4 @@
-[project]
+[workspace]
 authors = ["Mark Servilla <mark.servilla@gmail.com>"]
 channels = ["conda-forge"]
 name = "EMLvp"

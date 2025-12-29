@@ -242,6 +242,7 @@ def main(
         p = Path(__file__).resolve().parent
         v = Path(p, "VERSION.txt").read_text("utf-8")
         print(v)
+        return 0
 
     for t in target:
         if Path(t).is_file():

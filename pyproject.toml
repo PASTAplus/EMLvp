@@ -2,16 +2,29 @@
 authors = [
   {name = "Mark Servilla", email = "mark.servilla@gmail.com"}
 ]
-dependencies = [
-  "lxml>=5.3.1,<6",
-  "click>=8.1.8,<9",
-  "daiquiri>=3.0.0,<4",
-]
+dependencies = []
 name = "EMLvp"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11,<3.14"
 dynamic = ["version"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64"]
+preview = ["pixi-build"]
+
+[tool.pixi.pypi-dependencies]
+emlvp = { path = ".", editable = true }
+
+[tool.pixi.dependencies]
+python = ">=3.12.9,<3.14"
+lxml = ">=6.0.2,<7"
+click = ">=8.1.8,<9"
+daiquiri = ">=3.0.0,<4"
+pip = ">=26.0.1,<27"
+pytest = ">=9.0.2,<10"
+ruff = ">=0.15.5,<0.16"
 
 [project.scripts]
 emlvp = "emlvp.emlvp_cli:main"
@@ -25,4 +38,14 @@ path = "src/emlvp/VERSION.txt"
 pattern = "(?P<version>\\d+\\.\\d+\\.\\d+)"
 
 [tool.hatch.build.targets.sdist]
-only-include = ["src"]
+only-include = ["src", "README.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--strict-markers",
+]
